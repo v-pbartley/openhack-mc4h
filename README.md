@@ -18,7 +18,19 @@ Components used in this OpenHack
 
 
 ## Challenges  
-[Challenge 0]() 
+List of challenges at publishing, others will be added over time 
+
+- [Challenge 0](Challenge-0/Readme.md) - Pre-Req Overview
+- [Challenge 1](Challenge-1/Readme.md) - Deploy Azure API for FHIR
+- [Challenge 2](Challenge-2/Readme.md) - Pre-Req Overview
+- [Challenge 3](Challenge-3/Readme.md) - Ingest to FHIR
+- [Challenge 4](Challenge-4/Readme.md) - Query and Search FHIR using Postman 
+- [Challenge 5](Challenge-5/Readme.md) - SyncAgent 
+- [Challenge 6](Challenge-6/Readme.md) - Dataverse Entity and Attribute Mapping 
+- [Challenge 7](Challenge-7/Readme.md) - Dataverse writing data
+- [Challenge 8](Challenge-8/Readme.md) - Debugging, Operations and Maintenance 
+
+
 
 
 ## Trademarks
