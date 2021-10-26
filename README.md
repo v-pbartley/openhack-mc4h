@@ -1,28 +1,25 @@
-# Project
+# OpenHack for Microsoft Cloud for Healthcare 
+Welcome to the OpenHack for Microsoft Cloud for Healthcare.  This OpenHack is designed to be self-service or it can be taught with an instructor.   
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+## Errata 
+No known issues at this time 
 
-As the maintainer of this project, please make a few updates:
+## Introduction
+The goals of  **Microsoft Cloud for Healthcare** include: enabling interoperability using Azure for FHIR, driving advanced solutions with Machine Learning, Artificla Intillegence and Dynamics.  
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+Applications built on the Azure with FHIR can make use of Logic Apps, Connections IoMT, SMART on FHIR, Conversion and more.   
 
-## Contributing
+Applications built on the Dynamics platform (which includes Dynamics Model applications) or makes use of Dataverse can operate without needing to make REST API calls directly to Azure API for FHIR.  In addition to running Microsoft Cloud for Healthcare solutions, developers can also take advantage of the Dynamics' low-code/no-code environment to construct solutions/applications that can read & write healthcare related data to the Azure API for FHIR.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+## Components  
+Components used in this OpenHack 
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+![component deployment](/docs/assets/images/architecture/BigPicture.png)
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## Challenges  
+[Challenge 0]() 
+
 
 ## Trademarks
 
