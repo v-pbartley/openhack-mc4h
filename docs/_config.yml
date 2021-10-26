@@ -15,7 +15,7 @@
 # Config notes:
 # change site to health-architectures when moving
 
-title: "Microsoft Cloud for Healthcare OpenHack"
+title: "MC4H OpenHack"
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "light"
 search_enabled: true
