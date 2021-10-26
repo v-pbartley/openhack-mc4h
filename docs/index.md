@@ -19,7 +19,8 @@ This OpenHack was designed with the product teams responsible for technologies s
 ### Components  
 Components used in this OpenHack 
 
-![component deployment](/docs/assets/images/architecture/BigPicture.png)
+![component deployment](./assets/images/architecture/BigPicture.png)
+
 
 
 ### Support or Contact
