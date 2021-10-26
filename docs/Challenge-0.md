@@ -1,7 +1,7 @@
 ---
-title: Challeng 0 - Pre-req
+title: Pre-req
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

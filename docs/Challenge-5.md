@@ -1,7 +1,7 @@
 ---
-title: Challenge 5 - SyncAgent
+title: FHIR SyncAgent
 has_children: false
-nav_order: 1
+nav_order: 7
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

@@ -1,7 +1,7 @@
 ---
-title: Challenge 2 - Convert HL7 to FHIR
+title: Convert HL7 to FHIR
 has_children: false
-nav_order: 1
+nav_order: 4
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

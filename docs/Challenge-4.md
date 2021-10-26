@@ -1,7 +1,7 @@
 ---
-title: Challenge 4 - Query and Search FHIR
+title: Query & Search FHIR
 has_children: false
-nav_order: 1
+nav_order: 6
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

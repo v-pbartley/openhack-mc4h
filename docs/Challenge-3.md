@@ -1,7 +1,7 @@
 ---
-title: Challenge 3 - Ingest to FHIR
+title: Ingest to FHIR
 has_children: false
-nav_order: 1
+nav_order: 5
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

@@ -1,7 +1,7 @@
 ---
-title: Challenge 7 - Dataverse Writing data
+title: Writing data to DV
 has_children: false
-nav_order: 1
+nav_order: 9
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

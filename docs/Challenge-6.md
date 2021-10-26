@@ -1,7 +1,7 @@
 ---
-title: Challenge 6 - Dataverse Entity and Attribute Mapping
+title: Entity & Attribute Mapping
 has_children: false
-nav_order: 1
+nav_order: 8
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

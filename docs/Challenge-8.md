@@ -1,7 +1,7 @@
 ---
-title: Challenge 8 - Debugging, Operations and Maintenance
+title: Ops & Maintenance
 has_children: false
-nav_order: 1
+nav_order: 10
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare
