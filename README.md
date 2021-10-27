@@ -11,12 +11,6 @@ Applications built on the Azure with FHIR can make use of Logic Apps, Connection
 
 Applications built on the Dynamics platform (which includes Dynamics Model applications) or makes use of Dataverse can operate without needing to make REST API calls directly to Azure API for FHIR.  In addition to running Microsoft Cloud for Healthcare solutions, developers can also take advantage of the Dynamics' low-code/no-code environment to construct solutions/applications that can read & write healthcare related data to the Azure API for FHIR.
 
-## Components  
-Components used in this OpenHack 
-
-![component deployment](/docs/assets/images/architecture/BigPicture.png)
-
-
 ## Challenges  
 List of challenges at publishing, others will be added over time 
 
@@ -29,6 +23,15 @@ List of challenges at publishing, others will be added over time
 - [Challenge 6](Challenge-6/Readme.md) - Dataverse Entity and Attribute Mapping 
 - [Challenge 7](Challenge-7/Readme.md) - Dataverse writing data
 - [Challenge 8](Challenge-8/Readme.md) - Debugging, Operations and Maintenance 
+
+
+## Components  
+Components used in this OpenHack 
+
+![component deployment](/docs/assets/images/architecture/BigPicture.png)
+
+
+
 
 
 
