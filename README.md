@@ -1,15 +1,38 @@
-# OpenHack for Microsoft Cloud for Healthcare 
-Welcome to the OpenHack for Microsoft Cloud for Healthcare.  This OpenHack is designed to be self-service or it can be taught with an instructor.   
+# Microsoft Cloud for Healthcare 2021 OpenHack
 
-## Errata 
-No known issues at this time 
+# Introduction
+Hello and welcome to the Microsoft Cloud for Healthcare 2021 OpenHack! This live event will take place in online sessions Wednesday-Friday Nov 10-12, 2021. For information about how to register, please visit ______________. All registered participants will be placed on a team and given instructions for how to log in to the event.
 
-## Introduction
-The goals of  **Microsoft Cloud for Healthcare** include: enabling interoperability using Azure for FHIR, driving advanced solutions with Machine Learning, Artificla Intillegence and Dynamics.  
 
-Applications built on the Azure with FHIR can make use of Logic Apps, Connections IoMT, SMART on FHIR, Conversion and more.   
+# MC4H 2021 OpenHack Overview
+Over the course of three days, you and your teammates will work through a series of guided challenges where you'll test your skills building FHIR data workflows using Microsoft Cloud for Healthcare (MC4H) tools and architectures. You will gain exposure to a complete host of MC4H components and get hands on experience deploying and configuring systems capable of handling production workloads.
 
-Applications built on the Dynamics platform (which includes Dynamics Model applications) or makes use of Dataverse can operate without needing to make REST API calls directly to Azure API for FHIR.  In addition to running Microsoft Cloud for Healthcare solutions, developers can also take advantage of the Dynamics' low-code/no-code environment to construct solutions/applications that can read & write healthcare related data to the Azure API for FHIR.
+The challenges in this OpenHack are designed to give you and your teammates a chance to exercise your health data problem-solving skills in a collaborative environment. To make this a valuable experience for everyone, each team will need to make sure that 
+
++ All team members can contribute to the team's success
++ Everyone works in areas that provide opportunities to gain new skills (whatever those areas may be for different team members)
+
+In finding solutions to problems together, you and your teammates will help strengthen each other's knowledge. Ideally, you will all be able to get practice in areas that you have less experience in, and in areas where you have more experience, hopefully you will find opportunities to share what you know and bring the team forward.
+
+For each challenge, there will be a Microsoft Health and Life Sciences Cloud and Data engineer present to lead the session and serve as a coach, providing guidance as needed. Your team will be able to ask questions, and the coach in attendance will provide support. Bear in mind, however, that the coach can only point you in the right direction. The rest will be up to you and your teammates to accomplish your objectives. As you progress through the challenges, the tasks will increase in difficulty, and you will need to be self-sufficient with information you pull in from publically available documentation.
+
+Overall, the most important thing in this OpenHack is for you and your teammates to have a valuable, productive experience gaining new skills with Microsoft Cloud for Healthcare solutions. We wish you and your team the best of luck in your OpenHack journey!
+
+
+## Microsoft Cloud for Healthcare - Overview
+**Microsoft Cloud for Healthcare** is the aggregrate of Microsoft's Health and Life Sciences (HLS) industry solutions, encompassing Azure API for FHIR and its full complement of supporting tools - enabling health data interoperability and integration with Microsoft Dynamics MC4H workstreams.
+
+Azure API for FHIR together with FHIR Proxy (OSS) and the supporting suite of tools enable EHR interoperability, legacy health data format conversion, eventing workflows, IoMT connectivity, bulk FHIR data pipelines for research and ML, SMART on FHIR applications, and more.
+
+Applications built on the Dynamics platform (which include Dynamics model-driven apps) make use of Dataverse and can operate without need of making REST API calls directly to Azure API for FHIR. In addition to running Microsoft Cloud for Healthcare solutions, developers can also take advantage of the Dynamics' low-code/no-code environment to construct patient or provider-facing solutions/applications that can tap into healthcare data in Azure API for FHIR.
+
+## Prerequisites
+
++ Azure Subscription with Contributor/Co-Owner rights 
++ Global Admin in your Azure tenant 
++ Dynamics Environment + MC4H temporary license and solution set 
++ GitHub account 
++ Postman (cloud or desktop) 
 
 ## Challenges  
 List of challenges at publishing, others will be added over time 
