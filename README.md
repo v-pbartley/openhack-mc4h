@@ -12,11 +12,11 @@ The challenges in this OpenHack are designed to give you and your teammates a ch
 + All team members can contribute to the team's success
 + Everyone works in areas that provide opportunities to gain new skills (whatever those areas may be for different team members)
 
-In finding solutions to problems together, you and your teammates will help strengthen each other's knowledge. Ideally, you will all be able to get practice in areas that you have less experience in, and in areas where you have more experience, hopefully you will find opportunities to share what you know and bring the team forward.
+In finding solutions to problems together, you and your teammates will help strengthen each other's knowledge. Ideally, you will all get practice in areas that you have less experience in, and in areas where you have more experience, hopefully you will find opportunities to share what you know and bring the team forward.
 
-For each challenge, there will be a Microsoft Health and Life Sciences Cloud and Data engineer present to lead the session and serve as a coach, providing guidance as needed. Your team will be able to ask questions, and the coach in attendance will provide support. Bear in mind, however, that the coach can only point you in the right direction. The rest will be up to you and your teammates to accomplish your objectives. As you progress through the challenges, the tasks will increase in difficulty, and you will need to be self-sufficient with information you pull in from publically available documentation.
+For each challenge, there will be a Microsoft Health and Life Sciences Cloud and Data engineer present to lead the session and serve as a coach, providing guidance as needed. Your team will be able to ask questions, and the coach in attendance will be available to provide support. Bear in mind, however, that the coach can only point you in the right direction. The rest will be up to you and your teammates. As you progress through the challenges, the tasks will increase in difficulty, and you will need to be self-sufficient with information from publically available documentation.
 
-Overall, the most important thing in this OpenHack is for you and your teammates to have a valuable, productive experience gaining new skills with Microsoft Cloud for Healthcare solutions. We wish you and your team the best of luck in your OpenHack journey!
+Overall, the most important thing in this OpenHack is for you and your teammates to have a valuable, productive experience gaining new skills with Microsoft Cloud for Healthcare solutions. We wish you and your team the best of luck in your MC4H 2021 OpenHack journey!
 
 
 ## Microsoft Cloud for Healthcare - Overview
@@ -24,7 +24,7 @@ Overall, the most important thing in this OpenHack is for you and your teammates
 
 Azure API for FHIR together with FHIR Proxy (OSS) and the supporting suite of tools enable EHR interoperability, legacy health data format conversion, eventing workflows, IoMT connectivity, bulk FHIR data pipelines for research and ML, SMART on FHIR applications, and more.
 
-Applications built on the Dynamics platform (which include Dynamics model-driven apps) make use of Dataverse and can operate without need of making REST API calls directly to Azure API for FHIR. In addition to running Microsoft Cloud for Healthcare solutions, developers can also take advantage of the Dynamics' low-code/no-code environment to construct patient or provider-facing solutions/applications that can tap into healthcare data in Azure API for FHIR.
+Applications built on the Dynamics platform (which include Dynamics model-driven apps) make use of Dataverse and can operate without need of making REST API calls directly to Azure API for FHIR. In addition to running Microsoft Cloud for Healthcare solutions, developers can also take advantage of the Dynamics low-code/no-code environment to construct patient or provider-facing solutions/applications that can tap into healthcare data persisted in Azure API for FHIR.
 
 ## Prerequisites
 
