@@ -10,7 +10,17 @@ This OpenHack is designed to be self-service or it can be taught with an instruc
 
 
 ## Deploying Healthcare API 
-Sample video embedding 
-
+Quick video on deploying Azure API for FHIR
 <a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Healthcare API's with Workspaces"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
 
+Quick video on deploying the new Healthcare API for FHIR  
+<a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Healthcare API's with Workspaces"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
+
+
+## Get Started 
+[Repo](../Challenge-1/Readme.md)
+
+
+## Reference Links 
+- docs .msft 
+- 

@@ -1,10 +1,10 @@
-# Microsoft Cloud for Healthcare 2021 OpenHack
+# Microsoft Cloud for Healthcare OpenHack
 
 # Introduction
-Hello and welcome to the Microsoft Cloud for Healthcare 2021 OpenHack! This live event will take place in online sessions Wednesday-Friday Nov 10-12, 2021. For information about how to register, please visit ______________. All registered participants will be placed on a team and given instructions for how to log in to the event.
+Hello and welcome to the Microsoft Cloud for Healthcare OpenHack! This live event will take place in online sessions. All registered participants will be placed on a team and given instructions for how to log in to the event.
 
 
-# MC4H 2021 OpenHack Overview
+# MC4H OpenHack Overview
 Over the course of three days, you and your teammates will work through a series of guided challenges where you'll test your skills building FHIR data workflows using Microsoft Cloud for Healthcare (MC4H) tools and architectures. You will gain exposure to a complete host of MC4H components and get hands on experience deploying and configuring systems capable of handling production workloads.
 
 The challenges in this OpenHack are designed to give you and your teammates a chance to exercise your health data problem-solving skills in a collaborative environment. To make this a valuable experience for everyone, each team will need to make sure that 
@@ -16,23 +16,8 @@ In finding solutions to problems together, you and your teammates will help stre
 
 For each challenge, there will be a Microsoft Health and Life Sciences Cloud and Data engineer present to lead the session and serve as a coach, providing guidance as needed. Your team will be able to ask questions, and the coach in attendance will be available to provide support. Bear in mind, however, that the coach can only point you in the right direction. The rest will be up to you and your teammates. As you progress through the challenges, the tasks will increase in difficulty, and you will need to be self-sufficient with information from publically available documentation.
 
-Overall, the most important thing in this OpenHack is for you and your teammates to have a valuable, productive experience gaining new skills with Microsoft Cloud for Healthcare solutions. We wish you and your team the best of luck in your MC4H 2021 OpenHack journey!
+Overall, the most important thing in this OpenHack is for you and your teammates to have a valuable, productive experience gaining new skills with Microsoft Cloud for Healthcare solutions. We wish you and your team the best of luck in your MC4H OpenHack journey!
 
-
-## Microsoft Cloud for Healthcare - Overview
-**Microsoft Cloud for Healthcare** is the aggregrate of Microsoft's Health and Life Sciences (HLS) industry solutions, encompassing Azure API for FHIR and its full complement of supporting tools - enabling health data interoperability and integration with Microsoft Dynamics MC4H workstreams.
-
-Azure API for FHIR together with FHIR Proxy (OSS) and the supporting suite of tools enable EHR interoperability, legacy health data format conversion, eventing workflows, IoMT connectivity, bulk FHIR data pipelines for research and ML, SMART on FHIR applications, and more.
-
-Applications built on the Dynamics platform (which include Dynamics model-driven apps) make use of Dataverse and can operate without need of making REST API calls directly to Azure API for FHIR. In addition to running Microsoft Cloud for Healthcare solutions, developers can also take advantage of the Dynamics low-code/no-code environment to construct patient or provider-facing solutions/applications that can tap into healthcare data persisted in Azure API for FHIR.
-
-## Prerequisites
-
-+ Azure Subscription with Contributor/Co-Owner rights 
-+ Global Admin in your Azure tenant 
-+ Dynamics Environment + MC4H temporary license and solution set 
-+ GitHub account 
-+ Postman (cloud or desktop) 
 
 ## Challenges  
 List of challenges at publishing, others will be added over time 
