@@ -1,7 +1,8 @@
 ---
 title: Deploy FHIR
+parent: FHIR Basics
 has_children: false
-nav_order: 3
+nav_order: 1
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

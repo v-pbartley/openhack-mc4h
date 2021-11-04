@@ -1,8 +1,8 @@
 ---
-title: Ops & Maintenance
-parent: MC4H
+title: Research Azure Data Analytics 
+parent: Analytics
 has_children: false
-nav_order: 4
+nav_order: 2
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

@@ -1,5 +1,14 @@
 # Challenge 1 - Deploy Azure API for FHIR
-Welcome 
+Welcome to Challenge 1 - deploying Azure API for FHIR.  For this challenge we will walk through the following 
+- Login to Azure CLI (via the Portal or directly at shell.azure.com)
+- Clone the FHIR-Starter repo 
+- Execute the deployment scripts 
+- Setup Postman 
+- Test Authentication 
+
+Supporting material can be found on the IO Page for this hack - https://microsoft.github.io/openhack-mc4h/ 
+
+---
 
 (taken from fhir-starter / scripts / readme )
 
@@ -51,9 +60,8 @@ Run the deployment script and follow the prompts
 
 Optionally the deployment script can be used with command line options 
 ```azurecli
-./scripts/deployFhirStarter.bash -i <subscriptionId> -g <resourceGroupName> -l <resourceGroupLocation> 
+./scripts/deployFhirStarter.bash -i <subscriptionId> -g <resourceGroupName> -l <resourceGroupLocation> -k <keyVaultName> -n <fhirServiceName> -p <yes -or - no>
 ```
-
 
 Azure Components installed 
  - Resource Group (if needed)

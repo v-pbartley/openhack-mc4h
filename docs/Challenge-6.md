@@ -1,7 +1,8 @@
 ---
 title: Entity & Attribute Mapping
+parent: MC4H
 has_children: false
-nav_order: 8
+nav_order: 2
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

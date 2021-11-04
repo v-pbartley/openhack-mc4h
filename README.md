@@ -36,17 +36,33 @@ Applications built on the Dynamics platform (which include Dynamics model-driven
 
 ## Challenges  
 List of challenges at publishing, others will be added over time 
+- [Challenge 0](Challenge-0/Readme.md) - Hack Overview
 
-- [Challenge 0](Challenge-0/Readme.md) - Pre-Req Overview
+### FHIR Basics 
 - [Challenge 1](Challenge-1/Readme.md) - Deploy Azure API for FHIR
-- [Challenge 2](Challenge-2/Readme.md) - Pre-Req Overview
+- [Challenge 2](Challenge-2/Readme.md) - Convert HL7 to FHIR
 - [Challenge 3](Challenge-3/Readme.md) - Ingest to FHIR
 - [Challenge 4](Challenge-4/Readme.md) - Query and Search FHIR using Postman 
+
+### Microsoft Cloud for Healthcare 
+- FHIR Basics challenges +
 - [Challenge 5](Challenge-5/Readme.md) - SyncAgent 
 - [Challenge 6](Challenge-6/Readme.md) - Dataverse Entity and Attribute Mapping 
 - [Challenge 7](Challenge-7/Readme.md) - Dataverse writing data
 - [Challenge 8](Challenge-8/Readme.md) - Debugging, Operations and Maintenance 
 
+### Analytics 
+- FHIR Basics challenges +
+- [Challenge 9](Challenge-9/Readme.md) - Export and Anonymize Data 
+- [Challenge 10](Challenge-10/Readme.md) - Research Azure Data Analytics
+
+### IoMT
+- FHIR Basics challenges +
+- [Challenge 11](Challenge-11/Readme.md) - IoMT FHIR Connector
+
+### DICOM
+- FHIR Basics challenges +
+- [Challenge 12](Challenge-12/Readme.md) - DICOM Service   
 
 ## Components  
 Components used in this OpenHack 

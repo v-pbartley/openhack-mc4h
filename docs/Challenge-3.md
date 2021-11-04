@@ -1,7 +1,8 @@
 ---
 title: Ingest to FHIR
+parent: FHIR Basics
 has_children: false
-nav_order: 5
+nav_order: 3
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

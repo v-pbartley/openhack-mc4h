@@ -1,8 +1,8 @@
 ---
-title: Ops & Maintenance
-parent: MC4H
+title: Export and Anonymize Data 
+parent: Analytics
 has_children: false
-nav_order: 4
+nav_order: 1
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare

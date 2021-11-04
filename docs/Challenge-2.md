@@ -1,7 +1,8 @@
 ---
 title: Convert HL7 to FHIR
+parent: FHIR Basics
 has_children: false
-nav_order: 4
+nav_order: 2
 ---
 
 # Welcome to OpenHack for Microsoft Cloud for Healthcare
