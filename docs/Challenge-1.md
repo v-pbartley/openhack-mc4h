@@ -1,5 +1,5 @@
 ---
-title: Deploy FHIR (challenge 1)
+title: 1) Deploy FHIR
 parent: FHIR Basics
 has_children: false
 nav_order: 1
