@@ -18,7 +18,7 @@ Quick video on deploying the new Healthcare API for FHIR
 
 
 ## Get Started 
-[Repo](../Challenge-1/Readme.md)
+[Repo](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/Readme.md)
 
 
 ## Reference Links 
