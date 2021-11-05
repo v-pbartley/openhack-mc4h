@@ -1,5 +1,9 @@
 # Microsoft Cloud for Healthcare OpenHack
 
+
+Point users to IO site use the content below in the IO site 
+
+
 # Introduction
 Hello and welcome to the Microsoft Cloud for Healthcare OpenHack! This live event will take place in online sessions. All registered participants will be placed on a team and given instructions for how to log in to the event.
 
