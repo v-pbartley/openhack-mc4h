@@ -26,7 +26,7 @@ FHIR-Proxy is an Open Source Software project designed to be a secure FHIR Gatew
 - Is integrated with Azure Active Directory for authentication and to provide Role based access control.
 - Acts as a FHIR specific reverse proxy rewriting responses and brokering requests to FHIR Servers
 
-Deploy FHIR-Proxy
+Deploy FHIR-Proxy  
 [Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#fhir-proxy-deploying-fhir-proxy-via-cli)
 
 
@@ -39,7 +39,7 @@ Setup Postman
 ## Videos 
 
 ### Deploying Healthcare API 
-Quick video on deploying Azure API for FHIR
+Quick video on deploying Azure API for FHIR  
 <a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Healthcare API's with Workspaces"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
 
 Quick video on deploying the new Healthcare API for FHIR  
