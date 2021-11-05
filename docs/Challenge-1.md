@@ -22,9 +22,9 @@ Deploy Azure API for FHIR
 FHIR-Proxy is an Open Source Software project designed to be a secure FHIR Gateway and Proxy.  FHIR-Proxy is an Azure Function based solution that:
 - Acts as an intelligent and secure gateway to FHIR Servers
 - Allows multi-tenant access and purpose driven security policies specialized access to a common FHIR Server
-- Provides a consolidated approach to PRE and POST processing of FHIR Server Calls to support various access and result filtering or actions.
-- Is integrated with Azure Active Directory for authentication and to provide Role based access control.
-- Acts as a FHIR specific reverse proxy rewriting responses and brokering requests to FHIR Servers
+- Provides a consolidated approach to PRE and POST processing of FHIR Server Calls 
+- Is integrated with Azure Active Directory for authentication and to provide Role based access control
+- Acts as a FHIR specific reverse-proxy rewriting responses and brokering requests to FHIR Servers
 
 Deploy FHIR-Proxy  
 [Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#fhir-proxy-deploying-fhir-proxy-via-cli)
