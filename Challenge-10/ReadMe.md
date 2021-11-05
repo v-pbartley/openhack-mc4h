@@ -49,7 +49,7 @@ By the end of the section you will be able to
 ### Step 1: Load Parquet data into Azure Synapse
 
 #### 1. Open your Synapse workspace and import data from the storage account you wrote flattened parquet files to in Section 1: Data Analysis and Statistical Modeling  <br />
-You will need Patient data and Immmunizaton data to explore regional vaccinaion rates for Sunrise Healthcare <br />
+You will need Patient data and Immmunizaton data to explore regional vaccination rates for Sunrise Healthcare <br />
 <br />
 If you get stuck, check out this article on the Copy Data Tool in Azure Synapse<br />
 <br />
@@ -58,7 +58,7 @@ https://docs.microsoft.com/en-us/azure/data-factory/copy-data-tool?tabs=data-fac
 
 ### Step 2: Connect PowerBI, Load Synapse data, and report of vaccination rates by postal code <br />
 Connect your PowerBI workspace to Azure Synapse, load the Patient and Immunization data into PowerBI<br />
-You are interested in the Flu vaccination rates so you will need to join the datasets and create a field in the combined dataset that can be aggregated to achieve that rate.<br />
+You are interested in the Flu vaccination rates so you will need to join the datasets and create a field in the combined dataset that can be aggregated to achieve that rate. Pay attention to any data transformation necessary to join the datasets <br />
 If you get stuck, check out this article on creating custom columns in PowerBI. <br />
 <br />
 https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-add-custom-column#:~:text=Use%20Power%20Query%20Editor%20to%20add%20a%20custom%20column,-To%20start%20creating&text=From%20the%20Home%20tab%20on,The%20Custom%20Column%20window%20appears. <br />

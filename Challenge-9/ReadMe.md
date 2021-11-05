@@ -14,7 +14,7 @@ By the end of the section you will be able to
 * Deployed Azure Data Lake Storage Gen2
 * Azure Databricks
 
-### Step 1: Review sample anaonymization configuration and customize if needed
+### Step 1: Review sample anonymization configuration and customize if needed
 Microsoft provides a sample configuration file to anonymize data according to HIPAA safe harbor specifications. It's important to review the sample configuration and HIPAA safe harbor to determine if the sample configuration will work for your organization or if you need to develop your own anonymization rules.
 
 For more information on the sample anonymization file check out this documentation
