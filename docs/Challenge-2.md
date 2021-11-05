@@ -1,5 +1,5 @@
 ---
-title: Convert HL7 to FHIR
+title: 2) Convert HL7 to FHIR
 parent: FHIR Basics
 has_children: false
 nav_order: 2
