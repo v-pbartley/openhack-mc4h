@@ -5,8 +5,8 @@ has_children: false
 nav_order: 1
 ---
 
-## API FHIR (PaaS) 
-The FHIR service in the Azure Healthcare APIs (hereby called the FHIR service) enables rapid exchange of data through Fast Healthcare Interoperability Resources (FHIR®) APIs, backed by a managed Platform-as-a Service (PaaS) offering in the cloud. It makes it easier for anyone working with health data to ingest, manage, and persist Protected Health Information PHI in the cloud
+## Azure API for FHIR (PaaS) 
+The FHIR service in the Azure API for FHIR (hereby called the FHIR service) enables rapid exchange of data through Fast Healthcare Interoperability Resources (FHIR®) APIs, backed by a managed Platform-as-a Service (PaaS) offering in the cloud. It makes it easier for anyone working with health data to ingest, manage, and persist Protected Health Information PHI in the cloud
 
 Deploy Azure API for FHIR  
 [Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#fhir-starter-deploying-azure-api-for-fhir-via-cli)
@@ -34,9 +34,9 @@ Download Postman Collection for Testing
 
 ## Videos 
 
-### Deploying Healthcare API 
+### Deploying via Azure Portal 
 Quick video on deploying Azure API for FHIR  
-<a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Healthcare API's with Workspaces"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
+<a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Azure API for FHIR"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
 
 Quick video on deploying the new Healthcare API for FHIR  
 <a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Healthcare API's with Workspaces"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
