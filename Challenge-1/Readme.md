@@ -10,23 +10,18 @@ Supporting material can be found on the IO Page for this hack - https://microsof
 
 ---
 
-(taken from fhir-starter / scripts / readme )
-
-# FHIR-Starter Getting started scripts Readme
-Script purpose, order of execution and other steps necessary to get up and running with FHIR-SyncAgent
-
-## Errata 
-There are no open issues at this time. 
-
-## Prerequisites 
-
-These scripts will gather (and export) information necessary to the proper deployment and configuration of Azure Healthcare API for FHIR, an Application Service Client, Key Vault and Resource Groups secure information will be stored in the Keyvault.  
- - Prerequisites:  User must have rights to deploy resources at the Subscription scope 
+# FHIR-Starter Deploying Azure API for FHIR via CLI
+This script will gather information necessary to the proper deployment and configuration of Azure API for FHIR (PaaS) and the following: an Azue AD Application Service Client, Key Vault and Resource Group.
+  
+ Prerequisites:  
+ - User must have rights to deploy resources at the Subscription scope
+ - User must be able to provision an Azure AD Application Service client  
 
 __Note__
 A Keyvault is necessary for securing Service Client Credentials used with the FHIR Service and FHIR-Proxy.  Only 1 Keyvault should be used as this script scans the keyvault for FHIR Service and FHIR-Proxy values. If multiple Keyvaults have been used, please use the [backup and restore](https://docs.microsoft.com/en-us/azure/key-vault/general/backup?tabs=azure-cli) option to copy values to 1 keyvault.
 
-__Note__ The FHIR-Starter scripts are designed for and tested from the Azure Cloud Shell - Bash Shell environment.
+__Note__ 
+The FHIR-Starter scripts are designed for and tested from the Azure Cloud Shell - Bash Shell environment.
 
 ## Step 1. Setup 
 Please note you should deploy these components into a tenant that you have appropriate permissions to create and manage Application Registrations, Enterprise Applications, Permissions and Role Definitions Assignments
@@ -87,9 +82,18 @@ FS-RESOURCE       | Application Endpoint for Auth Access | Endpoint for Authorit
 FS-URL            | Application Endpoint for Clients     | Endpoint for FHIR Service interaction 
 
 
+---
 
-## Step 3.  Setup Postman
-Once the script finishes deployment, users can use Postman to test access to the new FHIR Service.  Instructions on setting up Postman can be found in the docs directory [here](../docs/postman.md).
+# FHIR-Proxy Deploying FHIR-Proxy via CLI
+
+
+
+
+--- 
+
+# Postman Setup and Testing 
+
+
 
 
 
