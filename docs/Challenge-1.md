@@ -29,6 +29,8 @@ Deploy FHIR-Proxy
 Setup Postman 
 [Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#postman-setup-and-testing)
 
+Download Postman Collection for Testing 
+[collection](./assets/postman/MC4H_Testing.postman_collection.json)
 
 ## Videos 
 
