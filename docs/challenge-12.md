@@ -1,5 +1,5 @@
 ---
-title: DICOM Service
+title: 12) DICOM Service
 parent: DICOM
 has_children: false
 nav_order: 1
