@@ -3,6 +3,7 @@ title: About
 has_children: false
 nav_order: 1
 ---
+# Microsoft Cloud for Healthcare OpenHack
 
 ## What is the Microsoft Cloud for Healthcare OpenHack?
 The Microsoft Cloud for Healthcare (MC4H) OpenHack is an opportunity to gain new health data knowledge and learn about Microsoft's solutions for the Health and Life Sciences industry. The OpenHack will initally be held as a live event in online sessions. For those unable to attend the live event, all materials will remain available for self-paced study.
