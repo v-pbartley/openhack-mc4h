@@ -1,5 +1,5 @@
 ---
-title: Research Azure Data Analytics 
+title: 10) Research Azure Data Analytics 
 parent: Analytics
 has_children: false
 nav_order: 2
