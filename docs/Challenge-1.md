@@ -5,12 +5,6 @@ has_children: false
 nav_order: 1
 ---
 
-# Introduction 
-The healthcare industry is rapidly transforming health data to the emerging standard of [FHIR®](https://hl7.org/fhir/) (Fast Healthcare Interoperability Resources). FHIR enables a robust, extensible data model with standardized semantics and data exchange that enables all systems using FHIR to work together. 
-
-Transforming your data to FHIR allows you to quickly connect existing data sources such as the electronic health record systems or research databases. FHIR also enables the rapid exchange of data in modern implementations of mobile and web development. Most importantly, FHIR can simplify data ingestion and accelerate development with analytics and machine learning tools.
-
-
 ## API FHIR (PaaS) 
 The FHIR service in the Azure Healthcare APIs (hereby called the FHIR service) enables rapid exchange of data through Fast Healthcare Interoperability Resources (FHIR®) APIs, backed by a managed Platform-as-a Service (PaaS) offering in the cloud. It makes it easier for anyone working with health data to ingest, manage, and persist Protected Health Information PHI in the cloud
 
