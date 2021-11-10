@@ -1,5 +1,5 @@
 # Challenge  - Export and Anonymize Data
-The biostatistics program at Sunnyville University regularly partners with Sunrise Healthcare on medical research projects. They are interested in studying yearly Flu trends. Since the use case is academic and not for treatment, payment, or healthcare operations, the biostatisticians cannot have access to PHI. In this challenge you will review the data in your FHIR server, determine the minimal necessary data for the Sunnyville University biostatisticans and export the data anonymized based on the HIPAA Safe Harbor specifications.
+The biostatistics program at AdventureWorks University regularly partners with Contoso Healthcare on medical research projects. They are interested in studying yearly Flu trends. Since the use case is academic and not for treatment, payment, or healthcare operations, the biostatisticians cannot have access to PHI. In this challenge you will review the data in your FHIR server, determine the minimal necessary data for the AdventureWorks University biostatisticans and export the data anonymized based on the HIPAA Safe Harbor specifications.
 
 
 ## Learning Objectives
@@ -22,16 +22,16 @@ https://github.com/microsoft/Tools-for-Health-Data-Anonymization/blob/master/doc
 
 
 ### Step 2: Export minimal necessary anonymized data to a storage account
-HIPAA rules dictate only the minimal data necessary should be used for research projects even if the data is anonymized. Determine what FHIR objects are necessary for Sunnyville University students to study yearly Flu trends.
+HIPAA rules dictate only the minimal data necessary should be used for research projects even if the data is anonymized. Determine what FHIR objects are necessary for AdventureWorks University students to study yearly Flu trends.
 
 Perform a de-identified $export operation on the FHIR server. If you get stuck refer to the documentation in step 1.
 
 
 ### Step 3: Securely transfer the file to the research team
-Since the researchers at Sunnyville University are not a part of Sunrise Healthcare, they cannot be given access in Sunrise Healthcare's Azure.
+Since the researchers at AdventureWorks University are not a part of Contoso Healthcare, they cannot be given access in Contoso Healthcare's Azure.
 
 Set up a shared access signature (SAS) token to allow the research team to access the anonymized datasets.
 
 If you get stuck check out https://docs.microsoft.com/en-us/azure/cognitive-services/translator/document-translation/create-sas-tokens?tabs=Containers
 
-You have successfully supported the Sunnyville University and Sunrise Healthcare research partnership!
+You have successfully supported the AdventureWorks University and Contoso Healthcare research partnership!

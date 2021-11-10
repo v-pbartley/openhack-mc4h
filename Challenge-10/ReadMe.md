@@ -5,7 +5,7 @@ Data shared and aggregated using the FHIR standard offers rich analytics potenti
 In this challenge we will utilize FHIR data for analytics. The lesson will be broken into two sections: Data Analysis & Statistical Modeling, and Data Visualization. 
 
 ## Context
-Sunrise Healthcare is working to increase Flu vaccination rates in their healthcare regions. To develop programs to address the vaccination rates, the health system needs to understand what factors influence the Flu vaccination rate for a given geographic region. In this challenge you will explore the effect of gender and age on patients' recieving the Flu shot or not and visually explore regional vaccination rates.
+Contoso Healthcare is working to increase Flu vaccination rates in their healthcare regions. To develop programs to address the vaccination rates, the health system needs to understand what factors influence the Flu vaccination rate for a given geographic region. In this challenge you will explore the effect of gender and age on patients' recieving the Flu shot or not and visually explore regional vaccination rates.
 
 ## 1. Data Analysis and Statistical Modeling: Does gender or age have an effect on completion of a Flu shot?
 ### Learning Objectives
@@ -33,7 +33,7 @@ The remaining steps in this challenge section will be walked through in the Azur
 
 
  
-## 2. Data Visualization and BI: What Sunrise Healthcare region has the lowest Flu vaccination rates?
+## 2. Data Visualization and BI: What Contoso Healthcare region has the lowest Flu vaccination rates?
 ### Learning Objectives
 By the end of the section you will be able to 
 * Write Anonymized FHIR data to Azure Synapse Analytics
@@ -69,6 +69,6 @@ https://docs.microsoft.com/en-us/power-query/group-by#:~:text=Select%20Group%20b
 <br />
 
 
-Sunrise Healthcare now knows what regions have low vaccination rate zip codes and what demographic groups are less likely to be vaccinated. They can now create targeted programs to increase vaccination rates across their system.
+Contoso Healthcare now knows what regions have low vaccination rate zip codes and what demographic groups are less likely to be vaccinated. They can now create targeted programs to increase vaccination rates across their system.
 	
 	
