@@ -5,22 +5,43 @@ has_children: false
 nav_order: 1
 ---
 
-# Microsoft Cloud for Healthcare OpenHack
-This OpenHack is designed to be self-service or it can be taught with an instructor.   
+## Azure API for FHIR (PaaS) 
+The FHIR service in the Azure API for FHIR (hereby called the FHIR service) enables rapid exchange of data through Fast Healthcare Interoperability Resources (FHIR®) APIs, backed by a managed Platform-as-a Service (PaaS) offering in the cloud. It makes it easier for anyone working with health data to ingest, manage, and persist Protected Health Information PHI in the cloud
+
+Deploy Azure API for FHIR  
+[Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#fhir-starter-deploying-azure-api-for-fhir-via-cli)
 
 
-## Deploying Healthcare API 
-Quick video on deploying Azure API for FHIR
-<a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Healthcare API's with Workspaces"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
+## FHIR-Proxy (OSS)
+FHIR-Proxy is an Open Source Software project designed to be a secure FHIR Gateway and Proxy.  FHIR-Proxy is an Azure Function based solution that:
+- Acts as an intelligent and secure gateway to FHIR Servers
+- Allows multi-tenant access and purpose driven security policies specialized access to a common FHIR Server
+- Provides a consolidated approach to PRE and POST processing of FHIR Server Calls 
+- Is integrated with Azure Active Directory for authentication and to provide Role based access control
+- Acts as a FHIR specific reverse-proxy rewriting responses and brokering requests to FHIR Servers
+
+Deploy FHIR-Proxy  
+[Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#fhir-proxy-deploying-fhir-proxy-via-cli)
+
+
+## Testing with Postman 
+
+Setup Postman 
+[Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#postman-setup-and-testing)
+
+Download Postman Collection for Testing 
+[collection](./assets/postman/MC4H_Testing.postman_collection.json)
+
+## Videos 
+
+### Deploying via Azure Portal 
+Quick video on deploying Azure API for FHIR  
+<a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Azure API for FHIR"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
 
 Quick video on deploying the new Healthcare API for FHIR  
 <a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Healthcare API's with Workspaces"><img src="./assets/images/FHIR-icon.png" alt="FHIR" /></a>
 
 
-## Get Started 
-[Repo](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/Readme.md)
-
-
 ## Reference Links 
-- docs .msft 
-- 
+- [Microsoft Docs](https://docs.microsoft.com/en-us/azure/healthcare-apis/)
+ 
