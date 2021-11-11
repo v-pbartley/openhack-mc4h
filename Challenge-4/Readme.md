@@ -45,7 +45,7 @@ The search parameter _id refers to the logical id of the resource, and can be us
 This search finds the patient resource with the given id (there can only be one resource for a given id). 
 
 ## Challenge - Understand the basic concepts of FHIR Search
-Using the Postman file [provided]() 
+Using the Postman file provided search for Patient's using the following 
 
 
 ## Challenge - Perform both Common and Composite Searches 
