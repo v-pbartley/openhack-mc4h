@@ -1,36 +1,33 @@
 # Deploy and demonstrate the consent capabilities of Azure Healthcare APIs
 
-## Challenge
+## Introduction
 
-+ Deploy Secure FHIR Proxy and populate the Healthcare APIs instance with patient data and sample consent resources.
-+ Define and demonstrate the methods that Contoso will use to obtain user consent and how to expose scopes that will be used to control access to data stored in a Healthcare API FHIR service instance.
-+ Demonstrate that Secure FHIR proxy successfully implements the defined consent opt-out feature.
-+ Describe techniques and methods that may be used to extend and enhance the default opt-out capability provided by the Secure FHIR proxy.
+In this challenge you will learn how to configure Consent Opt-Out filtering using the Secure FHIR Proxy solution.
 
-## Customer requirements
+## Background
 
-+ There are multiple levels of consent the Contoso is interested in. The first area is in the context of applications that are used to access healthcare data. Are applications trusted and are users aware of the data that applications will access and store or otherwise process.
-+ The second level of consent relates to how protected health information is accessed and subsequently used. Secure FHIR proxy provides some capabilities to enable enforcement of user data in the context of FHIR consent resources.
-+ Provide support for internally and externally develop SMART on FHIR applications.
+In today's rapidly changing healthcare data landscape, the FHIR R4 format is fast becoming the HLS industry standard for storage and exchange of health data. Healthcare consumers expect that their directives related to privacy, treatment, research, and advanced care are respected.
 
-## Cheat sheet
+## Learning Objectives
+
++ Configure Consent Opt-Out filtering in Secure FHIR Proxy
++ Add a Consent Resource to the Healthcare APIs FHIR service
++ Verify that Consent Opt-Out filtering performs as expected
+
+## Prerequisites
++ Azure Healthcare APIs FHIR service instance with patient data
++ Secure FHIR Proxy service successfully deployed
++ Postman (https://www.postman.com/downloads/) or Visual Studio Code with the Rest Client extension (https://marketplace.visualstudio.com/items?itemName=humao.rest-client) 
+
+## Step - 1 Configure Postman
+
+## Step - 2 Post Consent Record to FHIR Service
+
+## Step - 3 Verify Consent Opt-Out filtering
 
 
-## Success Criteria
 
-+ Successfully deploy Healthcare APIs and configure Secure FHIR proxy to implement consent filtering.
-+ Define and describe methods or techniques that Contoso could implement to extend the consent capabilities of the Secure FHIR Proxy
-+ Successfully configure a SMART on FHIR application in Azure Active Directory
+## Challenge Success
 
-## References
-
-- [Secure FHIR Proxy](https://github.com/microsoft/fhir-proxy)
-- [Configuring Secure Proxy Consent](https://github.com/microsoft/fhir-proxy/blob/main/docs/configuration.md)
-- [Permissions and consent in the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent)
-+ [FHIR Consent Resource](https://www.hl7.org/fhir/consent.html#:~:text=The%20Consent%20resource%20on%20FHIR%20provides%20support%20for,structures%20with%20optional%20attached%2C%20or%20referenced%20unstructured%20representations.%29)
-
-## Challenge Links
-
-+ [Overview](Readme.md)
-+ [Authentication](Challenge-Authentication.md)
-+ [Authorization](Challenge-Authorization.md)
++ Successfully POST a consent record to the Healthcare APIs FHIR service
++ Verify that Consent Opt-Out properly filters resources
