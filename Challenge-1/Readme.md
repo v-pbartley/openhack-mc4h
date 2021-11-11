@@ -6,7 +6,6 @@ Welcome to Challenge 1 - deploying Azure API for FHIR.  For this challenge we wi
 - Setup Postman 
 - Test Authentication 
 
-Supporting material can be found on the IO Page for this hack - https://microsoft.github.io/openhack-mc4h/ 
 
 ---
 
