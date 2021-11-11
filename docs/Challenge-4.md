@@ -5,8 +5,6 @@ has_children: false
 nav_order: 4
 ---
 
-# Microsoft Cloud for Healthcare OpenHack
-This OpenHack is designed to be self-service or it can be taught with an instructor.   
 
 ## Search 
 Searching for resources is fundamental to the mechanics of FHIR. Search operations traverse through an existing set of resources filtering by parameters supplied to the search operation.
