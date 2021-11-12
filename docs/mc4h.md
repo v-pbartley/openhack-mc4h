@@ -4,9 +4,9 @@ has_children: true
 nav_order: 4
 ---
 
-# Microsoft Cloud for Healthcare - Overview
+# Introduction 
+Microsoft Cloud for Healthcare is the aggregrate of Microsoft's Health and Life Sciences (HLS) industry solutions, encompassing Azure API for FHIR and its full complement of supporting tools - enabling health data interoperability and integration with Microsoft Dynamics MC4H workstreams.
 
-**Microsoft Cloud for Healthcare** is the aggregrate of Microsoft's Health and Life Sciences (HLS) industry solutions, encompassing Azure API for FHIR and its full complement of supporting tools - enabling health data interoperability and integration with Microsoft Dynamics MC4H workstreams.
 
 Azure API for FHIR together with FHIR Proxy (OSS) and the supporting suite of tools enable EHR interoperability, legacy health data format conversion, eventing workflows, IoMT connectivity, bulk FHIR data pipelines for research and ML, SMART on FHIR applications, and more.
 

@@ -1,7 +1,7 @@
 # Databricks notebook source
 # DBTITLE 1,Challenge - Research Azure Data Analytics
 # MAGIC %md 
-# MAGIC This challange will walk you through using exported and anonymized data for research analytics.  You will explore the effect of gender and age on patients'recieving the Flu shot or not. The result of your analysis will help shape Sunrise Health's strategy for increasing Flu vaccination rates.
+# MAGIC This challange will walk you through using exported and anonymized data for research analytics.  You will explore the effect of gender and age on patients' recieving the Flu shot or not.
 # MAGIC In this lesson we will complete the following tasks
 # MAGIC * Read in anonymized FHIR json files
 # MAGIC * Flatten the data structure to tabular format
@@ -111,7 +111,7 @@ def flatten_df(dfflat):
 
 # DBTITLE 1,Step 2: Flatten the data structure to tabular format
 #Loop through the FHIR source and generate parquet, ddl, or both outputs based on output parameter
-#Assumes files are in folders by FHIR resource type. Ex. CareTeam
+#Assumes files are in folders by FHIR resource type. Ex. Patient
 try:
   dir = dbutils.fs.ls(dbutils.widgets.get("InputMountPoint"))
   dirdf = pd.DataFrame(dir,columns=['path','name','size'])
