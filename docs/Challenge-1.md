@@ -5,11 +5,8 @@ has_children: false
 nav_order: 1
 ---
 
-## Azure API for FHIR (PaaS) 
+## Azure API for FHIR
 The FHIR service in the Azure API for FHIR (hereby called the FHIR service) enables rapid exchange of data through Fast Healthcare Interoperability Resources (FHIR®) APIs, backed by a managed Platform-as-a Service (PaaS) offering in the cloud. It makes it easier for anyone working with health data to ingest, manage, and persist Protected Health Information PHI in the cloud
-
-Deploy Azure API for FHIR  
-[Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#fhir-starter-deploying-azure-api-for-fhir-via-cli)
 
 
 ## FHIR-Proxy (OSS)
@@ -20,18 +17,16 @@ FHIR-Proxy is an Open Source Software project designed to be a secure FHIR Gatew
 - Is integrated with Azure Active Directory for authentication and to provide Role based access control
 - Acts as a FHIR specific reverse-proxy rewriting responses and brokering requests to FHIR Servers
 
-Deploy FHIR-Proxy  
-[Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#fhir-proxy-deploying-fhir-proxy-via-cli)
 
+## Challenge 
++ Deploy both Azure API for FHIR and FHIR-Proxy to your Azure environment 
++ Test Authentication and Authorization with Postman
 
-## Testing with Postman 
+Access the **Deploy FHIR Challenge [here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-1)**.
 
-Setup Postman 
-[Challenge 1](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-1/#postman-setup-and-testing)
+## Materials 
 
-Download Postman Collection for Testing 
-
-[collection](./assets/zip/MC4H_Testing.postman_collection.zip)
+**[Postman Collections for Testing](./assets/zip/MC4H_Testing.postman_collection.zip)**
 
 ## Videos 
 
