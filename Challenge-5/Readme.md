@@ -24,11 +24,11 @@ Installing the FHIR-SyncAgent requires effort in both Azure and Dynamics.  The A
 ## Step 1 - Access the Private Github Repo (MSFT only)
 Setting up a GitHub account using this reference:  https://docs.opensource.microsoft.com/tools/github/accounts/index.html
 
-Join the Microsoft Organization requirements
-	• Microsoft employee, intern or vendor
-	• Must have a GitHub account with two-factor authentication (2FA) enabled
-	• Add your @microsoft.com email address to your GitHub account
-	• Professional GitHub profile appearance is requested for those who publicize their membership in the organization
+Join the Microsoft Organization requirements  
+- Microsoft employee, intern or vendor
+- Must have a GitHub account with two-factor authentication (2FA) enabled
+- Add your @microsoft.com email address to your GitHub account
+- Professional GitHub profile appearance is requested for those who publicize their membership in the organization
 
 Linking your Microsoft alias to your GitHub account
 Go to the https://opensource.microsoft.com/link and, if you have a GitHub account, sign in. Otherwise, create a GitHub account and follow the steps. After signing in, you need to authorize the "Microsoft Open Source Repositories" application in GitHub. Once authorized, click Link to complete the process.
