@@ -4,7 +4,17 @@
 
 Welcome to Challenge 2!
 
-In this challenge you will learn how to use the FHIR server's custom operation, `$convert-data`, to convert HL7 and C-CDA files to FHIR.
+In this challenge you will learn how to use the FHIR server's custom operation, `$convert-data`, to convert HL7 and C-CDA files into FHIR.
+
+## Background
+
+In today's rapidly changing healthcare data landscape, the FHIR R4 format is fast becoming the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and CCDA, and in this challenge, we will explore how to convert these formats into FHIR using MC4H tools.
+
+## Learning Objectives
+
++ Creating a Postman request for a FHIR API operation
++ Specifying request parameters
++ Preparing/cleaning data for conversion into FHIR
 
 ## Prerequisites
 
@@ -19,9 +29,9 @@ In this challenge you will learn how to use the FHIR server's custom operation, 
 
 1. Create a `New Request` in the Postman collection created in Challenge 1.
 ![New Postman Request Image](/Challenge-2/media/add_request.jpg)
-2. Rename the new request to `Convert Data - HL7`
+2. Rename the new request to `Convert Data - HL7`.
 3. Change the HTTP operation type from **GET** to **POST**.
-4. Fill in the URL of this request with `{{fhirurl}}/$convert-data`
+4. Fill in the URL of this request with `{{fhirurl}}/$convert-data`.
 5. Change to the **Authorization** tab of the request and change:
     + **Type** to **OAuth 2.0**
     + Add `{{bearerToken}}` as the **Access Token**
@@ -38,16 +48,16 @@ In this challenge you will learn how to use the FHIR server's custom operation, 
 
 ## Step 3 - Convert Data
 
-1. Get a new Bearer token from the FHIR server via Postman
-2. Execute the `Convert Data - HL7` request
+1. Get a new Bearer token from the FHIR server via Postman.
+2. Execute the `Convert Data - HL7` request.
 
 ## Step 4 - Convert C-CDA Data
 
 1. Create a `New Request` in the Postman collection created in Challenge 1.
 ![New Postman Request Image](/Challenge-2/media/add_request.jpg)
-2. Rename the new request to `Convert Data - CCDA`
+2. Rename the new request to `Convert Data - CCDA`.
 3. Change the HTTP operation type from **GET** to **POST**.
-4. Fill in the URL of this request with `{{fhirurl}}/$convert-data`
+4. Fill in the URL of this request with `{{fhirurl}}/$convert-data`.
 5. Change to the **Authorization** tab of the request and change:
     + **Type** to **OAuth 2.0**
     + Add `{{bearerToken}}` as the **Access Token**
@@ -62,8 +72,8 @@ In this challenge you will learn how to use the FHIR server's custom operation, 
 
 ## Step 6 - Convert Data
 
-1. Get a new Bearer token from the FHIR server via Postman
-2. Execute the `Convert Data - CCDA` request
+1. Get a new Bearer token from the FHIR server via Postman.
+2. Execute the `Convert Data - CCDA` request.
 
 > Note: You may have to escape certain values in the C-CDA before executing the request.
 

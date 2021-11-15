@@ -6,9 +6,15 @@ Welcome to Challenge 3!
 
 In this challenge you will learn how to use the [FHIR Bulk Loader](https://github.com/microsoft/fhir-loader) tool to bulk-ingest data into Azure API for FHIR.
 
+## Background
+
+FHIR is an evolving standard, and one area where the FHIR specification is still in its early stages of development is its coverage of bulk data ingestion. Until HL7 publishes specifications for a FHIR $import operator, implementors will have to rely on alternative methods of getting bulk FHIR data into a FHIR server. In this challenge, we will be working with the current best-practice solution for bulk FHIR import into Azure API for FHIR: the FHIR Bulk Loader utility offered by Microsoft as part of the suite of open-source FHIR tools.
+
 ## Learning Objectives
 
++ Gain familiarity with Synthea synthetic FHIR data untilty
 + Understand data constraints with FHIR bulk data loading
++ Understand how to track and compare bulk FHIR imports
 
 ## Prerequisites
 

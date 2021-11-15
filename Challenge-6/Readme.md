@@ -1,4 +1,4 @@
-#  Challenge 6 - Dataverse Entity and Attribute Mapping
+# Challenge 6 - Dataverse Entity and Attribute Mapping
 
 ## Introduction
 
@@ -21,6 +21,7 @@ Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**
 ---
 
 ## Step 1 - Configure Mapping on both Azure and Dynamics 
+
 
 
 

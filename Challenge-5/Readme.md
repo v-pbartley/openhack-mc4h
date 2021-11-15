@@ -1,4 +1,4 @@
-#  Challenge 5 - SyncAgent
+# Challenge 5 - SyncAgent
 
 ## Introduction
 
@@ -69,3 +69,4 @@ The FHIR-SyncAgent depends on other Microsoft technologies, specifically
 
 ## Challenge Success
 + Successful installation of the FHIR-SyncAgent
+
