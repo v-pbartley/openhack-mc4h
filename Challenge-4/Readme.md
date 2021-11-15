@@ -16,6 +16,10 @@ The FHIR specification defines the fundamentals of search for FHIR resources. Th
 + Use a Chained & Reverse Chained Search 
 + Defining a Custom Search parameter 
 
+## Prerequisites
++ Successful completion of Challenge 1
+
+---
 
 ## Search basics 
 Each FHIR Resource has specific Search parameters in addition to the [common parameters](https://www.hl7.org/fhir/search.html#all) which also apply. See [Searching](https://www.hl7.org/fhir/search.html) for more information about searching in REST, messaging, and services.  
