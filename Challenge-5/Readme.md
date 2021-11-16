@@ -67,6 +67,11 @@ The FHIR-SyncAgent depends on other Microsoft technologies, specifically
 + Azure API for FHIR
 + Micorosft Dynamics
 
+### Deployment Overview  
+Preview of the work each script completes 
+
+![deployment](./media/sync-agent-setup-diagram2.png)
+
 ## Challenge Success
 + Successful installation of the FHIR-SyncAgent
 
