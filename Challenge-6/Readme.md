@@ -10,7 +10,6 @@ In this challenge you will learn about the mapping that happens between the Azur
 Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**, while leveraging the **Dynamics** Industry data model for health.  Synchronizing data between these two data models requires several layers of mapping, most of which is setup, managed and controlled via the SyncAdmin for FHIR Page in Dynamics. 
 
 ## Learning Objectives
-+ Configure Mapping on both Azure and within Dynamics 
 + Understand and Explain each layer of mapping
 + Test mapping between Azure API for FHIR and Dynamics 
 
@@ -20,38 +19,199 @@ Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**
 
 ---
 
-## Step 1 - Configure Mapping on both Azure and Dynamics 
+## Step 1 - The Big Picture 
+Flow from left to right... 
 
-To begin, all Entity Maps are Disabled by default.  Customers must enable the ones equating to the FHIR Resources they wish to Sync with Dataverse. 
+FHIR Documents consisting of Healthcare Resources are sent to with Dataverse via the FHIR-SyncAgent.  Which Resources to send is determined by the SA-FHIRMAPPEDRESOURCES variable set in KeyVault.  To change this list, customers need to create a new Secret in KeyVault    
 
-![disable](./media/entity-map-disable.png)
+The FHIR-SyncAgent queries Dataverse API to determine if the Resource (ie Patient, Encounter, etc) should be sync’d with Dataverse. 
 
+Dataverse uses 2 maps
+- Entity Maps for matching Resources, if the Resource is Enabled in SyncAdministration, they data is parsed into Dataverse's Data model by the Attribute Maps. 
+ 
+- Attribute Maps use JSONPath queries to map FHIR values to Table entries.   
 
-Entity Expansion Maps
+Dataverse stores Healthcare data in a relational model requiring mapping to be applied to the FHIR JSON documents.  
 
-Entinty expansion maps have been added for Appointment, Patient, and CareTeam
+The reverse follows the same pattern where Dataverse maps Entity Attributes back to FHIR via JSONPath queries. 
 
-![expansion](./media/expansion-maps.png)
-
-
-Enable Patient 
-
-Save & Close when finished.  
-
-__Note__  the expansion Attribute Maps are shown below 
-
-![enable-patient](./media/enable-patient.png)
-
-Enable Patient -> Identifier Map
-
-![enable-id](./media/enable-identifier.png)
+![bigpicture](./media/big-picture.png)
 
 
-Enable Patient -> Link Map
+## Step 2 - Breaking down the Mapping Context
+Mapping from FHIR to Dataverse begins with files coming into FHIR via FHIR-Proxy.  Two App Configuration variables enable the mapping environmental variable SA-FHIRMAPPEDRESOURCES 
 
-![enable-link](./media/enable-link.png)
+__FHIR-Proxy Application Configuration__ values loaded by the SyncAgent Setup script. 
 
-**Restart the SyncApp to pickup Dynamics Changes**
+Name                               | Value                      | Located              
+-----------------------------------|----------------------------|--------------------
+SA-FHIRMAPPEDRESOURCES             | Static Resource List       | Keyvault reference 
+FP-POST-PROCESSOR-TYPES            | Proxy Module               | App Service Config          
+
+The current iteration of the FP-POST-PROCESSOR-TYPES is __FHIRProxy.postprocessors.FHIRCDSSyncAgentPostProcess2__
+
+
+### Resources Enabled by Default
+
+At this time there are two points / places to configure which Resources are sent to Dynamics
+
++ SA-FHIRMAPPEDRESOURCES
++ Entity Maps 
+
+Resource default settings 
+
+US Core R4 Resources | FHIR    | Dataverse
+---------------------|---------|----------
+Patient              | Enabled | Disabled 
+Encounter            | Enabled | Disabled 
+Device               | Enabled | Disabled 
+Observation          | Enabled | Disabled 
+Appointment          | Enabled | Disabled 
+MedicationRequest    | Enabled | Disabled 
+AllergyIntolerance   | Enabled | Disabled 
+Procedure            | Enabled | Disabled 
+Organization         | Enabled | Disabled  
+Location             | Enabled | Disabled 
+RelatedPerson        | Enabled | Disabled 
+Claim                | Enabled | Disabled  
+DiagnosticReport     | Enabled | Disabled  
+Condition            | Enabled | Disabled  
+Medication           | Enabled | Disabled 
+CarePlan             | Enabled | Disabled  
+Slot                 | Enabled | Disabled   
+Schedule             | Enabled | Disabled   
+CareTeam             | Enabled | Disabled  
+Practioner           | Enabled | Disabled 
+
+Customers **must** "Enable" Entity maps in Datavers then re-start the SyncAgent to enable data sync for the Resource(s). 
+
+## Step 3 Understanding JSONPath 
+Most issues with Mapping come from missing fields, ie why am I missing the name of this Encounter, which comes back to dicphering the JSON Path elements within the Attribute Maps.
+
+Attribute mapping definitions are contained in a serialized JSON object, this object contains entries to support JSON Path selection for retrieving and updating existing property values as well as definitions for creating new JSON Properties on the FHIR Object that do not exist or need to be inserted.
+ 
+
+### JSON Object Definition
+```al
+{
+	"s": "", //<A valid JSON Path expression used to select an existing JSON Property of the FHIR Resource to extract/set values from/to Dataverse,
+	"c": { //<JSON property fields used  to insert/create JSON Properties when the select path is non-existent in the resource JSON Object >,
+			"p": "", //<The parent JSON Property name to Create>.
+			"a": [ //<Array of attributes to set on the selected JSON Property
+				""
+			]
+}
+```
+
+### Examples
+
+### Simple String Existing Field
+The following would get lastname from FHIR to send to Dataverse or update lastname attribute value from Dataverse to FHIR:
+
+```al
+{"s": "$.name[?(@.use=='usual')].family"}
+```
+
+This mapping assumes that the node always exists and can be located via the JSON Path defined on the fhir resource
+
+### Existing or Non-Existing Field
+The following would get/update the city field of address[0] if it exists, if this was an update from Dataverse and address[0] did not exist it would create an address[0] parent and set the city value from Dataverse it would also create placeholder/default values for other attributes 
+
+```al
+{
+	"s": "$.address[0].city",
+	"c": {
+		"p": "address[0]",
+		"a": [
+			{
+				"line": ["x"]
+			},
+			{
+				"city": "%"
+			},
+			{
+				"state": "x"
+			},
+			{
+				"postalCode": "x"
+			},
+			{
+				"country": "x"
+			}
+		]
+	}
+}
+```
+
+__Note:__ For string values the value set is the literal defined in the attribute array unless it is one of the special character sequences, these will be replaced with values indicated below:
+1. % - Copy the value of the Dataverse Attribute
+2. %% -  Copy the type of the FHIR Reference Resource (e.g. Patient)
+3. %%% - Copy the type and resource id of the FHIR Reference Resource (e.g. Patient/1234) 
+
+### Patient Name 
+Applying the rules above, we can use the following to:
+
+- "s" =  extract a Patient given name to load into Dataverse
+- "c" = create a Patient given name when not in FHIR
+    - "p" = parent object of the entry to create
+    - "a" = array parameters to use when creating "c"
+
+```al
+{"s": "$.name[?(@use=='official')].given[0]", "c": {"p": "name[0]",  "a": [{"use": "official"}, {"family": "x"}, {"given[0]": "%"}]} }
+```
+
+__Note__:  the brackets {} contain the expression, while the commas "," separate the expression segments, however the array bracket [] means the expression above contains 2 complete segments 
+
+```al
+"s": "$.name[?(@use=='official')].given[0]"
+``` 
+and
+
+```al
+"c": {"p": "name[0]",  "a": [{"use": "official"}, {"family": "x"}, {"given[0]": "%"}]
+```
+
+### Codeable Concpet
+Matching Codeable Concepts is essentially the same as matching JSON string elements, the only difference being there is an additional level needed to get to the detail. 
+
+1.	URL of the extension is http://hl7.org/fhir/StructureDefinition/patient-religion
+2.	We want to access the valueCodeableConcept element inside this extension entry
+3.	We want the first entry in the coding array
+4.	We want to map the display to show the information in FHIR that is attached to a coding system
+
+FHIR Resource 
+![mapping_example1.png](./media/mapping_example1.png)
+
+
+JSON Path
+![mapping_example0.png](./media/mapping_example0.png)
+
+
+### Text Example (religion)
+1.	URL of the extension is http://hl7.org/fhir/StructureDefinition/patient-religion
+2.	We want to access the valueCodeableConcept element inside this extension entry
+3.	We want to map the text to show the information given to FHIR by Epic
+
+FHIR Resource 
+![mapping_example2.png](./media/mapping_example2.png)
+
+
+JSON Path
+![mapping_example3.png](./media/mapping_example3.png)
+
+### Current Limitations
+1. No dynamic array insertion/creation positions must be absolute, selection is dynamic using JSON Path
+2. Value data must be valid in JSON for the destination attribute UTF-8 strings, JSON UTC Dates, booleans, etc...
+
+# Tools
+There are multiple tools that can be used to test JSON Path strings  
+[JSONPath Online Evaluator](https://jsonpath.com) 
+ 
+[JSON Escape / Unescape](https://codebeautify.org/json-escape-unescape) 
+
+[JSON Path Extension for VSCodese](https://marketplace.visualstudio.com/items?itemName=weijunyu.vscode-json-path)
+
+Read more here https://github.com/stedolan/jq/wiki/For-JSONPath-users 
 
 
 

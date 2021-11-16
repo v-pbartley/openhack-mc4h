@@ -12,7 +12,7 @@ Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**
 
 ## Challenge 
 
-Access the **Ops and Manatence Challenge [here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-8)**.
+Access the Ops and Manatence Challenge **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-8)**.
 
 
 ## Materials   
