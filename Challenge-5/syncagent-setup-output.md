@@ -1,4 +1,4 @@
-## Sample script execution 
+## Setup script output (part 2)
 
 ```
 dale@Azure:~/fhir-cds-agent/scripts$ ./setupSyncAgent.bash
