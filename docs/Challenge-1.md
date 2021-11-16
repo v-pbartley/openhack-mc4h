@@ -36,15 +36,6 @@ Access the __Deploy FHIR Challenge__ **[here](https://github.com/microsoft/openh
 ## Materials 
 **[Postman Collections for Testing](./assets/zip/MC4H_Testing.postman_collection.zip)**
 
-## Videos 
-
-### Deploying via Azure Portal 
-Quick video on deploying Azure API for FHIR  
-<a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Azure API for FHIR"><img src="./assets/images/icon-fhir-64.png" alt="FHIR" /></a>
-
-Quick video on deploying the new Healthcare API for FHIR  
-<a href="./assets/video/Deploy-FHIR-Service.mp4" title="Deploying Healthcare API's with Workspaces"><img src="./assets/images/icon-fhir-64.png" alt="FHIR" /></a>
-
 
 ## Reference Links 
 Read more about Microsoft FHIR Services **[here](https://docs.microsoft.com/en-us/azure/healthcare-apis/)** 
