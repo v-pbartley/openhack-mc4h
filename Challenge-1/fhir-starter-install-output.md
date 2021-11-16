@@ -111,3 +111,11 @@ Client Credentials have been securely stored as Secrets in the Key Vault [fhir77
 The secret prefix is FS (for FHIR Service) <br>
 ************************************************************************************************************
 dale@Azure:~/fhir-starter/scripts$ <br>
+
+---
+
+## Deployment Architecture 
+
+![diagram](./media/fhir-starter-diagram.png)
+
+

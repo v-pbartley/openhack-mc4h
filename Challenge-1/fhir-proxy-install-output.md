@@ -57,3 +57,9 @@ Your app configuration settings are stored securely in KeyVault: fhir7700kv <br>
 ************************************************************************************************************
  <br>
 dale@Azure:~/fhir-proxy/scripts$
+
+---
+
+## Deployment Architecture 
+
+![diagram](./media/proxy-deployment-diagram.png)

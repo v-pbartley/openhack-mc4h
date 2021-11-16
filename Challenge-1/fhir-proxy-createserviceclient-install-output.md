@@ -56,6 +56,15 @@ Note: The display output and files created by this script can contain sensitive 
 
 dale@Azure:~/fhir-proxy/scripts$
 
+---
+
+## Deployment Architecture 
+
+![diagram](./media/proxy-svc-client-diagram.png)
+
+
+---
+
 ## Next Steps 
 
 Download the Postman file **proxy7700-svc-client.postman_environment.json**
