@@ -16,6 +16,10 @@ The FHIR specification defines the fundamentals of search for FHIR resources. Th
 + Use a Chained & Reverse Chained Search 
 + Defining a Custom Search parameter 
 
+## Prerequisites
++ Successful completion of Challenge 1
+
+---
 
 ## Search basics 
 Each FHIR Resource has specific Search parameters in addition to the [common parameters](https://www.hl7.org/fhir/search.html#all) which also apply. See [Searching](https://www.hl7.org/fhir/search.html) for more information about searching in REST, messaging, and services.  
@@ -34,7 +38,7 @@ You can also search using POST, which is useful if the query string is too long.
 If the search request is successful, you’ll receive a FHIR bundle response with the type searchset. If the search fails, you’ll find the error details in the OperationOutcome to help you understand why the search failed.
 
 ## Common Search Parameters 
-The following parameters apply to all resources: ```_content```, ```_id```, ```_lastUpdated```, ```_profile```, ```_query```, ```_security```, ```_source```, ```_tag```.  In addition, the search parameter ```_text``` and ```_filter``, (documented below) also applies to all resources (as do the search result parameters).
+The following parameters apply to all resources: ```_content```, ```_id```, ```_lastUpdated```, ```_profile```, ```_query```, ```_security```, ```_source```, ```_tag```.  In addition, the search parameter ```_text``` and ```_filter```, (documented below) also applies to all resources (as do the search result parameters).
 
 The search parameter _id refers to the logical id of the resource, and can be used when the search context specifies a resource type:
 

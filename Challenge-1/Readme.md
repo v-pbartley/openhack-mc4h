@@ -1,4 +1,22 @@
-# Challenge 1 - Deploy Azure API for FHIR
+## Introduction
+
+Welcome to Challenge 1!
+
+In this challenge you will deploy both Azure API for FHIR (PaaS) and FHIR-Proxy (Open Source)
+
+## Background
+FHIR is at the center of our Healthcare products at Microsoft.  Where necessary the "SmokeJumpers" team 
+
+## Learning Objectives 
++ Understand the prerequisites and requirements for deploying Azure API for FHIR and FHIR-Proxy
+
+## Prerequisites 
+HealthArchitecture scripts will gather (and export) information necessary to the proper deployment and configuration of Azure API for FHIR and multiple other HealthArchitecture Open Source Software systems.  
++ Prerequisite:  User must have rights to deploy resources at the Subscription scope (ie Contributor)
++ Prerequisite:  User must have Application Administrator (built In RBAC role) rights for the Tenant they are deploying into 
+  
+
+## Step 1 - Setup Azure Environment 
 Welcome to Challenge 1 - deploying Azure API for FHIR.  For this challenge we will walk through the following 
 - Login to Azure CLI (via the Portal or directly at shell.azure.com)
 - Clone the FHIR-Starter repo 
@@ -6,95 +24,46 @@ Welcome to Challenge 1 - deploying Azure API for FHIR.  For this challenge we wi
 - Setup Postman 
 - Test Authentication 
 
+[Open Azure Cloud Shell](https://shell.azure.com) you can also access this from [azure portal](https://portal.azure.com)
 
----
+Select Bash Shell as the operating environment 
 
-# FHIR-Starter Deploying Azure API for FHIR via CLI
-This script will gather information necessary to the proper deployment and configuration of Azure API for FHIR (PaaS) and the following: an Azue AD Application Service Client, Key Vault and Resource Group.
-  
- Prerequisites:  
- - User must have rights to deploy resources at the Subscription scope
- - User must be able to provision an Azure AD Application Service client  
+## Step 2 - FHIR Service deployment 
+HealthArchitecture repos follow a common naming standard (github.com/microsoft/fhir-NAME).  
+- Navigate to the FHIR-Starter repo https://github.com/microsoft/fhir-starter, review the main Readme.md, and the [Readme.md](https://github.com/microsoft/fhir-starter/blob/main/scripts/Readme.md) in the ./scripts folder.
+- Clone the Repo
+- Run the deployFhirStarter.bash script either from the command line or using the prompts
+- Be certain to GENERATE the POSTMAN Env
 
-__Note__
-A Keyvault is necessary for securing Service Client Credentials used with the FHIR Service and FHIR-Proxy.  Only 1 Keyvault should be used as this script scans the keyvault for FHIR Service and FHIR-Proxy values. If multiple Keyvaults have been used, please use the [backup and restore](https://docs.microsoft.com/en-us/azure/key-vault/general/backup?tabs=azure-cli) option to copy values to 1 keyvault.
+__Note__  During a live session, Resource Groups names will be assigned.  If you are performing this hack on your own, you can use any Resource Group name. 
 
-__Note__ 
-The FHIR-Starter scripts are designed for and tested from the Azure Cloud Shell - Bash Shell environment.
+## Step 3 - Setup Postman
+Using the Upload / Download button on the Azure CLI download the _$fhirServiceName.postman_environment.json_ file to your computer. 
 
-## Step 1. Setup 
-Please note you should deploy these components into a tenant that you have appropriate permissions to create and manage Application Registrations, Enterprise Applications, Permissions and Role Definitions Assignments
+Import the Postman Search Collection if you have not already done so.  See https://microsoft.github.io/openhack-mc4h/Challenge-1.html for the collection download 
 
-1. [Get or Obtain a valid Azure Subscription](https://azure.microsoft.com/en-us/free/)
+Test access to your FHIR Service 
 
-2. [Open Azure Cloud Shell](https://shell.azure.com) you can also access this from [azure portal](https://portal.azure.com)
-
-3. Select Bash Shell 
-
-4. Clone this repo 
-```azurecli
-git clone https://github.com/microsoft/fhir-starter
-```
-5. Change to the new directory to keep files organized within the fhir-starter directory
-```azurecli
-cd ./fhir-starter
-```
-6. Make the bash scripts executable
-```azurecli
-chmod +x ./scripts/*.bash
-``` 
-
-## Step 2.  deployFhirStarter.bash
-This is the main component deployment script for the Azure Components.    
-
-Run the deployment script and follow the prompts
-```azurecli
-./scripts/deployFhirStarter.bash 
-```
-
-Optionally the deployment script can be used with command line options 
-```azurecli
-./scripts/deployFhirStarter.bash -i <subscriptionId> -g <resourceGroupName> -l <resourceGroupLocation> -k <keyVaultName> -n <fhirServiceName> -p <yes -or - no>
-```
-
-Azure Components installed 
- - Resource Group (if needed)
- - Healthcare API for FHIR 
- - Key Vault 
- - Azure AD Application Service Client 
-
-Information needed by this script 
- - FHIR Service Name
- - KeyVault Name 
- - Resource Group Location 
- - Resource Group Name 
-
-__FHIR-Starter__ Key Vault values saved by this script 
-
-Name              | Value                                | Use             
-------------------|--------------------------------------|---------------------------------
-FS-TENANT-NAME    | Azure AD Tenant GUID                 | Tenant where Client applications can obtain a Token 
-FS-CLIENT-ID      | Service Client Application ID        | Client Application ID used for Token Access  
-FS-CLIENT-SECRET  | Service Client Application Secret    | Client Application Secret used for Token Access                    
-FS-SECRET         | Service Client Application Secret    | Saved for backwards compatibility  
-FS-RESOURCE       | Application Endpoint for Auth Access | Endpoint for Authority (AD) Token grant  
-FS-URL            | Application Endpoint for Clients     | Endpoint for FHIR Service interaction 
+_[Need help with Postman - try this](https://github.com/daemel/fhir-postman)_ 
 
 
----
+## Step 4 - Proxy Setup 
+HealthArchitecture repos follow a common naming standard (github.com/microsoft/fhir-NAME).  
+- Navigate to the FHIR-Proxy repo https://github.com/microsoft/fhir-proxy, review the main Readme.md, and the [Readme.md](https://github.com/microsoft/fhir-proxy/blob/main/scripts/Readme.md) in the ./scripts folder.
+- Clone the Repo
+- Run the deployfhirproxy.bash script either from the command line or using the prompts
+- Be certain to GENERATE the POSTMAN Env
 
-# FHIR-Proxy Deploying FHIR-Proxy via CLI
+__Note__  During a live session, Resource Groups names will be assigned.  If you are performing this hack on your own, you can use any Resource Group name. 
+
+## Step 5 - Setup Postman with Proxy 
+Using the Upload / Download button on the Azure CLI download the _$fhirServiceName.postman_environment.json_ file to your computer. 
 
 
 
-
---- 
-
-# Postman Setup and Testing 
-
-
-
-
+## Challenge Success
++ Azure API for FHIR (PaaS) installed and available 
++ FHIR-Proxy (Open Source Software) installed and able to communicate with Azure API for FHIR
 
 
 
