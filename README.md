@@ -3,9 +3,9 @@
 # Introduction
 Hello and welcome to the Microsoft Cloud for Healthcare OpenHack! This OpenHack is initally being launched as a live event in online sessions. For those unable to attend the live event, all materials will remain available for self-paced study.
 
-To learn more about the Microsoft Cloud for Healthcare OpenHack or to access the challenge materials, please visit __[MC4H OpenHack](https://microsoft.github.io/openhack-mc4h/)__
+To learn more about the Microsoft Cloud for Healthcare OpenHack or to access the challenge materials, please visit __[MC4H OpenHack](https://microsoft.github.io/openhack-mc4h/)__.
 
-__Note__ You should __not__ clone this repo, all downloads and media are available via the __[IO site](https://microsoft.github.io/openhack-mc4h/)__ 
+__Note__ You should __not__ clone this repo. All downloads and media are available via the __[IO site](https://microsoft.github.io/openhack-mc4h/)__.
 
 
 ## Trademarks
