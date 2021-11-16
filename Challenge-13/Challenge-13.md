@@ -1,4 +1,4 @@
-# Challenge 16 - Deploy and demonstrate the consent capabilities of Azure Healthcare APIs
+# Challenge 13 - Deploy and demonstrate the consent capabilities of Azure Healthcare APIs
 
 ## Introduction
 
