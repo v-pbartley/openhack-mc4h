@@ -22,7 +22,36 @@ Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**
 
 ## Step 1 - Configure Mapping on both Azure and Dynamics 
 
+To begin, all Entity Maps are Disabled by default.  Customers must enable the ones equating to the FHIR Resources they wish to Sync with Dataverse. 
 
+![disable](./media/entity-map-disable.png)
+
+
+Entity Expansion Maps
+
+Entinty expansion maps have been added for Appointment, Patient, and CareTeam
+
+![expansion](./media/expansion-maps.png)
+
+
+Enable Patient 
+
+Save & Close when finished.  
+
+__Note__  the expansion Attribute Maps are shown below 
+
+![enable-patient](./media/enable-patient.png)
+
+Enable Patient -> Identifier Map
+
+![enable-id](./media/enable-identifier.png)
+
+
+Enable Patient -> Link Map
+
+![enable-link](./media/enable-link.png)
+
+**Restart the SyncApp to pickup Dynamics Changes**
 
 
 
