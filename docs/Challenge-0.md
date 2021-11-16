@@ -1,19 +1,26 @@
 ---
-title: Pre-req
+title: Welcome
 has_children: false
 nav_order: 2
 ---
 
-# Challenge 0 - Pre-Req Overview
-Welcome 
+## Overview 
+This OpenHack is a series of hands on activities meant to help participants get hands on experience with Azure Healthcare tools.  
+
+## What to expect 
++ Each Hack will have challenges
++ Challenges will be more than Cut and Paste tasks, expect to work through problems 
++ Evolving Content 
+
+## Where to start 
+Start here to understand the Challenges and what you will learn.  Many challenges build on the previous challenge, for instance, Challenge 1 is setting up a FHIR Service and Proxy, which you will use in all the remaining challenges.
+
+## What you will learn 
++ FHIR
++ Microsoft Cloud for Healthcare
++ Analytics 
++ IoMT
++ DICOM 
 
 
-## Prerequisites
 
-+ Azure Subscription with Contributor/Co-Owner rights 
-+ Global Admin in your Azure tenant 
-+ Dynamics Environment + MC4H temporary license and solution set 
-+ GitHub account 
-+ Postman (cloud or desktop) 
-
-[Readme](https://github.com/microsoft/openhack-mc4h/blob/main/Challenge-0/Readme.md)
