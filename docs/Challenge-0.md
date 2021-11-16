@@ -5,7 +5,7 @@ nav_order: 2
 ---
 
 ## Overview 
-This OpenHack is a series of hands on activities meant to help participants get direct experience working with Microsoft Cloud for Healthcare (MC4H) tools and architectures.
+This OpenHack is a series of hands on activities to help you get direct experience working with Microsoft Cloud for Healthcare (MC4H) tools and architectures.
 
 ## What to expect 
 + Each hack will introduce part of the MC4H health data workflow and present a challenge for you to work on using MC4H tools.
