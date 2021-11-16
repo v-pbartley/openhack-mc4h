@@ -13,8 +13,10 @@ remote: Total 441 (delta 216), reused 253 (delta 82), pack-reused 0
 Receiving objects: 100% (441/441), 47.57 MiB | 38.14 MiB/s, done.
 Resolving deltas: 100% (216/216), done.
 dale@Azure:~$
+```
 
 ### Deployment Script execution (part 1)
+```
 dale@Azure:~/fhir-cds-agent/scripts$ ./deploysyncagent.bash
 Executing ./deploysyncagent.bash...
 Checking Azure Authentication...
