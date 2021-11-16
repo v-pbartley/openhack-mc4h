@@ -12,7 +12,7 @@ The script gathers information then lets users choose to use a template or scrip
 Users without CLI Access can use the template deployment from the templates directory in this repo. <br>
 
 Press Enter to continue, or Ctrl+C to exit
----
+
 Collecting Azure Parameters (unless supplied on the command line)
 Enter your subscription ID <press Enter to accept default> [de91991f-4607-4d0e-80fc-66a33f4e1681]:
 
@@ -44,7 +44,7 @@ Enter a Key Vault name <press Enter to accept default> [fhir7700kv]: <br>
  <br>
 Do you want to generate a Postman Environment for FHIR Service access? [y/n]:
 y <br>
---- <br>
+<br>
 Ready to start deployment of [fhir7700] with the following values: <br>
 Subscription ID:....................... de91991f-4607-4d0e-80fc-66a33f4e1681 <br>
 Use Existing Resource Group:........... no <br>
@@ -59,17 +59,17 @@ Generate Postman Environment:.......... yes <br>
  <br>
 Please validate the settings above before continuing <br>
 Press Enter to continue, or Ctrl+C to exit <br>
---- <br>
+ <br>
 Starting Deployments <br>
  <br>
 Creating Resource Group [api-fhir-7700] in location [westus2] <br>
-+ az group create --name api-fhir-7700 --location westus2 --output none --tags 'HealthArchitectures FHIRStarter' <br>
---- <br>
+  az group create --name api-fhir-7700 --location westus2 --output none --tags 'HealthArchitectures FHIRStarter' <br>
+ <br>
  <br>
 Creating Key Vault [fhir7700kv] in location [api-fhir-7700] <br>
-++ az keyvault create --name fhir7700kv --resource-group api-fhir-7700 --location westus2 --tags 'HealthArchitectures FHIRStarter' --output none <br>
-+ stepresult= <br>
---- <br>
+  az keyvault create --name fhir7700kv --resource-group api-fhir-7700 --location westus2 --tags 'HealthArchitectures FHIRStarter' --output none <br>
+  stepresult= <br>
+ <br>
 Deploying FHIR Service [fhir7700] <br>
 ... note that warnings here are expected and can be safely ignored ... <br>
  <br>
@@ -87,13 +87,13 @@ Creating FHIR Service Client Application [fhir7700-svc-client] <br>
 WARNING: The output includes credentials that you must protect. Be sure that you do not include these credentials in your code or check the credentials into your source control. <br> For more information, see https://aka.ms/azadsp-cli <br>
 WARNING: 'name' property in the output is deprecated and will be removed in the future. Use 'appId' instead. <br>
 FHIR Service Client Application ID is [734dfac4-4830-458e-a66c-449ca1971494] <br>
---- <br>
+ <br>
 Setting FHIR Service Client Object ID <br>
---- <br>
+ <br>
 Saving FHIR Service Client Information (FS-name) to Key Vault [fhir7700kv] <br>
---- <br>
+ <br>
 Granting FHIR Service Client Application FHIR Data Contributor Role <br>
---- <br>
+ <br>
 Generating Postman Environment File <br>
  <br>
 The Postman environment [fhir7700.postman_environment.json] has been generated <br>
