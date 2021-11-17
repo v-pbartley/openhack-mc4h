@@ -4,28 +4,27 @@
 
 Welcome to Challenge 5!
 
-In this challenge you will learn how to download and install the Microsoft Cloud for Health, FHIR-SyncAgent. 
+In this challenge you will learn how to download and install the Microsoft Cloud for Health FHIR-SyncAgent. 
 
 ## Background
-Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**, while leveraging the **Dynamics** Industry data model for health.  The FHIR-SyncAgent is a function app designed to keep data sychronized between the two data stores (Azure API for FHIR and Dataverse).  
+Microsoft's Cloud for Healthcare data store is **Azure API for FHIR**, while leveraging the **Dynamics** industry data model for health in **Dataverse**. Leveraging Dataverse enables you to quickly stand up Power Apps for your organization's unique needs. The FHIR-SyncAgent is a function app designed to keep data synchronized between the two data stores (Azure API for FHIR and Dataverse).  
 
 Installing the FHIR-SyncAgent requires effort in both Azure and Dynamics.  The Azure installation is accomplished using the Azure Cloud Shell - Bash Shell environment while the Dynamics work is carried out via Solution Center.  
 
 ## Learning Objectives
-+ Access the Private GitHub Repo holding the FHIR-SyncAgent (MSFT only)
-+ Use a Personnel Access Token to clone the repo (MSFT only)
 + Install and Configure the FHIR-SyncAgent using the bash shell scripts 
 
 ## Prerequisites
 + Successful completion of Challenge 1 
-
++ Access the Private GitHub Repo holding the FHIR-SyncAgent
++ Use a Personnel Access Token to clone the repo
 ---
 
 ## Step 1 - Access the Private Github Repo (MSFT only)
 Setting up a GitHub account using this reference:  https://docs.opensource.microsoft.com/tools/github/accounts/index.html
 
 Join the Microsoft Organization requirements  
-- Microsoft employee, intern or vendor
+- Microsoft employee, intern, or vendor
 - Must have a GitHub account with two-factor authentication (2FA) enabled
 - Add your @microsoft.com email address to your GitHub account
 - Professional GitHub profile appearance is requested for those who publicize their membership in the organization

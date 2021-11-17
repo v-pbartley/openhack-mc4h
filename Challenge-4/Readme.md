@@ -4,10 +4,10 @@
 
 Welcome to Challenge 4!
 
-In this challenge you will learn how to use the FHIR server's search operations.
+In this challenge you will learn how to use the search operations in Azure API for FHIR.
 
 ## Background
-The FHIR specification defines the fundamentals of search for FHIR resources. This hack will guide you through some key aspects to searching resources in FHIR. 
+The FHIR specification defines the fundamentals of search for FHIR resources. This hack will guide you through some key aspects of searching resources in FHIR. 
 
 ## Learning Objectives 
 + Understand the basic concepts of FHIR Search
@@ -33,7 +33,7 @@ FHIR searches can be against a specific resource type, a specified compartment, 
 GET {{FHIR_URL}}/Patient
 ```
 
-You can also search using POST, which is useful if the query string is too long. To search using POST, the search parameters can be submitted as a form body. This allows for longer, more complex series of query parameters that might be difficult to see and understand in a query string.
+You can also search using POST, which is useful if the query string is too long for a single line. To search using POST, the search parameters can be submitted as a form body. This allows for longer, more complex series of query parameters that might be difficult to see and understand in a query string.
 
 If the search request is successful, you’ll receive a FHIR bundle response with the type searchset. If the search fails, you’ll find the error details in the OperationOutcome to help you understand why the search failed.
 
@@ -50,9 +50,9 @@ This search finds the patient resource with the given id (there can only be one 
   
 
 ## Challenge - Understand the basic concepts of FHIR Search
-Using the Postman file provided search for Patient's using the following: ```_id``` ```name```, and more 
+Using the Postman file provided, search for Patients using the following: ```_id``` ```name```, and more 
 
-Q:  What field does "name" work?  What is FHIR matching against?
+Q: In what field does "name" work?  What is FHIR matching against?
 
 Azure API for FHIR, supports _almost_ all resource-specific search parameters defined by the FHIR specification. The only search parameters not supported are listed here [R4 Unsupported Search Parameters](https://github.com/microsoft/fhir-server/blob/main/src/Microsoft.Health.Fhir.Core/Data/R4/unsupported-search-parameters.json)
 
@@ -60,7 +60,7 @@ Azure API for FHIR, supports _almost_ all resource-specific search parameters de
 ## Challenge - Perform both Common and Composite Searches 
 Composite search allows you to search against value pairs. For example, if you were searching for a height observation where the person was 60 inches, you would want to make sure that a single component of the observation contained the code of height and the value of 60. 
 
-Azure API for FHIR, supports the following search parameter type pairings:
+Azure API for FHIR supports the following search parameter type pairings:
 + Reference, Token
 + Token, Date
 + Token, Number, Number
@@ -68,9 +68,9 @@ Azure API for FHIR, supports the following search parameter type pairings:
 + Token, String
 + Token, Token
 
-Using the Postman file provided search for Patient's using the following: ```date```, ```lastmodified```, ```identifier```, ```value-quantity```, ```component-code-value-quantity``` and more.  
+Using the Postman file provided, search for Patients using the following: ```date```, ```lastmodified```, ```identifier```, ```value-quantity```, ```component-code-value-quantity``` and more.  
 
-Ref:  Learn more about date search in FHIR https://www.hl7.org/fhir/search.html#date 
+Ref: Learn more about date search in FHIR https://www.hl7.org/fhir/search.html#date 
   
 
 ## Challenge - Using Search Result Parameters  
