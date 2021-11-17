@@ -5,7 +5,6 @@ nav_order: 5
 ---
 
 ## Welcome to the OpenHack for Microsoft Cloud for Healthcare: Analytics
-This section of the OpenHack is designed to be self-service or it can be taught with an instructor.
 
 Data analytics are fundamental to a wide range of disciplines in the Health and Life Sciences (HLS) industry, including clinical trials, medical research, population health, clinical ML model development, 'omics (genomics, metagenomics, etc.), healthcare quality improvement studies, and more. The topics we touch on in this OpenHack related to data analytics include FHIR bulk export and anonymization (de-identification of PHI).
 
@@ -18,4 +17,4 @@ The Microsoft Cloud for Healthcare OpenHack offers an opportunity to **explore t
 
 Working with Healthcare data for analytics requires **proper handling of PHI and respect for patient privacy**. This hack provides a roadmap for anonymizing datasets and securely sharing data with partner groups.
 
-Let explore some data!
+Let's explore some data!
