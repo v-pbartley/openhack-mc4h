@@ -73,16 +73,19 @@ Using the Postman file provided search for Patient's using the following: ```dat
 Ref:  Learn more about date search in FHIR https://www.hl7.org/fhir/search.html#date 
   
 
-## Challenge - Use Modifiers in Search 
-Using the Postman file provided search for Patient's using the following: ```_summary=count```, ```_total=accurate```  
-
+## Challenge - Using Search Result Parameters  
+Using the Postman file provided search for Patient's using the following search results parameters: ```_summary=count```, ```_total=accurate```  
 
   
 
-## Challenge - Use a Chained & Reverse Chained Search 
+## Challenge - Use a Chained & Reverse Chained Search Results Parameters 
 Using the Postman file provided search for Patient's using ```_has```.  For more examples of chained and reverse chained search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
 
+
+## Challenge - Use an Include & Reverse Include Search Results Parameters  
+Using the Postman file provided search for PractitionerRole including the Practitioner resource in the result, to reduce calls to the server. Discover all PractitionerRoles for an Organization using reverse include. For more examples of include and reverse include search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
   
 
 ## Challenge - Defining a Custom Search parameter 
 To create a new search parameter, you POST the SearchParameter resource to the database.  See the Postman file provided for an example.  Read through the full example at https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/how-to-do-custom-search 
+
