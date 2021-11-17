@@ -2,26 +2,27 @@
 
 Welcome to Challenge 1!
 
-In this challenge you will deploy both Azure API for FHIR (PaaS) and FHIR-Proxy (Open Source)
+In this challenge you will deploy both Azure API for FHIR (PaaS) and FHIR-Proxy (Open Source Software).
 
 ## Background
-FHIR is at the center of our Healthcare products at Microsoft.  Where necessary the "SmokeJumpers" team 
+FHIR is at the center of our healthcare products at Microsoft. FHIR data support in MC4H solutions rests on two fundamental components: Azure API for FHIR and FHIR-Proxy. In MC4H architectures, Azure API for FHIR is at the nexus of FHIR data activity, and FHIR-Proxy acts as a checkpoint, filtering data going into and out of Azure API for FHIR and enforcing Role-Based Access Control (RBAC) at the FHIR resource level.
 
 ## Learning Objectives 
-+ Understand the prerequisites and requirements for deploying Azure API for FHIR and FHIR-Proxy
++ Understand the prerequisites for deploying Azure API for FHIR and FHIR-Proxy
++ Become familiar with the Azure API for FHIR and FHIR-Proxy deployment process
 
 ## Prerequisites 
-HealthArchitecture scripts will gather (and export) information necessary to the proper deployment and configuration of Azure API for FHIR and multiple other HealthArchitecture Open Source Software systems.  
-+ Prerequisite:  User must have rights to deploy resources at the Subscription scope (ie Contributor)
-+ Prerequisite:  User must have Application Administrator (built In RBAC role) rights for the Tenant they are deploying into 
+HealthArchitecture scripts will gather (and export) information necessary for the proper deployment and configuration of Azure API for FHIR, in addition to multiple HealthArchitecture Open Source Software (OSS) components.  
++ Azure Prerequisite: User must have rights to deploy resources at the Subscription scope (ie Contributor role or Owner role).
++ Azure Active Directory (AAD) Prerequisite: User must have Application Administrator (built-in RBAC role) rights for the AAD tenant they are deploying into.
   
 
-## Step 1 - Setup Azure Environment 
-Welcome to Challenge 1 - deploying Azure API for FHIR.  For this challenge we will walk through the following 
+## Step 1 - Set up Azure Environment 
+Welcome to Challenge 1 - deploying Azure API for FHIR.  For this challenge we will walk through the following steps: 
 - Login to Azure CLI (via the Portal or directly at shell.azure.com)
 - Clone the FHIR-Starter repo 
 - Execute the deployment scripts 
-- Setup Postman 
+- Set up Postman 
 - Test Authentication 
 
 [Open Azure Cloud Shell](https://shell.azure.com) you can also access this from [azure portal](https://portal.azure.com)
@@ -35,12 +36,12 @@ HealthArchitecture repos follow a common naming standard (github.com/microsoft/f
 - Run the deployFhirStarter.bash script either from the command line or using the prompts
 - Be certain to GENERATE the POSTMAN Env
 
-__Note__  During a live session, Resource Groups names will be assigned.  If you are performing this hack on your own, you can use any Resource Group name. 
+__Note__  During a live session, Resource Groups names will be assigned. If you are performing this hack on your own, you can use any Resource Group name. 
 
 ## Step 3 - Setup Postman
-Using the Upload / Download button on the Azure CLI download the _$fhirServiceName.postman_environment.json_ file to your computer. 
+Using the Upload / Download button on the Azure CLI, download the _$fhirServiceName.postman_environment.json_ file to your computer. 
 
-Import the Postman Search Collection if you have not already done so.  See https://microsoft.github.io/openhack-mc4h/Challenge-1.html for the collection download 
+Import the Postman Search Collection if you have not already done so. See https://microsoft.github.io/openhack-mc4h/Challenge-1.html for the collection download.
 
 Test access to your FHIR Service 
 
@@ -64,6 +65,3 @@ Using the Upload / Download button on the Azure CLI download the _$fhirServiceNa
 ## Challenge Success
 + Azure API for FHIR (PaaS) installed and available 
 + FHIR-Proxy (Open Source Software) installed and able to communicate with Azure API for FHIR
-
-
-
