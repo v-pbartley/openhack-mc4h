@@ -7,7 +7,7 @@ Welcome to Challenge 6!
 In this challenge you will learn about the mapping that happens between the Azure API for FHIR and the Dynamics Industry health data model. 
 
 ## Background
-Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**, while leveraging the **Dynamics** Industry data model for health.  Synchronizing data between these two data models requires several layers of mapping, most of which is setup, managed and controlled via the SyncAdmin for FHIR Page in Dynamics. 
+Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**, while leveraging the **Dynamics** Industry data model for health in Dataverse.  Synchronizing data between these two data models requires several layers of mapping, most of which is setup, managed, and controlled via the SyncAdmin for FHIR Page in Dynamics. 
 
 ## Learning Objectives
 + Understand and Explain each layer of mapping
@@ -22,16 +22,16 @@ Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**
 ## Step 1 - The Big Picture 
 Flow from left to right... 
 
-FHIR Documents consisting of Healthcare Resources are sent to with Dataverse via the FHIR-SyncAgent.  Which Resources to send is determined by the SA-FHIRMAPPEDRESOURCES variable set in KeyVault.  To change this list, customers need to create a new Secret in KeyVault    
+FHIR Resources (Json Documents) are sent to Dataverse via the FHIR-SyncAgent.  Which resources to send is determined by the SA-FHIRMAPPEDRESOURCES variable set in KeyVault.  To change this list, customers need to create a new Secret in KeyVault    
 
-The FHIR-SyncAgent queries Dataverse API to determine if the Resource (ie Patient, Encounter, etc) should be sync’d with Dataverse. 
+The FHIR-SyncAgent queries the Dataverse API to determine if the Resource (ie Patient, Encounter, etc) should be sync’d with Dataverse. 
 
 Dataverse uses 2 maps
-- Entity Maps for matching Resources, if the Resource is Enabled in SyncAdministration, they data is parsed into Dataverse's Data model by the Attribute Maps. 
+- Entity Maps for matching Resources, if the Resource is Enabled in SyncAdministration, the data is parsed into Dataverse's Data model by the Attribute Maps. 
  
 - Attribute Maps use JSONPath queries to map FHIR values to Table entries.   
 
-Dataverse stores Healthcare data in a relational model requiring mapping to be applied to the FHIR JSON documents.  
+Dataverse stores Healthcare data in a relational model. The mappings above convert FHIR JSON documents to table entries.
 
 The reverse follows the same pattern where Dataverse maps Entity Attributes back to FHIR via JSONPath queries. 
 
