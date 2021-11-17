@@ -12,7 +12,6 @@ FHIR is an evolving standard, and one area where the FHIR specification is still
 
 ## Learning Objectives
 
-+ Gain familiarity with Synthea synthetic FHIR data untilty
 + Understand data constraints with FHIR bulk data loading
 + Understand how to track and compare bulk FHIR imports
 
