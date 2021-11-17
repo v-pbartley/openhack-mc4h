@@ -19,7 +19,6 @@ By the end of the section you will be able to
 ## Prerequisites 
 * Deployed and populated Azure API for FHIR. If the data you have loaded does not include Immunization or Patient Resources go ahead and [load this bundle](https://github.com/kamoclav/openhack-mc4h-2/blob/main/Challenge-9/synthea_sample_data_fhir_r4%20OpenHack.zip).
 * Deployed Azure Data Lake Storage Gen2
-* Azure Databricks
 
 ## Step 1: Review sample anonymization configuration and customize if needed
 Microsoft provides a sample configuration file to anonymize data according to HIPAA safe harbor specifications. It's important to review the sample configuration and HIPAA safe harbor to determine if the sample configuration will work for your organization or if you need to develop your own anonymization rules.
