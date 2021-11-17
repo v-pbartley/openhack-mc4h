@@ -17,7 +17,7 @@ By the end of the section you will be able to
 * Share anonymized data with a group not affiliated with your organization
 
 ## Prerequisites 
-* Deployed and populated Azure API for FHIR
+* Deployed and populated Azure API for FHIR. If the data you have loaded does not include Immunization or Patient Resources go ahead and [load this bundle](https://github.com/kamoclav/openhack-mc4h-2/blob/main/Challenge-9/synthea_sample_data_fhir_r4%20OpenHack.zip).
 * Deployed Azure Data Lake Storage Gen2
 * Azure Databricks
 
