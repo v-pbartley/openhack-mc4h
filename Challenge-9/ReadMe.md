@@ -27,6 +27,8 @@ To configure your FHIR service for export to a storage account follow the instru
 
 For more information on the sample anonymization file check out [de-identified-export-operation-on-the-fhir-server](https://github.com/microsoft/Tools-for-Health-Data-Anonymization/blob/master/docs/FHIR-anonymization.md#how-to-perform-de-identified-export-operation-on-the-fhir-server)
 
+For a general overview of the $export deidenification query parameters check out [this documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/data-transformation/de-identified-export)
+
 
 ## Step 2: Export minimal necessary anonymized data to a storage account
 HIPAA rules dictate only the minimal data necessary should be used for research projects even if the data is anonymized. Determine what FHIR objects are necessary to study yearly Flu trends.
