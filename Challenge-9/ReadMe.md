@@ -23,6 +23,8 @@ By the end of the section you will be able to
 ## Step 1: Review sample anonymization configuration and customize if needed
 Microsoft provides a sample configuration file to anonymize data according to HIPAA safe harbor specifications. It's important to review the sample configuration and HIPAA safe harbor to determine if the sample configuration will work for your organization or if you need to develop your own anonymization rules.
 
+To configure your FHIR service for export to a storage account follow the instructions [here](https://docs.microsoft.com/en-us/azure/healthcare-apis/data-transformation/configure-export-data)
+
 For more information on the sample anonymization file check out [de-identified-export-operation-on-the-fhir-server](https://github.com/microsoft/Tools-for-Health-Data-Anonymization/blob/master/docs/FHIR-anonymization.md#how-to-perform-de-identified-export-operation-on-the-fhir-server)
 
 
