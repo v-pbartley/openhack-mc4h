@@ -7,7 +7,7 @@ Welcome to Challenge 8!
 In this challenge you will learn to recoginize and address some of the issues that can happen with MC4H.  
 
 ## Background
-Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**, while leveraging the **Dynamics** Industry data model for health.  Synchronizing data between these two data models requires several layers of mapping, most of which is setup, managed and controlled via the SyncAdmin for FHIR Page in Dynamics. 
+The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for FHIR**, while MC4H model-driven apps leverage the **Dynamics** health industry data model in **Dataverse**. Synchronizing data between FHIR and the Dataverse model requires several layers of mapping, most of which is set up and managed via the **SyncAdmin for FHIR** settings page in Dynamics.
 
 ## Learning Objectives
 + Recognize and address some of the more common issues with integrating Azure and Dynamics  
@@ -22,9 +22,9 @@ Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**
 ---
 
 ## Step 1 - Enable Send and Receive Logging 
-There are two approaches to troublshooting issues in MC4H either "You will use things to do stuff and then there will be stuff in Dataverse," or "Enable logging and follow the API calls.  This step is about the later. 
+There are two approaches to troublshooting issues in MC4H. Either "You will use things to do stuff and then there will be stuff in Dataverse," or "Enable logging and follow the API calls." This step is about the latter. 
 
-As noted in the SyncAgent Deployment Readme.md there is a setting in the Application Configuration file will enable greater logging detail.  
+As noted in the Challenge-5 SyncAgent Deployment Readme.md, there is a setting in the Application Configuration file that will enable greater logging detail.  
 
 FHIR-SyncAgent Optional Application Settings - __NOT__ included in the setup scripts at this time - they will be added automatically to the seetings in the next release. 
   
@@ -32,11 +32,11 @@ FHIR-SyncAgent Optional Application Settings - __NOT__ included in the setup scr
 Name                                       | Value                      | Located 
 -------------------------------------------|----------------------------|--------------------
 AzureWebJobs.FHIRNDJsonFileLoader.Disabled | 1                          | Disables the bootstrap Loader  
-SA-LOGREQRESP                              | True                       | Additional logging 
+SA-LOGREQRESP                              | True                       | Additional logging
 
 Once Enabled, you will be able to view detailed logging information at:
 
-Function App -> Functions -> FHIRUpdate (updte to Dataverse)
+Function App -> Functions -> FHIRUpdate (update to Dataverse)
 
 ![function2](./media/function2.png)
 
@@ -48,29 +48,29 @@ Function App -> Functions -> FHIRUpdate (updte to Dataverse)
 
 
 ## Step 2 - Understanding the Messages 
-Note the 403-Forbidden response from CDS in the picture below.  This tells us that the application ID we are using is un-authorized to write to CDS (ie Dataverse)
+Note the 403-Forbidden response from CDS in the picture below. This tells us that the application ID we are using is un-authorized to write to CDS (ie Dataverse).
 
 Solution:  Contact your Dataverse administrator and have them update the Sync Agent Client ID for write access to DV **[link](https://docs.microsoft.com/en-us/dynamics365/industry/healthcare/configure-sync-clinical-data#update-integration-settings)** 
   
-![unable-to-wrtie](./media/unable-to-write.png)
+![unable-to-write](./media/unable-to-write.png)
 
 
 **Q:** Why does the monitor show Success even though there is an error in the file?  
 
-**A:**  Technically the connection was a success, we sent a package and received a reply, therefore the communication is deemed successful even through it may not have included the result you wanted. 
+**A:**  Technically the connection was a success. We sent a package and received a reply. Therefore the communication is deemed successful even through it may not have included the result you wanted.
 
 
 ## Step 3 - Testing from Postman 
-The best method for testing FHIR to Dataverse is to start with Postman.  **Remember** data that is in FHIR will not automatically be sync'd to Dataverse once an Entity is enabled; rather the data must be updated to trigger a sync.  This is due to the trigger function in the FHIR-Proxy:
+The best method for testing FHIR to Dataverse is to start with Postman.  **Remember** data that is in FHIR will not automatically be sync'd to Dataverse once an Entity is enabled; rather, the data must be *updated* in the FHIR server to trigger a sync. This is due to the trigger function in the FHIR-Proxy:
 
 + FHIR data enters the FHIR-Proxy either via Bundle or HTTPS
 + The FHIR-Proxy performs any Pre-Process task (ie converting a Transaction Bundle into a Batch Bundle)
 + The FHIR-Proxy Post-Process _FHIRProxy.postprocessors.FHIRCDSSyncAgentPostProcess2_ send the MSG and Patient ID to the FHIR-SyncAgent for processing
-+ The FHIR-SyncAgent calls the Dataverse API with the Resource for processing 
++ The FHIR-SyncAgent calls the Dataverse API with the FHIR resource for processing 
 
 You should have already loaded the MC4H Testing collection, here is the link again: [MC4H Testing.postman_collection.zip](./samples/MC4H_Testing.postman_collection.zip)  
 
-The Patient Data in the MC4H Testing collection is structured in a way to help you track the users you create by ID.  In this example we are creating a Patient with a known ID that we can track.
+The Patient Data in the MC4H Testing collection is structured in a way to help you track the users you create by ID. In this example we are creating a Patient with a known ID that we can track.
 
 ```al
 PUT {{fhirurl}}/Patient/D000000001
@@ -90,7 +90,7 @@ The JSON for Patient D000000001 is in the body of the Postman message (shortened
 }
 ```
 
-First, obtain a new Token from AD
+First, obtain a new Token from AAD
 
 ![postman-token](./media/postman-token.png)
 
@@ -113,7 +113,7 @@ Check the FHIRUpdates Monitor
 
 
 ## Step 4 - Testing from FHIR-Loader (Challenge 3)
-Testing from FHIR-Loader is similar to that of FHIR-Proxy, except for the FHIR Message format is different.  FHIR-Loader expects Bundle formatted messages
+Testing from FHIR-Loader is similar to that of FHIR-Proxy, except that the FHIR Message format is different.  FHIR-Loader expects Bundle formatted messages
 
 ```al
 {
@@ -135,7 +135,7 @@ Testing from FHIR-Loader is similar to that of FHIR-Proxy, except for the FHIR M
 }
 ``` 
 
-Note the extra FHIR Resource of Bundle and how items conteained within it are "entrys" in an arrary.  A bundle is similar to a C-CDA in that it holds multiple entries about a patient. 
+Note the extra FHIR Resource of the Bundle and how items contained within it are "entrys" in an arrary. A bundle is similar to C-CDA in that it holds multiple entries about a patient. 
 
 ### FHIR-Loader Container (Challenge 3)
 
@@ -152,9 +152,3 @@ Look for the RESTful Status
 Same view in VS Code 
 
 ![bp-edit](./media/bundle-processed-edit3.png)
-
-
-
-
-
-
