@@ -46,10 +46,12 @@ Note that because Microsoft uses SSO, you will have to authorize the token to wo
 - Go to Account -> Settings -> Developer Settings -> Personal Access Tokens - Generate new token 
 
 Cloning the Repo  
-+ git clone https://github.com/microsoft/fhir-cds-agent 
-+ Username for 'https://github.com': yourname@microsoft.com 
-+ Password for 'https://yourname@microsoft.com@github.com': (use your Personal Access Token)
-
+```
+git clone https://github.com/microsoft/fhir-cds-agent 
+Username for 'https://github.com': yourname@microsoft.com 
+Password for 'https://yourname@microsoft.com@github.com': (use your Personal Access Token)
+```
+  
 __Note__  
 The `microsoft' organization has enforced SAML SSO. You must verify for you email address before you can clone the repo.  After SSO is verified and enabled you can download / clone the repo. 
 
