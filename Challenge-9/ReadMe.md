@@ -27,7 +27,7 @@ To configure your FHIR service for export to a storage account follow the instru
 
 For more information on the sample anonymization file check out [de-identified-export-operation-on-the-fhir-server](https://github.com/microsoft/Tools-for-Health-Data-Anonymization/blob/master/docs/FHIR-anonymization.md#how-to-perform-de-identified-export-operation-on-the-fhir-server)
 
-For a general overview of the $export deidenification query parameters check out [this documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/data-transformation/de-identified-export)
+For a general overview of the $export anonymization query parameters check out [this documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/data-transformation/de-identified-export)
 
 
 ## Step 2: Export minimal necessary anonymized data to a storage account
