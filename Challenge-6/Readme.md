@@ -160,7 +160,7 @@ Applying the rules above, we can use the following to:
 {"s": "$.name[?(@use=='official')].given[0]", "c": {"p": "name[0]",  "a": [{"use": "official"}, {"family": "x"}, {"given[0]": "%"}]} }
 ```
 
-__Note__:  the brackets {} contain the expression, while the commas "," separate the expression segments, however the array bracket [] means the expression above contains at least 2 complete segments 
+__Note__:  the brackets {} contain the expression, while the commas "," separate the expression segments, however the array bracket [] means the expression above contains 2 complete segments 
 
 ```al
 "s": "$.name[?(@use=='official')].given[0]"
