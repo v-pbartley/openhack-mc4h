@@ -1,4 +1,4 @@
-#  Challenge 8 - Debugging, Operations and Maintenance
+#  Challenge 8 - Debugging, Operations, and Maintenance
 
 ## Introduction
 
