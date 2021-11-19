@@ -1,4 +1,4 @@
-# Challenge 5 - SyncAgent
+# Challenge 5 - FHIR SyncAgent
 
 ## Introduction
 
