@@ -14,7 +14,7 @@ The goal of the FHIR-SyncAgent is to sychronize health data between Azure API fo
 ## Challenge 
 + Installing and managing the FHIR-SyncAgent
 
-Access the __Ingest to FHIR Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-05)**.
+Access the __FHIR SyncAgent Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-05)**.
 
 ## Materials   
 Available on GitHub
