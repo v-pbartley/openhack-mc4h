@@ -13,6 +13,6 @@ Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**
 
 
 ## Challenge 
-+ FHIR resrouce to Dataverse Entity and Attribute mapping for synchronizing data between Azure API for FHIR and Dynamics
++ Map FHIR resrouces to Dataverse Entities and Attributes for synchronizing data between Azure API for FHIR and Dynamics
 
 Access the __Entity & Attribute Mapping Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-06)**.
