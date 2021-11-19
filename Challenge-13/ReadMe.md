@@ -2,6 +2,8 @@
 
 ## Introduction
 
+Welcome to Challenge 13!
+
 In this challenge you will learn how to configure Consent Opt-Out filtering using the Secure FHIR Proxy solution.
 
 ## Background
