@@ -25,7 +25,10 @@ Welcome to Challenge 1 - deploying Azure API for FHIR.  For this challenge we wi
 - Set up Postman 
 - Test Authentication 
 
-[Open Azure Cloud Shell](https://shell.azure.com) you can also access this from [azure portal](https://portal.azure.com)
+[![Launch Azure Shell](./media/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com/bash?target="_blank")
+
+
+
 
 Select Bash Shell as the operating environment 
 
