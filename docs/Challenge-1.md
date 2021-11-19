@@ -28,11 +28,8 @@ FHIR-Proxy is an Open Source Software project designed to be a secure FHIR Gatew
 
 ## Challenge 
 + Deploy both Azure API for FHIR and FHIR-Proxy to your Azure environment 
-+ Test Authentication and Authorization with Postman
 
 Access the __Deploy FHIR Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-1)**.
-
-
 
 ## Materials 
 **[Postman Collections for Testing](./assets/zip/MC4H_Testing.postman_collection.zip)**
