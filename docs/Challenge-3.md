@@ -9,6 +9,12 @@ nav_order: 3
 ## Ingest to FHIR
 [View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-03){: .btn }
 
+## Challenge 
++ Load bulk FHIR data into Azure API for FHIR
+
+Access the __Ingest to FHIR Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-03)**.
+
+## Materials
 Powerpoint deck on loading FHIR Bundles (Synthea bundles) via FHIR-Loader
 [File-loading-side-by-side](./assets/ppts/File-loading-side-by-side.pptx)
 
