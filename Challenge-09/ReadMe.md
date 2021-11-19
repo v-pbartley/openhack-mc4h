@@ -1,4 +1,4 @@
-# Challenge  - Export and Anonymize Data
+# Challenge 9 - Export and Anonymize Data
 ## Introduction
 
 Welcome to Challenge 9!
