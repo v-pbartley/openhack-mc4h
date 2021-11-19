@@ -5,7 +5,7 @@ has_children: false
 nav_order: 1
 ---
 # Microsoft Cloud for Healthcare OpenHack
-## Deploy Azure API for FHIR
+## Deploy FHIR
 [View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-01){: .btn }
 
 The FHIR service in Azure API for FHIR enables rapid exchange of data through Fast Healthcare Interoperability Resources (FHIR®) APIs, backed by a managed Platform-as-a Service (PaaS) offering in the cloud. It makes it easier for anyone working with health data to ingest, manage, and persist Protected Health Information PHI in the cloud.  Azure Healthcare APIs enables you to:
