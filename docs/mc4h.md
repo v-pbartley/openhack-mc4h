@@ -3,6 +3,7 @@ title: MC4H
 has_children: true
 nav_order: 4
 ---
+# Microsoft Cloud for Healthcare OpenHack
 
 # MC4H Introduction 
 Microsoft Cloud for Healthcare (MC4H) is the aggregrate of Microsoft's Health and Life Sciences (HLS) industry solutions, encompassing Azure API for FHIR, MC4H model-driven apps in Dynamics 365, and the full complement of supporting tools and architectures. 
