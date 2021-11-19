@@ -8,6 +8,7 @@ nav_order: 4
 
 ## Query & Search FHIR 
 [View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-04){: .btn }
+
 Searching for resources is fundamental to the mechanics of FHIR. Search operations traverse through an existing set of resources filtering by parameters supplied to the search operation.
 
 Search operations are executed in one of three defined contexts that control which set of resources are being searched:
