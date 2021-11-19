@@ -15,6 +15,7 @@ Healthcare data has the potential to drive insights that can improve patient car
 ## Challenge 
 Challenge 10 will give you practice asking questions of the Fhir data using data anlysis tools in the the MC4H ecosytems. The challenge is located **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-10)**.
 
+## Challenge 
++ Use data analysis tools with FHIR data
 
-## Materials   
-Available on GitHub
+Access the __Healthcare Analytics Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-10)**.
