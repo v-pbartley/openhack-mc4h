@@ -32,7 +32,7 @@ _Note_ Search using GET may include sensitive information in the search paramete
 
 ## Challenge 
 
-Access the **Search Challenge [here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-4)**.
+Access the **Query & Search FHIR Challenge [here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-4)**.
 
 
 ## Materials   
