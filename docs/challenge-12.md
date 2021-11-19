@@ -5,5 +5,5 @@ has_children: false
 nav_order: 1
 ---
 
-# Welcome to OpenHack for Microsoft Cloud for Healthcare
-This OpenHack is designed to be self-service or it can be taught with an instructor.   
+## DICOM Service
+[View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-12){: .btn } 
