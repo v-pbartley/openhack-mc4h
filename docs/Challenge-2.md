@@ -8,4 +8,4 @@ nav_order: 2
 # Microsoft Cloud for Healthcare OpenHack
 ## Convert HL7 to FHIR
 
-[View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/Challenge-2){: .btn }
+[View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-02){: .btn }
