@@ -13,7 +13,4 @@ Microsoft's Cloud for Healthcare healthcare data store is **Azure API for FHIR**
 ## Challenge 
 + Synchronize data between Azure API for FHIR and Dataverse
 
-Access the __Ingest to FHIR Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-07)**.
-
-
-## Materials   
+Access the __Writing Data to Dataverse Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-07)**.
