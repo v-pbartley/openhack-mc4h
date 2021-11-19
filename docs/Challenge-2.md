@@ -5,5 +5,7 @@ has_children: false
 nav_order: 2
 ---
 
-# Welcome to OpenHack for Microsoft Cloud for Healthcare
-This OpenHack is designed to be self-service or it can be taught with an instructor.   
+# Microsoft Cloud for Healthcare OpenHack
+## Convert HL7 to FHIR
+
+[View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/Challenge-2){: .btn }
