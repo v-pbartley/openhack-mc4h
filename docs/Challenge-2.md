@@ -11,7 +11,6 @@ nav_order: 2
 [View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-02){: .btn }
 
 ## Challenge 
-+ Create a Postman request for a FHIR API operation
 + Prepare data for conversion into FHIR
 
 Access the __Convert HL7 to FHIR Challenge__ **[here](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-02)**.
