@@ -5,5 +5,5 @@ has_children: false
 nav_order: 2
 ---
 
-# Welcome to OpenHack for Microsoft Cloud for Healthcare
-This OpenHack is designed to be self-service or it can be taught with an instructor.   
+## IoMT FHIR Connector
+[View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-11){: .btn }   
