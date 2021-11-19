@@ -1,5 +1,5 @@
 ---
-title: 7) Writing data to DV
+title: 7) Writing Data to DV
 parent: MC4H
 has_children: false
 nav_order: 3
