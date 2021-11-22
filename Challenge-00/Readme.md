@@ -1,10 +1,10 @@
 # Challenge 0 - Welcome
 
 ## Introduction 
-In this challenge you will learn about the goals of this OpenHack and the prerequisites for completing the tasks. 
+In this challenge, you will be checking your environment to make sure that all of the prerequisites for the MC4H OpenHack are in place. If you are missing any of the prerequisites (see below), you will need to set them up before proceeding.
 
 ## Backgound 
-This hack will help users gain the skills necessary for deploying Azure API for FHIR, DICOM, MC4H on Dynamics 365, and supporting tools. After completing this hack, you will be able to build the architectures highlighted on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
+This OpenHack will help users gain the skills necessary for deploying Azure API for FHIR, DICOM, MC4H on Dynamics 365, and supporting tools. After completing the MC4H OpenHack, you will be able to build the architectures highlighted on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
  
 ## Learning Objectives 
 + Understand the prerequisites for this OpenHack
