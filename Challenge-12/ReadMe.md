@@ -13,7 +13,7 @@ Research is broadening beyond text based research. These research initiatives re
 ## Learning Objectives
 
 - Setup a DICOM instance within Azure Healthcare APIs
-- Submit a DICOM files to the service
+- Submit DICOM files to the service
 - Successfully view the files with a DICOM viewer connected to the Azure Healthcare APIs
 
 *Note: Azure Healthcare APIs is still in Public Preview. For customers looking to move to production prior to GA please use the OSS Imaging Service or contact this team.*
@@ -103,4 +103,4 @@ Success is seeing actual human images in your stuides in the DICOM Service.
 
 The bonus part of the challenge is to repeat your path but this time deploy the OSS Medical Imageing Server for DICOM. You have already cloned the repo for the tools.
 
-Tip - The GitHub repo site has an Deploy to Azure button built in.
+Tip - The GitHub repo site has a Deploy to Azure button built in.
