@@ -8,6 +8,7 @@ nav_order: 3
 # Microsoft Cloud for Healthcare OpenHack
 ## Ingest to FHIR
 [View Repo on GitHub](https://github.com/microsoft/openhack-mc4h/tree/main/Challenge-03){: .btn } <br>
+<br>
 To utilize FHIR many organizations need a bulk data load solution. This challenge walks you through our FHIR bulk loader tool to load FHIR bundles into the Azure API for FHIR.
 
 
