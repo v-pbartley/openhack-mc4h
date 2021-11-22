@@ -1,4 +1,4 @@
-# Challenge 0 - Welcome
+# Challenge 0 - Welcome!
 
 ## Introduction 
 In this challenge, you will be checking your environment to make sure that all of the prerequisites for the MC4H OpenHack are in place. If you are missing any of the prerequisites (see below), you will need to set them up before proceeding.
