@@ -103,4 +103,4 @@ Success is seeing actual human images in your stuides in the DICOM Service.
 
 The bonus part of the challenge is to repeat your path but this time deploy the OSS Medical Imageing Server for DICOM. You have already cloned the repo for the tools.
 
-Tip - The GitHub repo site has an Deploy to Azure button built in.
+Tip - The GitHub repo site has a Deploy to Azure button built in.
