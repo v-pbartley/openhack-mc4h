@@ -1,4 +1,4 @@
-# Challenge 1 - Deloy Azure API for FHIR and FHIR-Proxy (OSS)
+# Challenge 1 - Deploy Azure API for FHIR and FHIR-Proxy (OSS)
 
 ## Introduction
 
