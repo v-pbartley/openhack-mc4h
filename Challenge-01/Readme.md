@@ -43,7 +43,7 @@ Select Bash as the operating environment.
   
 - Navigate to the FHIR-Starter repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-starter in your browser, review the main [Readme.md](https://github.com/microsoft/fhir-starter#fhir-starter), and the [Readme.md](https://github.com/microsoft/fhir-starter/blob/main/scripts/Readme.md) in the ./scripts folder.  
 
-- Clone the Repo in your Azure Cloudshell environment.  
+- Clone the FHIR-Starter repo in your Azure Cloudshell environment.  
     ```azurecli-interactive
     $ git clone https://github.com/microsoft/fhir-starter.git
     ```
