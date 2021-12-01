@@ -16,11 +16,12 @@ FHIR (Fast Healthcare Interoperability Resources) is at the center of our health
 ## Prerequisites 
 To help you set up your environment, we provide install scripts that gather (and export) information necessary for the proper deployment and configuration of Azure API for FHIR and supporting Open Source Software (OSS) components.
 
-Before you run these install scripts, it is crucial that you have the following permissions in your Azure environment (or the install will not work):
+Before you run these install scripts, please make sure that you have the following permissions in your Azure environment:
 
-+ Azure Subscription Prerequisite: User must have rights to deploy resources at the Subscription scope (ie Contributor role or Owner role).
-+ Azure Active Directory (AAD) Prerequisite: User must have Application Administrator (built-in RBAC role) rights for the AAD tenant they are deploying into.
-  
++ **Azure Subscription Prerequisite:** User must have rights to deploy resources at the Subscription scope (ie Contributor role or Owner role).
++ **Azure Active Directory (AAD) Prerequisite:** User must have Application Administrator (built-in RBAC role) rights for the AAD tenant they are deploying into.
+
+The install will fail unless both of these permissions prerequisites are met.
 
 ## Getting Started
 Deploying Azure API for FHIR. 
