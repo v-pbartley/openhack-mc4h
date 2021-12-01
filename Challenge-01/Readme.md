@@ -32,7 +32,8 @@ For this challenge, we will walk through these steps:
 - Set up Postman 
 - Test Authentication 
 
-To begin the deployment process, CTRL+click (Windows or Linux) or CMD+click (Mac) on the "Launch Azure Shell" button below. The Azure Cloud Shell CLI will open in a new tab/window.
+To begin the deployment process, CTRL+click (Windows or Linux) or CMD+click (Mac) on the "Launch Azure Shell" button below. 
+The Azure Cloud Shell CLI will open in a new tab.
 
 [![Launch Azure Shell](./media/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com/bash?target="_blank")
 
@@ -40,29 +41,29 @@ Select Bash as the operating environment.
 
 ## Step 1 - FHIR Service deployment 
   
-- Navigate to the FHIR-Starter repo https://github.com/microsoft/fhir-starter in your browser, review the main Readme.md, and the [Readme.md](https://github.com/microsoft/fhir-starter/blob/main/scripts/Readme.md) in the ./scripts folder.  
+- Navigate to the FHIR-Starter repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-starter in your browser, review the main Readme.md, and the [Readme.md](https://github.com/microsoft/fhir-starter/blob/main/scripts/Readme.md) in the ./scripts folder.  
 
 - Clone the Repo in your Azure Cloudshell environment.  
     ```azurecli-interactive
-    git clone https://github.com/microsoft/fhir-starter.git
+    $ git clone https://github.com/microsoft/fhir-starter.git
     ```
 
 - Change the working directory to the ```./fhir-starter/scripts``` directory in the repo.  
     ```azurecli-interactive
-    cd ./fhir-starter/scripts
+    $ cd ./fhir-starter/scripts
     ```
 
 - Make the Bash scripts for deployment and setup executable.  
     ```azurecli-interactive
-    chmod +x *.bash
+    $ chmod +x *.bash
     ```
 
 - Execute the ```deployFhirStarter.bash``` script.  
     ```azurecli-interactive
-    ./deployFhirStarter.bash
+    $ ./deployFhirStarter.bash
     ```
 
-- Be certain to GENERATE the POSTMAN Env
+- Be certain to GENERATE the POSTMAN Env.
 
 __Note__  During the live MC4H OpenHack session, Resource Groups names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
 
