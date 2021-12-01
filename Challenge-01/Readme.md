@@ -36,7 +36,7 @@ To begin the deployment process, CTRL+click (Windows or Linux) or CMD+click (Mac
 
 [![Launch Azure Shell](./media/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com/bash?target="_blank")
 
-Select Bash Shell as the operating environment.
+Select Bash as the operating environment.
 
 ## Step 1 - FHIR Service deployment 
   
