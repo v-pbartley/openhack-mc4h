@@ -163,7 +163,7 @@ analysis_df_joined.select(<<list of columns>>).corr().style.background_gradient(
 # COMMAND ----------
 
 # DBTITLE 1,Step 5 : Perform an ANOVA test on two data elements
-#A group by can give us a gut check on how a categorical variable effects a response variable. An ANOVA gives us a statistical answer. Sample code below will get you started exploring the effect of gender and age on Flu vaccination rates
+#A group by can give us a gut check on how a categorical variable effects a response variable. An ANOVA gives us a statistical answer. Sample code below will get you started exploring the effect of gender and age buckets on Flu vaccination rates
 stats.f_oneway(analysis_df_joined.select(<<column name>>),analysis_df_joined.select(<<column name>>))
 
 # COMMAND ----------
