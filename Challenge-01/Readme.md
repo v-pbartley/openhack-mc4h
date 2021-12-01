@@ -21,7 +21,7 @@ Before you run these install scripts, please make sure that you have the followi
 + **Azure Subscription Prerequisite:** User must have rights to deploy resources at the Subscription scope (ie Contributor role or Owner role).
 + **Azure Active Directory (AAD) Prerequisite:** User must have Application Administrator (built-in RBAC role) rights for the AAD tenant they are deploying into.
 
-The install will fail unless both of these permissions prerequisites are met.
+The install will fail unless both of these prerequisites are met.
 
 ## Getting Started
 Deploying Azure API for FHIR. 
@@ -32,7 +32,7 @@ For this challenge, we will walk through these steps:
 - Set up Postman 
 - Test Authentication 
 
-To begin the deployment process, click on the "Launch Azure Shell" button.
+To begin the deployment process, CTRL+click (Windows or Linux) or CMD+click (Mac) on the "Launch Azure Shell" button below. The Azure Cloud Shell CLI will open in a new tab/window.
 
 [![Launch Azure Shell](./media/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com/bash?target="_blank")
 
