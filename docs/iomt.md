@@ -5,6 +5,8 @@ nav_order: 6
 ---
 # Microsoft Cloud for Healthcare OpenHack
 
+This section of the OpenHack is designed to be more self guided than earlier sections. It will take a little more time to accomplish each task and there will often be more than one way to be successful. Take time to explore the tools and make the challenges your own!
+
 ## IoMT Introduction 
 The Internet of Medical Things (IoMT) represents the advent of wireless connectivity for medical as well as consumer-grade devices in the healthcare space. IoMT devices range from clinical vital signs monitors to popular consumer products, and the increase in their use, both in clinical and non-clinical settings, has led to a staggering increase in the amount of health data collected year over year. It has become an HLS industry imperative to utilize IoMT data to its fullest potential.
 
