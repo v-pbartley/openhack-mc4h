@@ -7,7 +7,7 @@ Welcome to Challenge 1!
 In this challenge, you will deploy both Azure API for FHIR (PaaS) and FHIR-Proxy (Open Source Software).
 
 ## Background
-FHIR is at the center of our healthcare products at Microsoft. FHIR data support in MC4H solutions rests on two fundamental components: Azure API for FHIR and FHIR-Proxy. In MC4H architectures, Azure API for FHIR is at the nexus of FHIR data activity, and FHIR-Proxy acts as a checkpoint, filtering data and enforcing Role-Based Access Control (RBAC) at the FHIR resource level.
+FHIR (Fast Healthcare Interoperability Resources) is at the center of our healthcare products at Microsoft, and support for FHIR data in MC4H solutions rests on two fundamental components: Azure API for FHIR and FHIR-Proxy. In MC4H architectures, Azure API for FHIR is at the center of FHIR data activity, and FHIR-Proxy acts as a checkpoint, filtering data and enforcing Role-Based Access Control (RBAC) at the FHIR resource level.
 
 ## Learning Objectives 
 + Understand the prerequisites for deploying Azure API for FHIR and FHIR-Proxy
