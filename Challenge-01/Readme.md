@@ -65,7 +65,7 @@ Select Bash as the operating environment.
 
 - Be certain to GENERATE the POSTMAN Env.
 
-__Note__  During the live MC4H OpenHack session, Resource Groups names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
+__Note__  During the live MC4H OpenHack session, Resource Group names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
 
 ## Step 2 - Set up Postman
 Using the Upload / Download button in the Azure Cloushell interface, download the _$fhirServiceName.postman_environment.json_ file to your computer. 
