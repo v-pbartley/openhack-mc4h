@@ -79,7 +79,7 @@ _[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https
 
 ## Step 3 - Proxy Setup  
 - Navigate to the FHIR-Proxy repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-proxy in your browser. 
-- Review the main Readme.md and the [Readme.md](https://github.com/microsoft/fhir-proxy/blob/main/scripts/Readme.md) in the ./scripts folder.  
+- Review the main [Readme.md](https://github.com/microsoft/fhir-proxy/tree/main/scripts#fhir-proxy-getting-startd-scripts-readme) and the [Readme.md](https://github.com/microsoft/fhir-proxy/blob/main/scripts/Readme.md) in the ./scripts folder.  
     
 - Clone the Repo in your Azure Cloudshell environment.  
     ```azurecli-interactive
