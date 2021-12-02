@@ -70,15 +70,15 @@ __Note__  During the live MC4H OpenHack session, Resource Group names will be as
 ## Step 2 - Set up Postman
 Using the Upload / Download button in the Azure Cloushell interface, download the _$fhirServiceName.postman_environment.json_ file to your computer. 
 
-Import the Postman Search Collection if you have not already done so. See https://microsoft.github.io/openhack-mc4h/Challenge-1.html for the collection download.
+Import the Postman Search Collection into Postman if you have not already done so. CTRL+click or CMD+click https://microsoft.github.io/openhack-mc4h/Challenge-1.html#materials for the collection download.
 
-Test access to your FHIR Service 
+Test access to your FHIR Service.
 
-_[Need help with Postman - try this](https://github.com/daemel/fhir-postman)_ 
+_[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https://github.com/daemel/fhir-postman)_ 
 
 
 ## Step 3 - Proxy Setup  
-- Navigate to the FHIR-Proxy repo https://github.com/microsoft/fhir-proxy in your browser. 
+- Navigate to the FHIR-Proxy repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-proxy in your browser. 
 - Review the main Readme.md and the [Readme.md](https://github.com/microsoft/fhir-proxy/blob/main/scripts/Readme.md) in the ./scripts folder.  
     
 - Clone the Repo in your Azure Cloudshell environment.  
