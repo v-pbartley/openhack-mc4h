@@ -101,7 +101,7 @@ _[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https
     ./deployfhirproxy.bash
     ```
 
-- Be certain to GENERATE the POSTMAN Env
+- Be certain to GENERATE the POSTMAN Env.
 
 __Note__  During the live MC4H OpenHack session, Resource Groups names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
 
