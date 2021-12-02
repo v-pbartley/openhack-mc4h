@@ -1,7 +1,7 @@
 # Databricks notebook source
 # DBTITLE 1,Challenge - Research Azure Data Analytics
 # MAGIC %md 
-# MAGIC This challange will walk you through using exported and anonymized data for research analytics.  You will explore the effect of gender and age on patients' recieving the Flu shot or not.
+# MAGIC This challange will walk you through using exported and anonymized data for research analytics.  You will explore the effect of gender, race, or age on patients' recieving the Flu shot or not.
 # MAGIC In this lesson we will complete the following tasks
 # MAGIC * Read in anonymized FHIR json files
 # MAGIC * Flatten the data structure to tabular format
@@ -111,7 +111,9 @@ def flatten_df(dfflat):
 
 # DBTITLE 1,Step 2: Flatten the data structure to tabular format
 #Loop through the FHIR source and generate parquet, ddl, or both outputs based on output parameter
-#Assumes files are in folders by FHIR resource type. Ex. Patient
+
+#IMPORTANT! This code assumes files are in folders by FHIR resource type. Ex. Patient
+
 try:
   dir = dbutils.fs.ls(dbutils.widgets.get("InputMountPoint"))
   dirdf = pd.DataFrame(dir,columns=['path','name','size'])
@@ -163,7 +165,7 @@ analysis_df_joined.select(<<list of columns>>).corr().style.background_gradient(
 # COMMAND ----------
 
 # DBTITLE 1,Step 5 : Perform an ANOVA test on two data elements
-#A group by can give us a gut check on how a categorical variable effects a response variable. An ANOVA gives us a statistical answer. Sample code below will get you started exploring the effect of gender and age on Flu vaccination rates
+#A group by can give us a gut check on how a categorical variable effects a response variable. An ANOVA gives us a statistical answer. Sample code below will get you started exploring the effect of gender or race or age buckets on Flu vaccination rates
 stats.f_oneway(analysis_df_joined.select(<<column name>>),analysis_df_joined.select(<<column name>>))
 
 # COMMAND ----------

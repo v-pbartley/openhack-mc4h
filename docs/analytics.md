@@ -5,6 +5,8 @@ nav_order: 5
 ---
 # Microsoft Cloud for Healthcare OpenHack
 
+This section of the OpenHack is designed to be more self guided than earlier sections. It will take a little more time to accomplish each task and there will often be more than one way to be successful. Take time to explore the tools and make the challenges your own!
+
 ## Analytics Introduction
 
 Data analytics are fundamental to a wide range of disciplines in the Health and Life Sciences (HLS) industry, including clinical trials, medical research, population health, clinical ML model development, 'omics (genomics, metagenomics, etc.), healthcare quality improvement studies, and more. The topics we touch on in this OpenHack related to data analytics include FHIR bulk export and anonymization (de-identification of PHI).
