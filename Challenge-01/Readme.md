@@ -53,22 +53,22 @@ Select Bash as the operating environment.
 
 - Clone the FHIR-Starter repo in your Azure Cloudshell environment.  
     ```azurecli-interactive
-    $ git clone https://github.com/microsoft/fhir-starter.git
+    git clone https://github.com/microsoft/fhir-starter.git
     ```
 
 - Change the working directory to the ```./fhir-starter/scripts``` directory in the repo.  
     ```azurecli-interactive
-    $ cd ./fhir-starter/scripts
+    cd ./fhir-starter/scripts
     ```
 
 - Make the Bash scripts for deployment and setup executable.  
     ```azurecli-interactive
-    $ chmod +x *.bash
+    chmod +x *.bash
     ```
 
 - Execute the ```deployFhirStarter.bash``` script.  
     ```azurecli-interactive
-    $ ./deployFhirStarter.bash
+    ./deployFhirStarter.bash
     ```
 
 Be certain to GENERATE the POSTMAN Env
@@ -97,29 +97,29 @@ _[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https
     
 - Clone the Repo in your Azure Cloudshell environment.  
     ```azurecli-interactive
-    $ git clone https://github.com/microsoft/fhir-proxy.git
+    git clone https://github.com/microsoft/fhir-proxy.git
     ```
 
 - Change the working directory to the ```./fhir-proxy/scripts``` directory in the repo.  
     ```azurecli-interactive
-    $ cd ./fhir-proxy/scripts
+    cd ./fhir-proxy/scripts
     ```
 
 - Make the Bash scripts for deployment and setup executable.  
     ```azurecli-interactive
-    $ chmod +x *.bash
+    chmod +x *.bash
     ```
 
 - Execute the ```deployfhirproxy.bash``` script.  
     ```azurecli-interactive
-    $ ./deployfhirproxy.bash
+    ./deployfhirproxy.bash
     ```
 
 Once the ```deployfhirproxy.bash``` script completes, run the ```createproxyserviceclient.bash``` script. 
 
 - Execute the ```createproxyserviceclient.bash``` script.  
     ```azurecli-interactive
-    $ ./createproxyserviceclient.bash
+    ./createproxyserviceclient.bash
     ```
 
 Be certain to GENERATE the POSTMAN Env
