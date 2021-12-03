@@ -14,6 +14,7 @@ To improve Flu vaccine rates, health systems need to understand what factors inf
 
 ## 1. Data Analysis and Statistical Modeling
 Discover if gender or age has an effect on completion of a Flu shot
+
 ### Learning Objectives
 By the end of the section you will be able to
 * Import Anonymized FHIR data into Azure Databricks
@@ -37,17 +38,19 @@ Open  ***Challenge  - Research Azure Data Analytics.py***  in Azure Databricks
 
 The remaining steps in this challenge section will be walked through in the Azure Databricks notebook.
 
+Note: Confirm the container with the anonymized data you will be using in databricks has access set to Public and allows anonymous read access for containers and blobs
+
 ### Challenge Success
 + Successfully load FHIR data into Azure Databricks
 + Sucessfully convert the data to tabular format
 + Successfully perform statistical analyses on the data 
  
 ## 2. Data Visualization and BI
-Given the dataset exported in Challenge 9, what geographic region has the lowest Flu vaccination rates?
+Given the dataset exported in Challenge 9, what geographic areas have the lowest Flu vaccination rates?
 ### Learning Objectives
 By the end of the section you will be able to 
 * Write Anonymized FHIR data to Azure Synapse Analytics
-* Create a Power BI report with a widget summarizing regional Flu vaccination rates
+* Create a Power BI report with a widget summarizing Flu vaccination rates geographically
 
 ### Prerequisites 
 * Deployed Azure API for FHIR
@@ -59,7 +62,7 @@ By the end of the section you will be able to
 ### Step 1: Load Parquet data into Azure Synapse
 
 #### 1. Open your Synapse workspace and import data from the storage account you wrote flattened parquet files to in Section 1: Data Analysis and Statistical Modeling  <br />
-You will need Patient data and Immmunizaton data to explore regional vaccination rates <br />
+You will need Patient data and Immmunizaton data to explore geographic vaccination rates <br />
 <br />
 If you get stuck, check out this article on the [Copy Data Tool in Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/copy-data-tool?tabs=data-factory)<br />
 
