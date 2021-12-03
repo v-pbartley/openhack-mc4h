@@ -72,7 +72,7 @@ Using the Upload / Download button in the Azure Cloushell interface, download th
 
 Import the Postman Search Collection into Postman if you have not already done so. CTRL+click or CMD+click https://microsoft.github.io/openhack-mc4h/Challenge-1.html#materials for the collection download.
 
-Use Postman to test access to your FHIR Service.
+Use the imported Collection in Postman to test access to your FHIR Service.
 
 _[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https://github.com/daemel/fhir-postman)_ 
 
