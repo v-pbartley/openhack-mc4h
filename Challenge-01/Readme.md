@@ -12,6 +12,14 @@ FHIR (Fast Healthcare Interoperability Resources) is at the center of our health
 ## Learning Objectives 
 + Understand the prerequisites for deploying Azure API for FHIR and FHIR-Proxy
 + Become familiar with the Azure API for FHIR and FHIR-Proxy deployment process
++ Understand the Azure API for FHIR - FHIR-Proxy Relationship
+
+### Azure API for FHIR and FHIR-Proxy Relationship
+The FHIR-Proxy acts as a Pre- and Post- Processor for Azure API for FHIR.  FHIR-Proxy has its own Client Credential Auth Flow and adds a means of Role Based Consent to Azure API for FHIR.
+
+Component View of Azure API for FHIR and FHIR-Proxy 
+
+![component-view](./media/component-view.png)
 
 ## Prerequisites 
 To help you set up your environment, we provide install scripts that gather (and export) information necessary for the proper deployment and configuration of Azure API for FHIR and supporting Open Source Software (OSS) components.
@@ -63,7 +71,12 @@ Select Bash as the operating environment.
     $ ./deployFhirStarter.bash
     ```
 
-- Be certain to GENERATE the POSTMAN Env.
+Be certain to GENERATE the POSTMAN Env
+
+Deployed Components 
+
+![fhir-starter](./media/fhir-starter.png)
+
 
 __Note__  During the live MC4H OpenHack session, Resource Group names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
 
@@ -84,26 +97,63 @@ _[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https
     
 - Clone the Repo in your Azure Cloudshell environment.  
     ```azurecli-interactive
-    git clone https://github.com/microsoft/fhir-proxy.git
+    $ git clone https://github.com/microsoft/fhir-proxy.git
     ```
 
 - Change the working directory to the ```./fhir-proxy/scripts``` directory in the repo.  
     ```azurecli-interactive
-    cd ./fhir-proxy/scripts
+    $ cd ./fhir-proxy/scripts
     ```
 
 - Make the Bash scripts for deployment and setup executable.  
     ```azurecli-interactive
-    chmod +x *.bash
+    $ chmod +x *.bash
     ```
 
 - Execute the ```deployfhirproxy.bash``` script.  
     ```azurecli-interactive
-    ./deployfhirproxy.bash
+    $ ./deployfhirproxy.bash
     ```
 
-- Be certain to GENERATE the POSTMAN Env.
+Once the ```deployfhirproxy.bash``` script completes, run the ```createproxyserviceclient.bash``` script. 
 
+- Execute the ```createproxyserviceclient.bash``` script.  
+    ```azurecli-interactive
+    $ ./createproxyserviceclient.bash
+    ```
+
+Be certain to GENERATE the POSTMAN Env
+
+Deployed Components 
+
+![proxy-deployment](./media/proxy-deployment.png)
+
+## Step 4  Grant Admin Access (Portal)
+We purposely do not grant Admin Access in the ```createproxyserviceclient.bash``` script as not everyone has Application Administrator rights.  We will supply an "admin script" for this in the next release. In the meantime, here are the Azure Portal steps necessary to grant admin access. 
+
+Log into the Azure Portal, and go to Azure Active Directory
+
+![login](./media/login.png)
+
+Go to App Registrations and find the client created with the ```createproxyserviceclient.bash``` script
+
+![appreg](./media/appreg.png)
+
+Select API Permissions on the left blade, then slect Grant admin consent for "your tenant name"
+
+![api](./media/api-permissions.png)
+
+Grant Admin Consent 
+
+![apigrant](./media/api-grant.png)
+
+![apigrant](./media/api-grant2.png)
+
+Complete 
+
+![apigrant](./media/complete.png)
+
+---
 __Note__  During the live MC4H OpenHack session, Resource Groups names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
 
 ## Step 4 - Set up Postman with Proxy 
