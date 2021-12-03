@@ -13,7 +13,7 @@
 
 # DBTITLE 1,Prerequisites
 # MAGIC %md
-# MAGIC If you have not already completed Challenge - Export and Anonymize Data, work through the data export steps and record the Container Name, Sas Token, Index, and Sas Key for the output container.
+# MAGIC If you have not already completed Challenge - Export and Anonymize Data, work through the data export steps and record the Storage Accoun Name, Container Name and Sas Key for the output container.
 
 # COMMAND ----------
 
@@ -22,24 +22,20 @@ import pandas as pd
 from pyspark.sql.types import ArrayType, StructType
 from pyspark.sql.functions import explode_outer, col, arrays_zip
 import os
-from pyspark.sql.functions import pandas_udf, explode
+from pyspark.sql.functions import pandas_udf, explode, when, concat, lit
 import seaborn as sns
 import matplotlib.pyplot as plt
 import scipy.stats as stats
+from scipy.stats import chi2_contingency
 
 # COMMAND ----------
 
 # DBTITLE 1,Step 1: Configure FHIR data import into Databricks to read in anonymized FHIR json files
 #Options for mounting the blob storage account to Azure DataBricks
-dbutils.widgets.combobox("Premium", "Y", ["Y", "N"])
-dbutils.widgets.combobox("OutputStorageAccount", "<Blob Storage Account>", ["<Blob Storage Account>"])
 dbutils.widgets.combobox("InputContainerName", "<Container>", ["<Container>"])
-dbutils.widgets.combobox("OutputContainerName", "<Container>", ["<Container>"])
+dbutils.widgets.combobox("InputFolderName", "<Container>", ["<FolderName>"])
 dbutils.widgets.combobox("InputMountPoint", "<MountPoint>", ["<MountPoint>"])
-dbutils.widgets.combobox("SasToken", "N/A", ["N/A", "<SAS token>"])
-dbutils.widgets.combobox("Index", "N/A", ["N/A","<Index>"])
 dbutils.widgets.combobox("SasKey", "N/A", ["N/A","<SasKey>"])
-dbutils.widgets.combobox("OutputMountPoint",  "<MountPoint>", [ "<MountPoint>"])
 dbutils.widgets.combobox("InputStorageAccount",  "<Blob Storage Account>", [ "<Blob Storage Account>"])
 
 def mount_storage(container, storage, mountpoint):
@@ -50,26 +46,14 @@ def mount_storage(container, storage, mountpoint):
   }
  
   #Only mount storage if it not already mounted
-  if not any(mount.mountPoint == mountpoint for mount in dbutils.fs.mounts()):
- 
-    if dbutils.widgets.get("Premium") == 'Y':
-    #Mounting storage when account is Premium  
-      dbutils.fs.mount(
-        source = "abfss://"+ container + "@" + storage + ".dfs.core.windows.net/",
-        mount_point = mountpoint,
-        extra_configs = configs)
- 
-    else:
-    #Mounting storage when account is not Premium
-      dbutils.fs.mount(
-        source = "wasbs://%s@%s.blob.core.windows.net/" % (container, storage),
-        mount_point = mountpoint,
-        extra_configs = {"fs.azure.sas.%s.%s.blob.core.windows.net" % (container, storage) : "%s" % dbutils.widgets.get("SasKey")})
+  if not any(mount.mountPoint == '/mnt/' + mountpoint for mount in dbutils.fs.mounts()):
+    dbutils.fs.mount(
+      source = "wasbs://%s@%s.blob.core.windows.net/" % (container, storage),
+      mount_point = '/mnt/' + mountpoint,
+      extra_configs = {"fs.azure.sas.%s.%s.blob.core.windows.net" % (container, storage) : "%s" % dbutils.widgets.get("SasKey")})
       
- #Mounting the output blob storage account to Azure DataBricks
+ #Mounting the blob storage account to Azure DataBricks
 mount_storage(dbutils.widgets.get("InputContainerName"), dbutils.widgets.get("InputStorageAccount"), dbutils.widgets.get("InputMountPoint"))
-mount_storage(dbutils.widgets.get("OutputContainerName"), dbutils.widgets.get("OutputStorageAccount"), dbutils.widgets.get("OutputMountPoint"))
-
 
 
 # COMMAND ----------
@@ -112,21 +96,24 @@ def flatten_df(dfflat):
 # DBTITLE 1,Step 2: Flatten the data structure to tabular format
 #Loop through the FHIR source and generate parquet, ddl, or both outputs based on output parameter
 
-#IMPORTANT! This code assumes files are in folders by FHIR resource type. Ex. Patient
-
 try:
-  dir = dbutils.fs.ls(dbutils.widgets.get("InputMountPoint"))
+  dir = dbutils.fs.ls('mnt/' + dbutils.widgets.get("InputMountPoint"))
   dirdf = pd.DataFrame(dir,columns=['path','name','size'])
-  
-  for x in dirdf.path:
-    df = spark.read.json(x)
+  resources = set([name.split("-")[0] for name in dirdf.name])
+  print(resources)
+  resource_dataframes = {}
+
+  for resource in resources:  
+    file_list = []
+    for file in dir:
+        if(file.name.startswith(resource)):
+           file_list.append(file.path)
+    print(file_list)
+    df = spark.read.json(path=file_list)
     dfflat = flatten_df(df)
-    tblname = x[len(dbutils.widgets.get("InputMountPoint"))+6:(len(x)-1)]
-    dfoutpath = dbutils.widgets.get("OutputMountPoint") + '/' + tblname + '.parquet'
-    print(dfoutpath)
-    dfflat.write.mode('append').parquet(dfoutpath)   
+    resource_dataframes[resource] = df
 except:  
-  # Unmount if fails
+   Unmount if fails
   dbutils.fs.unmount(dbutils.widgets.get("InputMountPoint"))
   dbutils.fs.unmount(dbutils.widgets.get("OutputMountPoint"))
   raise
@@ -135,42 +122,65 @@ except:
 
 # DBTITLE 1,Step 3: Produce descriptive statistics on the dataset
 #It's important to understand what data is in your dataset before performing a specific analysis task
+
+patient_dataframe = resource_dataframes['Patient']
+
 #Basic descriptive statistics
-analysis_df_1 = spark.read.parquet(<<filepath>>)
-analysis_df_1.select('<<column name>>').describe().show()
+patient_dataframe.select('<<column name>>').describe().show()
+
+
+
+# COMMAND ----------
 
 #To explore the effect of patient demographics like gender and race on immunization rates, you will need to join datasets. Pay attention to any data transformation necessary to join Patient and Immunization data
+
 #Joining datasets
-analysis_df_2 = spark.read.parquet(<<filepath>>)
-analysis_df_joined = analysis_df_1.join(analysis_df_2, <<id column = id column>>, "left")
+#Think about the granularity of the two datasets and the resulting granularity of the joined dataset. Are there any aggregations you need to do to have the appropriate granularity for the research question?
+
+patient_dataframe = patient_dataframe.withColumn("Patient_Id", concat(lit("Patient/"),col("id")))
+immunization_dataframe = resource_dataframes["Immunization"]
+patient_immunization_dataframe = patient_dataframe.join(immunization_dataframe, patient_dataframe["Patient_Id"] == immunization_dataframe["patient.reference"], "left")
+
+#Create a Flu Vaccine Yes/No Column
+patient_immunization_dataframe = patient_immunization_dataframe.withColumn("Flu_Yes_No", when(col('vaccineCode.coding.display')[0].like('%Influenza%'), 1).otherwise(0))
+
+
+# COMMAND ----------
 
 #A group by can give a quick picture of a categorical variables effect on a responsive metric. The sample code below will help with a group by but first you will have to create a column to represent Flu vaccination or not
 #Group by aggregations
-analysis_df_joined.groupBy("<<column name").sum("<<column name>>").show(truncate=False)
+patient_immunization_dataframe.groupBy("gender").sum("Flu_Yes_No").show(truncate=False)
 
 # COMMAND ----------
 
 # DBTITLE 1,Step 4: Visualize data elements within the dataset
 #Visually exploring a dataset can generate additional hypothesises. There are a couple of sample code visualizations below.
 #Histogram
-analysis_df_joined.select('<<column name>>').histogram(5)
+patient_immunization_dataframe_pd = patient_immunization_dataframe.select('Flu_Yes_No').toPandas()
+patient_immunization_dataframe_pd.hist()
 
-#Boxplot
-plt.boxplot(df2)
-plt.show()
-
-#Correlation Matrix
-analysis_df_joined.select(<<list of columns>>).corr().style.background_gradient(cmap='coolwarm').set_precision(2)
 
 # COMMAND ----------
 
-# DBTITLE 1,Step 5 : Perform an ANOVA test on two data elements
-#A group by can give us a gut check on how a categorical variable effects a response variable. An ANOVA gives us a statistical answer. Sample code below will get you started exploring the effect of gender or race or age buckets on Flu vaccination rates
-stats.f_oneway(analysis_df_joined.select(<<column name>>),analysis_df_joined.select(<<column name>>))
+# DBTITLE 1,Step 5 : Perform a Chi-Square test on two data elements
+#A group by can give us a gut check on how a categorical variable effects a binomial response variable. A chi square gives us a statistical answer. Sample code below will get you started exploring the effect of gender or race or age buckets on Flu vaccination rates
+patient_immunization_dataframe_chi = patient_immunization_dataframe.toPandas()
+patient_immunization_dataframe_chi['gender'] = patient_immunization_dataframe_chi['gender'].astype("category").cat.codes
+
+patient_immunization_dataframe_chi_cross = pd.crosstab(patient_immunization_dataframe_anova['gender'],patient_immunization_dataframe_anova['Flu_Yes_No'], margins = True)
+
+stat, p, dof, expected = chi2_contingency(patient_immunization_dataframe_chi_cross)
+
+# interpret test
+alpha = 0.05
+print("p value is " + str(p))
+if p <= alpha:
+    print('Dependent')
+else:
+    print('Independent')
 
 # COMMAND ----------
 
 # DBTITLE 1,Final: Clean Up
   # Unmount storage account
-  dbutils.fs.unmount(dbutils.widgets.get("InputMountPoint"))
-  dbutils.fs.unmount(dbutils.widgets.get("OutputMountPoint"))
+  dbutils.fs.unmount('/mnt/' + dbutils.widgets.get("InputMountPoint"))
