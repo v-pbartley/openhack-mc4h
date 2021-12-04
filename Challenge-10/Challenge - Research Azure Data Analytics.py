@@ -111,7 +111,7 @@ try:
     print(file_list)
     df = spark.read.json(path=file_list)
     dfflat = flatten_df(df)
-    resource_dataframes[resource] = df
+    resource_dataframes[resource] = dfflat
 except:  
    Unmount if fails
   dbutils.fs.unmount(dbutils.widgets.get("InputMountPoint"))
