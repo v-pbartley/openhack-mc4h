@@ -108,12 +108,11 @@ try:
     for file in dir:
         if(file.name.startswith(resource)):
            file_list.append(file.path)
-    print(file_list)
     df = spark.read.json(path=file_list)
     dfflat = flatten_df(df)
     resource_dataframes[resource] = dfflat
 except:  
-   Unmount if fails
+  #Unmount if fails
   dbutils.fs.unmount(dbutils.widgets.get("InputMountPoint"))
   dbutils.fs.unmount(dbutils.widgets.get("OutputMountPoint"))
   raise
@@ -126,7 +125,7 @@ except:
 patient_dataframe = resource_dataframes['Patient']
 
 #Basic descriptive statistics
-patient_dataframe.select('<<column name>>').describe().show()
+#patient_dataframe.select('<<column name>>').describe().show()
 
 
 
@@ -139,10 +138,10 @@ patient_dataframe.select('<<column name>>').describe().show()
 
 patient_dataframe = patient_dataframe.withColumn("Patient_Id", concat(lit("Patient/"),col("id")))
 immunization_dataframe = resource_dataframes["Immunization"]
-patient_immunization_dataframe = patient_dataframe.join(immunization_dataframe, patient_dataframe["Patient_Id"] == immunization_dataframe["patient.reference"], "left")
+patient_immunization_dataframe = patient_dataframe.join(immunization_dataframe, patient_dataframe["Patient_Id"] == immunization_dataframe["patient_reference"], "left")
 
 #Create a Flu Vaccine Yes/No Column
-patient_immunization_dataframe = patient_immunization_dataframe.withColumn("Flu_Yes_No", when(col('vaccineCode.coding.display')[0].like('%Influenza%'), 1).otherwise(0))
+patient_immunization_dataframe = patient_immunization_dataframe.withColumn("Flu_Yes_No", when(col('vaccineCode_coding_display').like('%Influenza%'), 1).otherwise(0))
 
 
 # COMMAND ----------
