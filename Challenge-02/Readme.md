@@ -28,7 +28,7 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
 ## Step 1 - Postman Setup
 
 1. Create a `New Request` in the Postman collection created in Challenge 1.
-![New Postman Request Image](/Challenge-2/media/add_request.jpg)
+![New Postman Request Image](./media/add_request.jpg)
 2. Rename the new request to `Convert Data - HL7`.
 3. Change the HTTP operation type from **GET** to **POST**.
 4. Fill in the URL of this request with `{{fhirurl}}/$convert-data`.
@@ -36,7 +36,7 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
     + **Type** to **OAuth 2.0**
     + Add `{{bearerToken}}` as the **Access Token**
 
-    + ![Request Authorization Tab](/Challenge-2/media/request-auth.jpg)
+    + ![Request Authorization Tab](./media/request-auth.jpg)
 
 ## Step 2 - Setup Request Parameters
 
@@ -54,7 +54,7 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
 ## Step 4 - Convert C-CDA Data
 
 1. Create a `New Request` in the Postman collection created in Challenge 1.
-![New Postman Request Image](/Challenge-2/media/add_request.jpg)
+![New Postman Request Image](./media/add_request.jpg)
 2. Rename the new request to `Convert Data - CCDA`.
 3. Change the HTTP operation type from **GET** to **POST**.
 4. Fill in the URL of this request with `{{fhirurl}}/$convert-data`.
@@ -62,7 +62,7 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
     + **Type** to **OAuth 2.0**
     + Add `{{bearerToken}}` as the **Access Token**
 
-    + ![Request Authorization Tab](/Challenge-2/media/request-auth.jpg)
+    + ![Request Authorization Tab](./media/request-auth.jpg)
 
 ## Step 5 - Setup Request Parameters
 

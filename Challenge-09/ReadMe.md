@@ -49,7 +49,7 @@ The $export operation has required headers
 * Authorization: Bearer{{bearerToken}}
 * Prefer: respond-async. <br>
 
-![](https://github.com/kamoclav/openhack-mc4h-2/blob/main/Challenge-09/media/Export_Headers.png) <br>
+![export-header](./media/Export_Headers.png) <br>
 
 For more information on headers check out this [documentation] (https://hl7.org/Fhir/uv/bulkdata/export/index.html#headers)
 

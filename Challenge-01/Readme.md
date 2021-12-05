@@ -17,9 +17,11 @@ FHIR (Fast Healthcare Interoperability Resources) is at the center of our health
 ### Azure API for FHIR and FHIR-Proxy Relationship
 The FHIR-Proxy acts as a Pre- and Post- Processor for Azure API for FHIR.  FHIR-Proxy has its own Client Credential Auth Flow and adds a means of Role Based Consent to Azure API for FHIR.
 
-Component View of Azure API for FHIR and FHIR-Proxy 
+Component View of Azure API for FHIR and FHIR-Proxy.  _Larger image available [here](./media/component-view.png)_ 
 
-![component-view](./media/component-view.png)
+![component-view](./media/component-view-small.png)
+
+
 
 ## Prerequisites 
 To help you set up your environment, we provide install scripts that gather (and export) information necessary for the proper deployment and configuration of Azure API for FHIR and supporting Open Source Software (OSS) components.
@@ -128,7 +130,7 @@ Deployed Components
 
 ![proxy-deployment](./media/proxy-deployment.png)
 
-## Step 4  Grant Admin Access (Portal)
+## Step 4 - Grant Admin Access (Portal)
 We purposely do not grant Admin Access in the ```createproxyserviceclient.bash``` script as not everyone has Application Administrator rights.  We will supply an "admin script" for this in the next release. In the meantime, here are the Azure Portal steps necessary to grant admin access. 
 
 Log into the Azure Portal, and go to Azure Active Directory
@@ -156,11 +158,44 @@ Complete
 ---
 __Note__  During the live MC4H OpenHack session, Resource Groups names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
 
-## Step 4 - Set up Postman with Proxy 
+## Step 5 - Set up Postman with Proxy 
 Using the Upload / Download button in the Azure Cloudshell interface, download the _$fhirServiceName.postman_environment.json_ file to your computer. 
 
+![download](./media/download.png)
+
+Import the _environment file_ into Postman
+
+![postman1](./media/postman1.png)
+
+Get a Token 
+
+![postman3](./media/postman3.png)
+
+List Patients as a test 
+
+![test](./media/list-patient.png)
 
 
 ## Challenge Success
 + Azure API for FHIR (PaaS) installed and available 
 + FHIR-Proxy (Open Source Software) installed and able to communicate with Azure API for FHIR
+
+## Troubleshooting 
+Most often the problem is order of execution in that someone will get a token before Granting Authorization.  
+
+Error 403 - Unauthorized 
+Cause:  Token does not have the Reader & Writer Roles authorized 
+
+Obtain a new Token 
+
+![token1](./media/postman-token1.png)
+
+Copy the Token from Postman 
+
+![token2](./media/postman-token2.png)
+
+Check the Token for Reader and Writer roles using https://jwt.ms 
+
+![token3](./media/postman-token3.png)
+
+If the roles are missing, the permissions grant was not saved, please re-do Step 4. 
