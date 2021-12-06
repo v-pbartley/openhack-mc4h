@@ -21,7 +21,7 @@ By the end of the section you will be able to
 * Flatten the data structure to a tabular format
 * Produce descriptive statistics on the dataset
 * Visualize data elements within the dataset
-* Perform an ANOVA test to determine the effect of one variable on another
+* Perform a Chi-Squared test to determine the effect of one variable on another
 
 ### Prerequisites 
 * Deployed Azure API for FHIR
