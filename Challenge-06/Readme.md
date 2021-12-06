@@ -1,8 +1,10 @@
-# Challenge 6 - Dataverse Entity and Attribute Mapping
+# Challenge 6 - Dataverse Entity and Attribute Mapping (Instructor Lead Training)
 
 ## Introduction
 
 Welcome to Challenge 6!
+
+**Note This challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription to complete.** Given that most participants do not have this access, this is an instructor-lead training module.
 
 In this challenge you will learn about the mapping that happens between the Azure API for FHIR and the Dynamics Industry health data model. 
 

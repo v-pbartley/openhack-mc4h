@@ -1,9 +1,11 @@
-# Challenge 5 - FHIR SyncAgent
+# Challenge 5 - FHIR SyncAgent (Instructor Lead Training)
 
 ## Introduction
 
 Welcome to Challenge 5!
 
+**Note This challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription to complete.** Given that most participants do not have this access, this is an instructor-lead training module. 
+  
 In this challenge you will learn how to download and install the Microsoft Cloud for Health FHIR-SyncAgent. 
 
 ## Background
@@ -14,6 +16,11 @@ Installing the FHIR-SyncAgent requires configuration in both Azure and Dynamics.
 ## Learning Objectives
 + Install and Configure the FHIR-SyncAgent service using the bash shell scripts 
 + Deploy and Config the Sync Admin for FHIR administration application 
+
+### SyncAgent, API for FHIR and Dynamics Relationship 
+The SyncAgent acts as a 2-way communication processor between Azure API for FHIR and Dynamics. Requirements (not all pictured below) include FHIR-Proxy and Service Client information from the Dynamics Tenant. 
+
+![deploy](./media/deploy-components.png)
 
 ## Prerequisites
 + Successful completion of Challenge 1 
@@ -84,16 +91,24 @@ Select Bash Shell as the operating environment.
     ./deploysyncagent.bash
     ```
 
-   Example deployment script output [example](syncagent-deployment-output.md)
+
+
+## Step 3 - FHIR SyncAgent Setup
+ 
+**Note** Once the ```deploysyncagent.bash``` script is complete you will be prompted to run the ```setupsyncagent.bash``` script.  These two scripts are _interdependent_ but can be _ran at seperate times_.  Moreover, the deploysyncagent.bash script needs only to be run once, however __the setupsyncagent.bash script can be re-run to connect to a different Dynamics environment without re-running the deploysyncagent.bash script__
+
 
 - Execute the ```setupsyncagent.bash``` script _(you will need the URL and Sync Agent Client ID and Secret from Step 1)_
     ```azurecli-interactive
     ./setupsyncagent.bash
     ```
 
-   Example deployment script output [example](syncagent-setup-output.md)
+![deploy-setup](./media/setup-components.png)
 
-## Step 3 - Update Dynamics Sync admin for FHIR Integration 
+**Note** The ```setupsyncagent.bash``` script outputs Service Bus Namespace and Queue information to be loaded into the Dynamics Sync Admin for FHIR application.  This information is necessary for Step 4.  
+  
+
+## Step 4 - Update Dynamics Sync admin for FHIR Integration 
 The FHIR-Sync Agent ```setupsyncagent.bash``` script will output the following which need to be entered into the Integration settings page 
 - Service Bus URL
 - Service Queue name 

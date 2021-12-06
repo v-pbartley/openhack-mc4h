@@ -1,8 +1,10 @@
-#  Challenge 7 - Dataverse Writing data
+#  Challenge 7 - Dataverse Writing data (Instructor Lead Training)
 
 ## Introduction
 
 Welcome to Challenge 7!
+
+**Note This challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription to complete.** Given that most participants do not have this access, this is an instructor-lead training module.
 
 In this challenge you will learn about writing data to and from Azure API for FHIR and Dataverse. 
 
