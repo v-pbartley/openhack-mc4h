@@ -18,7 +18,10 @@ Installing the FHIR-SyncAgent requires configuration in both Azure and Dynamics.
 + Deploy and Config the Sync Admin for FHIR administration application 
 
 ### SyncAgent, API for FHIR and Dynamics Relationship 
-The SyncAgent acts as a 2-way communication processor between Azure API for FHIR and Dynamics. Requirements (not all pictured below) include FHIR-Proxy and Service Client information from the Dynamics Tenant. 
+The SyncAgent acts as a 2-way communication processor between Azure API for FHIR and Dynamics. Requirements (not all pictured below) include 
+- FHIR-Proxy deployed with Azure API for FHIR
+- Service Client information from the Dynamics Tenant (the Dynamics Tenant must be separate from the Azure API for FHIR/FHIR-Proxy tenant)
+
 
 ![deploy](./media/deploy-components.png)
 
