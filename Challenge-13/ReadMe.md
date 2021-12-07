@@ -1,4 +1,4 @@
-# Challenge 13 - Deploy and demonstrate the consent capabilities of Azure Healthcare APIs
+# Challenge 13 - Deploy and demonstrate the consent capabilities of Azure API for FHIR
 
 ## Introduction
 
