@@ -24,16 +24,16 @@ The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for
 ## Step 1 - The Big Picture 
 Flow from left to right... 
 
-FHIR Resources (JSON Documents) are sent to Dataverse via the FHIR-SyncAgent. The parameter that determines which FHIR resources to send is the SA-FHIRMAPPEDRESOURCES variable set in KeyVault. To change the list of FHIR resources to send, a user/administrator needs to create a new Secret in KeyVault for themselves and then access and edit the SA-FHIRMAPPEDRESOURCES list values.
+FHIR Resources (JSON Documents) are sent to Dataverse via the FHIR-SyncAgent. The parameter that determines which FHIR resources to send is the SA-FHIRMAPPEDRESOURCES variable set in Key Vault. To change the list of FHIR resources to send, a user/administrator needs to create a new Secret in Key Vault for themselves and then access and edit the SA-FHIRMAPPEDRESOURCES list values.
 
-The FHIR-SyncAgent queries the Dataverse API to determine if the Resource (ie Patient, Encounter, etc) should be sync’d with Dataverse. 
+The FHIR-SyncAgent queries the Dataverse API to determine if the FHIR Resource (hereto "Resource") (ie Patient, Encounter, etc) should be sync’d with Dataverse. 
 
-Dataverse uses 2 maps
+Dataverse uses two maps
 - Entity Maps for matching Resources. If the Resource is Enabled in SyncAdministration, the data is parsed into Dataverse's Data model by the Attribute Maps. 
  
 - Attribute Maps use JSONPath queries to map FHIR values to Table entries.   
 
-Dataverse stores Healthcare data in a relational model. The mappings above convert FHIR JSON documents to table entries.
+Dataverse stores healthcare data in a relational model. The mappings above convert FHIR JSON documents to table entries.
 
 The reverse follows the same pattern where Dataverse maps Entity Attributes back to FHIR via JSONPath queries. 
 
