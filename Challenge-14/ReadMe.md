@@ -5,14 +5,13 @@
 
 Welcome to Challenge #14!
 
-In this challenge you will practice using Azure API for FHIR to read and write data from an app developer's perspective.
+In this challenge you will practice using Azure API for FHIR to read and write data – as from an app developer's perspective.
 
 ## Background
 
 With data systems built on standardized health APIs, organizations can focus on application development to meet their unique needs.
 
-In this challenge we will use Firely to represent the FHIR object model in .NET to make calls into the Azure API for FHIR. 
-We will use FhirBlaze as a starter application. It is a barebones Blazor application that enables an end user to create or delete certain resources on the FHIR server. FhirBlaze runs as a SMART on FHIR application. We will use it as a user interface for interacting with the FHIR server. The ability to interact with the FHIR server for creates and deletes is a fundamental building block for more sophisticated use cases.
+In this challenge we will use Firely to represent the FHIR object model in .NET to make calls into Azure API for FHIR. We will use FhirBlaze as a starter application. It is a barebones Blazor application that enables an end user to create or delete certain resources on the FHIR server. FhirBlaze runs as a SMART on FHIR application. We will use it as a front-end user interface for interacting with the FHIR server. The ability to send Create and Delete requests to the FHIR server is a fundamental building block for more sophisticated use cases.
 
 ## Learning Objectives
 
@@ -23,10 +22,10 @@ We will use FhirBlaze as a starter application. It is a barebones Blazor applica
 ## Prerequisites
 
 + Visual Studio or Visual Studio Code installed on your local machine. The instructions are written for Visual Studio so you will have to map the equivalent in Visual Studio Code yourself.
-+ Working instance of Azure API for FHIR - no data is required, but it's ok if there's data already there.
++ Working instance of Azure API for FHIR - no data is required, but it's ok if there is data present on the server.
 ---
 ## Step 1 – Intro to FhirBlaze base solution
-We created FhirBlaze to accelerate web app development on top of the FHIR server. It lays the foundation for reads and write to the FHIR server, freeing you up to build your unique workflows that meet endusers' needs. <br>
+We created FhirBlaze to accelerate web app development on top of the FHIR server. It lays the foundation for sending Reads and Writes to the FHIR server, freeing you up to build your unique workflows that meet endusers' needs. <br>
 1. Clone FhirBlaze solution from [here]( https://github.com/microsoft/FhirBlaze)<br>
 2. Open FhirBlaze in **Visual Studio**.<br>
 <br>
