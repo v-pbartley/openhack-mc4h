@@ -25,7 +25,7 @@ Research is broadening beyond text based research. These research initiatives re
 &nbsp;&nbsp;&nbsp;&nbsp; This hackathon repo (If not already complete)
 
 ```azurecli
-git clone https://github.com/microsoft/iomt-fhir
+git clone https://github.com/microsoft/openhack-mc4h
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp; The Medical Imaging Server for Azure
