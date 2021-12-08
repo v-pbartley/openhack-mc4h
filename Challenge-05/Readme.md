@@ -81,7 +81,7 @@ Select Bash Shell as the operating environment.
 
 - Change the working directory to the ```./fhir-cds-agent/scripts``` directory in the repo.  
     ```azurecli-interactive
-    cd ./fhir-cds-agent/scripts
+    cd $HOME/fhir-cds-agent/scripts
     ```
 
 - Make the Bash scripts for deployment and setup executable.  
