@@ -9,9 +9,11 @@ Welcome to Challenge 5!
 In this challenge you will learn how to download and install the Microsoft Cloud for Health FHIR-SyncAgent. 
 
 ## Background
-Microsoft's Cloud for Healthcare data store is **Azure API for FHIR**, while leveraging the **Dynamics** industry data model for health in **Dataverse**. Leveraging Dataverse enables you to quickly stand up Power Apps for your organization's unique needs. The FHIR-SyncAgent is a function app designed to keep data synchronized between the two data stores (Azure API for FHIR and Dataverse).  
+The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is Azure API for FHIR, while MC4H model-driven apps leverage the Dynamics health industry data model in Dataverse. 
 
-Installing the FHIR-SyncAgent requires configuration in both Azure and Dynamics.  The Azure installation is accomplished using the Azure Cloud Shell - Bash Shell environment while the Dynamics work is carried out via Solution Center.  
+FHIR data in MC4H is managed in the **Azure API for FHIR** data store, while MC4H model-driven apps are based on the **Dynamics** health industry data model in **Dataverse**. Leveraging Dataverse enables organizations to quickly stand up Power Apps for their unique needs. The FHIR-SyncAgent is a function app designed to keep data synchronized between the two data stores (Azure API for FHIR and Dataverse).  
+
+Installing the FHIR-SyncAgent requires configuration in both Azure and Dynamics. The Azure installation is accomplished using the Azure Cloud Shell - Bash Shell environment, and the install on the Dynamics end is carried out via the Dynamics Solution Center.  
 
 ## Learning Objectives
 + Install and Configure the FHIR-SyncAgent service using the bash shell scripts 
