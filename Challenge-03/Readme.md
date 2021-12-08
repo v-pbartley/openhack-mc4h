@@ -54,7 +54,7 @@ Select Bash as the operating environment.
 
 - Change the working directory to the ```./fhir-loader/scripts``` directory in the repo.  
     ```azurecli-interactive
-    cd ./fhir-loader/scripts
+    cd $HOME/fhir-loader/scripts
     ```
 
 - Make the Bash scripts for deployment and setup executable.  
