@@ -4,11 +4,11 @@
 
 Welcome to Challenge 3!
 
-In this challenge you will learn how to use the [FHIR Bulk Loader](https://github.com/microsoft/fhir-loader) tool to bulk-ingest data into Azure API for FHIR.
+In this challenge you will learn how to use the [FHIR Bulk Loader & Export](https://github.com/microsoft/fhir-loader) tool to bulk-ingest data into Azure API for FHIR.
 
 ## Background
 
-FHIR is an evolving standard, and one area where the FHIR specification is still in its early stages of development is its coverage of bulk data ingestion. Until HL7 publishes specifications for a FHIR $import operator, implementors will have to rely on alternative methods for getting bulk FHIR data into a FHIR server. In this challenge, we will be using the current best-practice solution for bulk FHIR import into Azure API for FHIR: the FHIR Bulk Loader utility (OSS).
+FHIR is an evolving standard, and one area where the FHIR specification is still in its early stages of development is its coverage of bulk data ingestion. Until HL7 publishes specifications for a FHIR $import operator, implementors will have to rely on alternative methods for getting bulk FHIR data into a FHIR server. In this challenge, we will be using the current best-practice solution for bulk FHIR import into Azure API for FHIR: the FHIR Bulk Loader & Export utility (OSS).
 
 ## Learning Objectives
 
@@ -16,7 +16,7 @@ FHIR is an evolving standard, and one area where the FHIR specification is still
 + Understand how to track and compare bulk FHIR imports
 
 ### Azure API for FHIR, FHIR-Proxy and FHIR-Bulk Loader & Export Relationship 
-The FHIR-Bulk Loader & Export is designed to work directly with Azure API for FHIR and through FHIR-Proxy.  Advantages of using FHIR-Proxy include, additional scalability, monitoring and security.  __Note:  If you are using MC4H, you must use FHIR-Proxy__.  The remainder of the Challenges assumes you are using FHIR-Bulk Loader & Export with FHIR-Proxy
+The FHIR-Bulk Loader & Export tool is designed to work directly with Azure API for FHIR and through FHIR-Proxy. Advantages of using FHIR-Proxy include additional scalability, monitoring, and security. __Note:  If you are using MC4H, you must use FHIR-Proxy__. For the remainder of the Challenges, we assume you are using FHIR-Bulk Loader & Export with FHIR-Proxy.
 
 Component view of Azure API for FHIR with FHIR Bulk Loader & Export and FHIR-Proxy.  
 
