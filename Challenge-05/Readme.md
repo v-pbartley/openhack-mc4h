@@ -98,7 +98,7 @@ Select Bash Shell as the operating environment.
 
 ## Step 3 - FHIR SyncAgent Setup
  
-**Note** Once the ```deploysyncagent.bash``` script is complete you will be prompted to run the ```setupsyncagent.bash``` script.  These two scripts are _interdependent_ but can be _ran at seperate times_.  Moreover, the deploysyncagent.bash script needs only to be run once, however __the setupsyncagent.bash script can be re-run to connect to a different Dynamics environment without re-running the deploysyncagent.bash script__
+**Note** Once the ```deploysyncagent.bash``` script is complete, you will be prompted to run the ```setupsyncagent.bash``` script. These two scripts are _interdependent_ but can be _ran at seperate times_. Moreover, the deploysyncagent.bash script needs only to be run once, however __the setupsyncagent.bash script can be re-run to connect to a different Dynamics environment without re-running the deploysyncagent.bash script__
 
 
 - Execute the ```setupsyncagent.bash``` script _(you will need the URL and Sync Agent Client ID and Secret from Step 1)_
@@ -108,11 +108,11 @@ Select Bash Shell as the operating environment.
 
 ![deploy-setup](./media/setup-components.png)
 
-**Note** The ```setupsyncagent.bash``` script outputs Service Bus Namespace and Queue information to be loaded into the Dynamics Sync Admin for FHIR application.  This information is necessary for Step 4.  
+**Note** The ```setupsyncagent.bash``` script outputs Service Bus Namespace and Queue information to be loaded into the Dynamics Sync Admin for FHIR application. This information is necessary for Step 4.  
   
 
 ## Step 4 - Update Dynamics Sync admin for FHIR Integration 
-The FHIR-Sync Agent ```setupsyncagent.bash``` script will output the following which need to be entered into the Integration settings page 
+The FHIR-Sync Agent ```setupsyncagent.bash``` script will output the following pieces of information, all of which need to be entered into the Integration settings page. 
 - Service Bus URL
 - Service Queue name 
 - Service Queue Access Policy name 
