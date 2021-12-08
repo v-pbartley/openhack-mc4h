@@ -1,23 +1,32 @@
 # Challenge 0 - Welcome!
 
 ## Introduction 
-In this challenge, you will be checking your environment to make sure that all of the prerequisites for the MC4H OpenHack are present. If you are missing any of the prerequisites (see below), you will need to set them up before proceeding.
+In this challenge, you will be checking your Azure account and other tools in your environment to make sure that all of the prerequisites for the Microsoft Cloud for Healthcare (MC4H) OpenHack are met. If you are missing any of the prerequisites (see below), you will need to set them up before proceeding.
 
 ## Backgound 
-This OpenHack will help users gain the skills necessary for deploying Azure API for FHIR, DICOM, MC4H on Dynamics 365, and supporting tools. After completing the MC4H OpenHack, you will be able to build the architectures highlighted on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
+This OpenHack will help users gain the skills necessary for deploying Azure API for FHIR, MC4H on Dynamics 365, and supporting tools. After completing the MC4H OpenHack, you will be able to build the architectures highlighted on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
  
 ## Learning Objectives 
 + Understand the prerequisites for this OpenHack
 + Become familiar with MC4H tools and architectures
 
-## Prerequisites
-Please be sure to have the following set up in your environment before beginning the OpenHack.
+## Prerequisite knowledge
 
-+ Azure Subscription with Contributor/Co-Owner rights 
++ Participants in the MC4H OpenHack are expected to have a solid foundation in Azure fundamentals. If you are new to Microsoft Azure, visit [here](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-cloud-concepts/) to learn about the platform.
+
++ Since this OpenHack is intended for healthcare IT professionals, we assume learners have a basic familiarity with general topics related to health data interoperability. In particular, learners are expected to have a working knowledge of the FHIR R4 data standard. Please visit [here](https://hl7.org/fhir/R4/) for more information about the FHIR R4 specification.
+
++ In Challenges 05-08, we cover MC4H architectures that incorporate Microsoft Dynamics/Dataverse healthcare industry solutions. Because most participants do not have access to a Dynamics/Dataverse environment, Challenges 05-08 are presented as instructor-lead training modules. A basic knowledge of the Dynamics/Dataverse landscape will be helpful for learners to get the most out of this portion of the training. Please see [here](https://powerplatform.microsoft.com/en-us/dataverse/) for information about Dataverse and the Dynamics platform.
+
+## Environment Prerequisites
+Please be sure to have the following components ready in your environment before beginning the OpenHack.
+
++ Azure Subscription with Contributor/Co-Owner rights
++ Application Administrator role in Azure Active Directory (AAD)
 + GitHub account [link](https://github.com/)
 + Postman (cloud or desktop) [link](https://www.postman.com/)
 
-## Optional Components (for Challenges 5-7)
+## Optional Components (for Challenges 5-8)
 + Dynamics Environment + MC4H temporary license and solution set
 
 _Note_ Postman cloud accounts require a login via email (free) or via Google.  Additionally, Postman recommends if you choose to use the web client you should also download the desktop application.  You can [read more](https://www.postman.com/downloads/?utm_source=postman-home) and download the web desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
