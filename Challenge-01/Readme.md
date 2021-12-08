@@ -60,7 +60,7 @@ Select Bash as the operating environment.
 
 - Change the working directory to the ```./fhir-starter/scripts``` directory in the repo.  
     ```azurecli-interactive
-    cd ./fhir-starter/scripts
+    cd $HOME/fhir-starter/scripts
     ```
 
 - Make the Bash scripts for deployment and setup executable.  
@@ -104,7 +104,7 @@ _[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https
 
 - Change the working directory to the ```./fhir-proxy/scripts``` directory in the repo.  
     ```azurecli-interactive
-    cd ./fhir-proxy/scripts
+    cd $HOME/fhir-proxy/scripts
     ```
 
 - Make the Bash scripts for deployment and setup executable.  
