@@ -9,7 +9,7 @@ Welcome to Challenge 8!
 In this challenge you will learn to recoginize and address some of the issues that can happen with MC4H.  
 
 ## Background
-The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for FHIR**, while MC4H model-driven apps leverage the **Dynamics** health industry data model in **Dataverse**. Synchronizing data between FHIR and the Dataverse model requires several layers of mapping, most of which is set up and managed via the **SyncAdmin for FHIR** settings page in Dynamics.
+The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for FHIR**, while MC4H model-driven apps leverage the **Dynamics** health industry data model in **Dataverse**. Synchronizing data between FHIR and the Dataverse model requires several layers of mapping, most of which is set up and managed via the **SyncAdmin for FHIR** settings in Dynamics.
 
 ## Learning Objectives
 + Recognize and address some of the more common issues with integrating Azure and Dynamics  
