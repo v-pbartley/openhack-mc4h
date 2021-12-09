@@ -4,7 +4,7 @@
 
 Welcome to Challenge 8!
 
-**Note This challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription to complete.** Given that most participants do not have this access, this is an instructor-lead training module.
+**Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
 
 In this challenge you will learn to recoginize and address some of the issues that can happen with MC4H.  
 
