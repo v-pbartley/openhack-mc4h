@@ -19,7 +19,7 @@ This OpenHack will help users gain skills in deploying Azure API for FHIR, FHIR-
 + In Challenges 05-08, we cover MC4H architectures that incorporate Microsoft Dynamics/Dataverse healthcare industry solutions. Because most participants do not have access to a Dynamics/Dataverse environment, Challenges 05-08 are presented as instructor-lead training modules. A basic knowledge of the Dynamics/Dataverse landscape will be helpful to get the most out of this portion of the training. Please visit [here](https://powerplatform.microsoft.com/en-us/dataverse/) to learn more about the Dynamics/Dataverse platform.
 
 ## Environment Prerequisites
-Please be sure to have the following components ready in your environment before beginning the OpenHack.
+Please be sure to have the following components ready in your environment before beginning the MC4H OpenHack.
 
 + Azure Subscription with Contributor/Co-Owner rights
 + Application Administrator role in your Azure Active Directory (AAD) tenant
