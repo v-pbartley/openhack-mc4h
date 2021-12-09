@@ -4,11 +4,11 @@
 Welcome to the Microsoft Cloud for Healthcare (MC4H) OpenHack! In this preliminary challenge, you will be checking your Azure environment and other components to make sure that you can deploy the MC4H tools this OpenHack is based on. Please make certain that everything is in place before proceeding to the next challenge.
 
 ## Backgound 
-This OpenHack will help users gain the skills necessary for deploying Azure API for FHIR, MC4H on Dynamics 365, and supporting tools. After completing the MC4H OpenHack, you will be able to build the architectures highlighted on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
+This OpenHack will help users gain skills in deploying Azure API for FHIR, Dynamics/Dataverse MC4H solutions, and supporting tools. After completing the MC4H OpenHack, you will be able to build the architectures highlighted on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
  
 ## Learning Objectives for Challenge-0
-+ Understand the prerequisites for this OpenHack
-+ Become familiar with MC4H tools and architectures
++ Understand the prerequisites for the MC4H OpenHack
++ Familiarize yourself with MC4H tools and architectures
 
 ## Prerequisite knowledge
 
