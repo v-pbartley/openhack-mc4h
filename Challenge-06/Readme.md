@@ -9,7 +9,7 @@ Welcome to Challenge 6!
 In this challenge you will learn about the data mapping that connects parts of the Azure API for FHIR data store with the Dynamics health industry data model. 
 
 ## Background
-The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for FHIR**, while MC4H model-driven apps leverage the **Dynamics** health industry data model in **Dataverse**. Synchronizing data between FHIR and the Dataverse model requires several layers of mapping, most of which is set up and managed via the **SyncAdmin for FHIR** settings in Dynamics.
+The FHIR data store in Microsoft Cloud for Healthcare (MC4H) is **Azure API for FHIR**, while MC4H model-driven apps leverage the **Dynamics** health industry data model in **Dataverse**. Synchronizing data between FHIR and the Dataverse model requires several layers of mapping, most of which is set up and managed via the **SyncAdmin for FHIR** settings in Dynamics.
 
 ## Learning Objectives
 + Understand and Explain each layer of mapping
