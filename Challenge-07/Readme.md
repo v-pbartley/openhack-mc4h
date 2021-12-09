@@ -4,9 +4,9 @@
 
 Welcome to Challenge 7!
 
-**Note This challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription to complete.** Given that most participants do not have this access, this is an instructor-lead training module.
+**Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
 
-In this challenge you will learn about writing data to and from Azure API for FHIR and Dataverse. 
+In this challenge you will learn about writing data from Azure API for FHIR to Dataverse, and vice versa. 
 
 ## Background
 The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for FHIR**, while MC4H model-driven apps leverage the **Dynamics** health industry data model in **Dataverse**. Synchronizing data between FHIR and the Dataverse model requires several layers of mapping, most of which is set up and managed via the **SyncAdmin for FHIR** settings in Dynamics.
