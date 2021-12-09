@@ -4,7 +4,7 @@
 
 Welcome to Challenge 5!
 
-**Note This challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription to complete.** Given that most participants do not have this access, this is an instructor-lead training module. 
+**Note To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription to complete.** Given that most participants do not have this access, this is an instructor-lead training module. 
   
 In this challenge you will learn how to download and install the Microsoft Cloud for Health FHIR-SyncAgent. 
 
