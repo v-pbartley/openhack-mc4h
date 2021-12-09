@@ -4,7 +4,7 @@
 
 Welcome to Challenge 6!
 
-**Note This challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription to complete.** Given that most participants do not have this access, this is an instructor-lead training module.
+**Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
 
 In this challenge you will learn about the data mapping that brings parts of the Azure API for FHIR data store together with the Dynamics industry health data model. 
 
