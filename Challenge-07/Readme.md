@@ -1,4 +1,4 @@
-#  Challenge 7 - Dataverse Writing data (Instructor Lead Training)
+#  Challenge 7 - Dataverse Writing Data (Instructor Lead Training)
 
 ## Introduction
 
