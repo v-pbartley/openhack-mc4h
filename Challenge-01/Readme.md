@@ -124,7 +124,7 @@ Once the ```deployfhirproxy.bash``` script completes, run the ```createproxyserv
     ./createproxyserviceclient.bash
     ```
 
-Be certain to click ```y``` (for "yes") when prompted to generate a Postman environment for FHIR Service access.
+Be certain to click ```y``` (for "yes") when prompted to generate a Postman environment for FHIR-Proxy access.
 
 Deployed Components 
 
