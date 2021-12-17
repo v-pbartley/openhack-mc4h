@@ -16,7 +16,7 @@ FHIR is an evolving standard, and one area where the FHIR specification is still
 + Understand how to track and compare bulk FHIR imports
 
 ### Azure API for FHIR, FHIR-Proxy and FHIR-Bulk Loader & Export Relationship 
-The FHIR-Bulk Loader & Export tool is designed to work directly with Azure API for FHIR and through FHIR-Proxy. Advantages of using FHIR-Proxy include additional scalability, monitoring, and security. __Note:  If you are using MC4H, you must use FHIR-Proxy__. For the remainder of the Challenges, we assume you are using FHIR-Bulk Loader & Export with FHIR-Proxy.
+The FHIR-Bulk Loader & Export tool is designed to work directly with Azure API for FHIR and through FHIR-Proxy. Advantages of using FHIR-Proxy include additional scalability, monitoring, and security. __Note:  If you are connecting to MC4H solutions in Dynamics/Dataverse, you must use FHIR-Proxy__. For the remainder of the Challenges, we assume you are using FHIR-Bulk Loader & Export with FHIR-Proxy.
 
 Component view of Azure API for FHIR with FHIR Bulk Loader & Export and FHIR-Proxy.  
 
