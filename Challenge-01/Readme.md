@@ -73,7 +73,7 @@ Select Bash as the operating environment.
     ./deployFhirStarter.bash
     ```
 
-Be certain to GENERATE the POSTMAN Env
+Be certain to click ```y``` (for "yes") when prompted to generate a Postman environment for FHIR Service access.
 
 Deployed Components 
 
@@ -124,7 +124,7 @@ Once the ```deployfhirproxy.bash``` script completes, run the ```createproxyserv
     ./createproxyserviceclient.bash
     ```
 
-Be certain to GENERATE the POSTMAN Env
+Be certain to click ```y``` (for "yes") when prompted to generate a Postman environment for FHIR Service access.
 
 Deployed Components 
 
