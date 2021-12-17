@@ -51,7 +51,7 @@ This search finds the patient resource with the given id (there can only be one 
   
 
 ## Step 1 - Understand the basic concepts of FHIR Search
-Using the Postman file provided, search for Patients using the following: ```_id``` ```name```, and more 
+Using the Postman file provided, search for Patients using the following: ```_id``` ```name```, and more.
 
 Q: In what field does "name" work?  What is FHIR matching against?
 
