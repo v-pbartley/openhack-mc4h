@@ -114,6 +114,6 @@ Click on a **.result** file, then click on Edit
 
 ![bundle-edit](./media/bundle-edit.png)
 
-In the Editor view, look for status codes, here a 201 is successful, and the logs show the FHIR Resource now containing the informatio. 
+In the Editor view, look for status codes, here a 201 is successful, and the logs show the FHIR Resource now containing the information. 
 
 ![bundle-edit-status](./media/bundle-edit-status.png)
