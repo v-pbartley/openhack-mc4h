@@ -87,10 +87,10 @@ Deployed Components.  _Larger image [here](./media/install-components.png)_
 ![Blob Containers](./media/portal-browser-container.png)  
 
 3. Using the `good_bundles.zip` file downloaded in Step 1:
-    + Determine which container this file should be uploaded too
+    + Determine which container this file should be uploaded to.
 
 4. Using  the `bad_bundles.zip` file downloaded in Step 1:
-    + Determine which container this file should be uploaded too
+    + Determine which container this file should be uploaded to.
 
 > Refer to the Troubleshooting section below or FHIR Bulk Loader [testing](https://github.com/microsoft/fhir-loader/blob/main/docs/testing.md) documentation for more information
 
