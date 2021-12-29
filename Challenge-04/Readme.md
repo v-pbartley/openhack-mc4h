@@ -83,7 +83,7 @@ Using the Postman file provided, search for Patients using ```_has```.  For more
 
 
 ## Step 5 - Use the Include & Reverse Include Search Results Parameters  
-Using the Postman file provided, search for PractitionerRole including the Practitioner resource in the result, to reduce calls to the server. Discover all PractitionerRoles for an Organization using reverse include. For more examples of include and reverse include search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
+Using the Postman file provided, search for PractitionerRole including the Practitioner resource in the result to reduce calls to the server. Discover all PractitionerRoles for an Organization using reverse include. For more examples of include and reverse include search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
   
 
 ## Step 6 - Defining a Custom Search parameter 
