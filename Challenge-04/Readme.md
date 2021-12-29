@@ -75,17 +75,17 @@ Ref: Learn more about date search in FHIR https://www.hl7.org/fhir/search.html#d
   
 
 ## Step 3 - Using Search Result Parameters  
-Using the Postman file provided search for Patient's using the following search results parameters: ```_summary=count```, ```_total=accurate```  
+Using the Postman file provided, search for Patients using the following search results parameters: ```_summary=count```, ```_total=accurate```  
   
 
 ## Step 4 - Use the Chained & Reverse Chained Search Results Parameters 
-Using the Postman file provided search for Patient's using ```_has```.  For more examples of chained and reverse chained search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
+Using the Postman file provided, search for Patient's using ```_has```.  For more examples of chained and reverse chained search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
 
 
 ## Step 5 - Use the Include & Reverse Include Search Results Parameters  
-Using the Postman file provided search for PractitionerRole including the Practitioner resource in the result, to reduce calls to the server. Discover all PractitionerRoles for an Organization using reverse include. For more examples of include and reverse include search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
+Using the Postman file provided, search for PractitionerRole including the Practitioner resource in the result, to reduce calls to the server. Discover all PractitionerRoles for an Organization using reverse include. For more examples of include and reverse include search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
   
 
 ## Step 6 - Defining a Custom Search parameter 
-To create a new search parameter, you POST the SearchParameter resource to the database.  See the Postman file provided for an example.  Read through the full example at https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/how-to-do-custom-search 
+To create a new search parameter, you need to POST the SearchParameter resource to the database.  See the Postman file provided for an example.  Read through the full example at https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/how-to-do-custom-search.
 
