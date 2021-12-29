@@ -79,7 +79,7 @@ Using the Postman file provided, search for Patients using the following search 
   
 
 ## Step 4 - Use the Chained & Reverse Chained Search Results Parameters 
-Using the Postman file provided, search for Patient's using ```_has```.  For more examples of chained and reverse chained search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
+Using the Postman file provided, search for Patients using ```_has```.  For more examples of chained and reverse chained search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
 
 
 ## Step 5 - Use the Include & Reverse Include Search Results Parameters  
