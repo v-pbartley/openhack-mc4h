@@ -93,7 +93,7 @@ Use the imported collection in Postman to test access to your FHIR Service.
 _[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https://github.com/daemel/fhir-postman)_ 
 
 
-## Step 3 - Proxy Setup  
+## Step 3 - FHIR-Proxy (OSS) Setup  
 - Navigate to the FHIR-Proxy repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-proxy in your browser. 
 - Review the main [Readme.md](https://github.com/microsoft/fhir-proxy/tree/main/scripts#fhir-proxy-getting-startd-scripts-readme) and the [Readme.md](https://github.com/microsoft/fhir-proxy/blob/main/scripts/Readme.md) in the ./scripts folder.  
     
