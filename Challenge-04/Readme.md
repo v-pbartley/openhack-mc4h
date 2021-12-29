@@ -59,7 +59,7 @@ Azure API for FHIR supports _almost_ all resource-specific search parameters def
 
   
 ## Step 2 - Perform both Common and Composite Searches 
-Composite search allows you to search against value pairs. For example, if you were searching for a height observation where the person was 60 inches, you would want to make sure that a single component of the observation contained the code of bodyheight and the value of 60. 
+Composite search allows you to search against value pairs. For example, if you were searching for a height observation where the person was 60 inches, you would want to make sure that a single component of the observation contained the code of ```bodyheight``` and the value of 60. 
 
 Azure API for FHIR supports the following search parameter type pairings:
 + Reference, Token
