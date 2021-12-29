@@ -178,7 +178,7 @@ List Patients as a test
 
 ## Challenge Success
 + Azure API for FHIR (PaaS) installed and available 
-+ FHIR-Proxy (Open Source Software) installed and able to communicate with Azure API for FHIR
++ FHIR-Proxy (OSS) installed and able to communicate with Azure API for FHIR
 
 ## Troubleshooting 
 Most often the problem is order of execution in that someone will get a token before Granting Authorization.  
