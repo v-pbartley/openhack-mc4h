@@ -15,7 +15,7 @@ FHIR (Fast Healthcare Interoperability Resources) is at the center of our health
 + Understand the Azure API for FHIR - FHIR-Proxy relationship
 
 ### Azure API for FHIR and FHIR-Proxy Relationship
-The FHIR-Proxy acts as a Pre- and Post- Processor for Azure API for FHIR.  FHIR-Proxy has its own Client Credential Auth Flow and adds a means of Role Based Consent to Azure API for FHIR.
+The FHIR-Proxy acts as a Pre- and Post- Processor for Azure API for FHIR.  FHIR-Proxy has its own Client Credential Auth Flow and adds a means of Role-Based Consent to Azure API for FHIR.
 
 Component View of Azure API for FHIR and FHIR-Proxy.  _Larger image available [here](./media/component-view.png)_ 
 
