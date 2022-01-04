@@ -24,7 +24,7 @@ Component View of Azure API for FHIR and FHIR-Proxy.  _Larger image available [h
 
 
 ## Prerequisites 
-To help you set up your environment, we provide install scripts that gather (and export) information necessary for the proper deployment and configuration of Azure API for FHIR and supporting Open Source Software (OSS) components.
+To help you set up your environment, we provide install scripts that gather information necessary for the proper deployment and configuration of Azure API for FHIR and supporting Open Source Software (OSS) components.
 
 Before you run these install scripts, please make sure that you have the following permissions in your Azure environment:
 
