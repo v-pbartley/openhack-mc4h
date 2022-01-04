@@ -49,7 +49,7 @@ The Azure Cloud Shell CLI will open in a new tab.
 
 Select Bash as the operating environment.
 
-## Step 1 - FHIR Service deployment 
+## Step 1 - Azure API for FHIR deployment 
   
 - Navigate to the FHIR-Starter repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-starter in your browser, review the main [Readme.md](https://github.com/microsoft/fhir-starter#fhir-starter) and the [Readme.md](https://github.com/microsoft/fhir-starter/blob/main/scripts/Readme.md) in the ./scripts folder.  
 
