@@ -26,7 +26,7 @@ Please be sure to have the following components ready in your environment before
 + GitHub account [link](https://github.com/)
 + Postman (cloud or desktop) [link](https://www.postman.com/)
 
-_Note_ Postman cloud accounts require a login via email (free) or via Google.  Additionally, Postman recommends that if you choose to use the web client, you should also download the desktop application. You can [read more](https://www.postman.com/downloads/?utm_source=postman-home) and download the web desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
+_Note_ Free Postman cloud accounts require a login via email or a Google account. Additionally, Postman recommends that if you choose to use the web client, you should also download the desktop application. You can [read more](https://www.postman.com/downloads/?utm_source=postman-home) and download the web desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
 
 ## Optional Components (for Challenges 5-8)
 + Dynamics/Dataverse Environment + MC4H temporary license and solution set
