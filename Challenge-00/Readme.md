@@ -30,3 +30,5 @@ _Note_ Free Postman cloud accounts require a login via email or a Google account
 
 ## Optional Components (for Challenges 5-8)
 + Dynamics/Dataverse Environment + MC4H temporary license and solution set
+
+Information about obtaining a Dynamics/Dataverse trial license can be found [here](https://docs.microsoft.com/en-us/power-platform/admin/trial-environments).
