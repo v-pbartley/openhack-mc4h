@@ -27,8 +27,8 @@ The SyncAgent acts as a 2-way communication processor between Azure API for FHIR
 
 ## Prerequisites
 + Successful completion of Challenge 1 
-+ Access the Private GitHub Repo holding the FHIR-SyncAgent (Microsoft personnel)
-+ Use a Personnel Access Token to clone the repo (Microsoft personnel)
++ Access to the Private GitHub Repo holding the FHIR-SyncAgent (Microsoft personnel)
++ A Personal Access Token to clone the private repo (Microsoft personnel)
 
 ## Getting Started
 Azure FHIR Sync Agent includes two components:
