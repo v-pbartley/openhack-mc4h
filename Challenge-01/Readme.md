@@ -42,7 +42,7 @@ For this challenge, we will walk through these steps:
 - Set up Postman 
 - Test Authentication 
 
-To begin the deployment process, CTRL+click (Windows or Linux) or CMD+click (Mac) on the "Launch Azure Shell" button below.  
+To begin the deployment process, CTRL+click (Windows or Linux) or CMD+click (Mac) on the "Launch Cloud Shell" button below.  
 The Azure Cloud Shell CLI will open in a new tab.
 
 [![Launch Azure Shell](./media/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com/bash?target="_blank")
