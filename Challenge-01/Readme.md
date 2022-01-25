@@ -50,7 +50,7 @@ Select Bash as the operating environment.
 
 ## Step 1 - Azure API for FHIR deployment 
   
-- Navigate to the FHIR-Starter repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-starter in your browser. Review the main [Readme.md](https://github.com/microsoft/fhir-starter#fhir-starter) and the [Readme.md](https://github.com/microsoft/fhir-starter/blob/main/scripts/Readme.md) in the ./scripts folder.  
+- Navigate to the FHIR-Starter repo (**CTRL+click** or **CMD+click** for new tab) https://github.com/microsoft/fhir-starter in your browser. Review the main [Readme.md](https://github.com/microsoft/fhir-starter#fhir-starter) and the [Readme.md](https://github.com/microsoft/fhir-starter/blob/main/scripts/Readme.md) in the ./scripts folder.  
 
 - Clone the FHIR-Starter repo in your Azure Cloudshell environment.  
     ```azurecli-interactive
@@ -85,7 +85,7 @@ __Note__  During the live MC4H OpenHack session, Resource Group names will be as
 Using the Upload / Download button in the Azure Cloushell interface, download the _$fhirServiceName.postman_environment.json_ file to your computer. 
 
 Import the Postman Search Collection into Postman if you have not already done so.  
-Go to (CTRL+click or CMD+click) https://microsoft.github.io/openhack-mc4h/Challenge-1.html#materials for the collection download.
+Go to (**CTRL+click** or **CMD+click**) https://microsoft.github.io/openhack-mc4h/Challenge-1.html#materials for the collection download.
 
 Use the imported collection in Postman to test access to your FHIR Service.
 
@@ -93,7 +93,7 @@ _[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https
 
 
 ## Step 3 - FHIR-Proxy (OSS) Setup  
-- Navigate to the FHIR-Proxy repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-proxy in your browser. 
+- Navigate to the FHIR-Proxy repo (**CTRL+click** or **CMD+click** for new tab) https://github.com/microsoft/fhir-proxy in your browser. 
 - Review the main [Readme.md](https://github.com/microsoft/fhir-proxy/tree/main/scripts#fhir-proxy-getting-startd-scripts-readme) and the [Readme.md](https://github.com/microsoft/fhir-proxy/blob/main/scripts/Readme.md) in the ./scripts folder.  
     
 - Clone the Repo in your Azure Cloudshell environment.  
