@@ -64,12 +64,12 @@ Select Bash as the operating environment.
     cd $HOME/fhir-starter/scripts
     ```
 
-- Make the Bash scripts for deployment and setup executable.  
+- Make the Bash scripts inside the ```fhir-starter/scripts``` directory executable.  
     ```azurecli-interactive
     chmod +x *.bash
     ```
 
-- Execute the ```deployFhirStarter.bash``` script.  
+- While in the ```fhir-starter/scripts``` directory, execute the ```deployFhirStarter.bash``` script.  
     ```azurecli-interactive
     ./deployFhirStarter.bash
     ```
