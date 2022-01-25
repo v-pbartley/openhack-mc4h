@@ -74,7 +74,7 @@ Select Bash as the operating environment.
     ./deployFhirStarter.bash
     ```
 
-Be certain to click ```y``` (for "yes") when prompted to generate a Postman environment for Azure API for FHIR access.
+Be certain to enter ```y``` (for "yes") when prompted to generate a Postman environment for Azure API for FHIR access.
 
 Deployed Components\: 
 
