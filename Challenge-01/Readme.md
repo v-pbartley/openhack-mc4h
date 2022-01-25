@@ -79,7 +79,7 @@ Deployed Components
 ![fhir-starter](./media/fhir-starter.png)
 
 
-__Note__  During the live MC4H OpenHack session, Resource Group names will be assigned. If you are performing the OpenHack on your own, you can use your own custom Resource Group name, or you can use the automatically-generated name provided in the install process. 
+__Note__  During the live MC4H OpenHack session, Resource Group names will be assigned. If you are performing the OpenHack on your own, you can use your own custom Resource Group name, or you can use the automatically-generated name provided in the install process. Whether you use a custom or automatically generated Resource Group name, make sure to take note of the name because you will need it later when installing additional Azure components.
 
 ## Step 2 - Set up Postman
 Using the Upload / Download button in the Azure Cloushell interface, download the _$fhirServiceName.postman_environment.json_ file to your computer. 
