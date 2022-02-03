@@ -10,7 +10,7 @@ The MC4H OpenHack presents a series of challenges to help users gain skills in d
 + Understand the prerequisites for the MC4H OpenHack
 + Familiarize yourself with MC4H tools and architectures
 
-## Prerequisite knowledge
+## Prerequisite Knowledge
 
 + Participants in the MC4H OpenHack are expected to have a solid foundation in Azure fundamentals. If you are new to Microsoft Azure, visit [here](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-cloud-concepts/) to learn about the platform.
 
