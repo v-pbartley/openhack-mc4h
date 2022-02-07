@@ -1,12 +1,46 @@
 # Microsoft Cloud for Healthcare OpenHack
 
 # Introduction
-Hello and welcome to the Microsoft Cloud for Healthcare OpenHack! This OpenHack is initally being launched as a live event in online sessions. For those unable to attend the live event, all materials will remain available for self-paced study.
+Hello and welcome to the Microsoft Cloud for Healthcare (MC4H) OpenHack! This hack presents a series of hands-on activities for you to gain new skills working with Microsoft Health and Life Sciences (HLS) tools and architectures. 
 
-To learn more about the Microsoft Cloud for Healthcare OpenHack or to access the challenge materials, please visit __[MC4H OpenHack](https://microsoft.github.io/openhack-mc4h/)__.
+# Who is the MC4H OpenHack for?
+This hack is intended for **healthcare system integrators**, **independent software vendors** in the healthcare space, and other **healthcare IT professionals**. Participants are expected to have a solid foundation in MS Azure fundamentals, a working knowledge of the Fast Healthcare Interoperability Resources R4 (FHIR R4) data standard, and familiarity with the MS Dynamics/Dataverse platform.
 
-__Note__ You should __not__ clone this repo. All downloads and media are available via the __[IO site](https://microsoft.github.io/openhack-mc4h/)__.
+# When is the MC4H OpenHack?
 
+The MC4H OpenHack is initially launching as a live event in online sessions. For those unable to attend the live event, all materials will remain available for self-paced study.
+
+# What topics are covered?
+
++ In the first portion of the hack (Challenges 0-4), you'll get direct experience deploying the Azure components used in real-world health data production environments.  
+
+    + Challenge-00 - Check prerequisites and configure your environment
+    + Challenge-01 - Deploy Azure API for FHIR (PaaS), FHIR-Proxy (OSS), and FHIR-Bulk Loader (OSS)
+    + Challenge-02 - Convert HL7 and C-CDA to FHIR
+    + Challenge-03 - Ingest to FHIR
+    + Challenge-04 - Query and Search FHIR
+
++ In the second part of the hack (Challenges 5-8), we introduce Microsoft Cloud for Healthcare (MC4H) solutions using Microsoft Dynamics/Dataverse model-based apps and supporting tools.
+
+    + Challenge-05 - FHIR SyncAgent (Instructor Lead Training)
+    + Challenge-06 - Dataverse Entity and Attribute Mapping (Instructor Lead Training)
+    + Challenge-07 - Dataverse Writing Data (Instructor Lead Training)
+    + Challenge-08 - Debugging, Operations, and Maintenance (Instructor Lead Training)
+    
++ In the final part of the hack (Challenges 9-14), you'll get exposure to real-world applications through hands-on activities in a variety of topic areas.
+
+    + Challenge-09 - Export and Anonymize Data
+    + Challenge-10 - Research Azure Data Analytics
+    + Challenge-11 - IoT Connector for FHIR
+    + Challenge-12 - DICOM
+    + Challenge-13 - Consent capabilities of Azure API for FHIR
+    + Challenge-14 - FhirBlaze (Blazor app dev + FHIR)
+
+# Where to start?
+
+Go to the Challenge-00 folder (accessible [here](./Challenge-00)) and read the instructions to get started. When finished with Challenge-00, move on to Challenge-01. The challenge topics build on each other, and it is recommended to go through the challenges in the order they are presented. 
+
+Best of luck!
 
 ## Trademarks
 
