@@ -4,7 +4,7 @@
 In this preliminary challenge, you will be checking your Azure subscription and other parts of your environment to make sure that you can deploy the Microsoft Health and Life Sciences (HLS) components used in this OpenHack. Please make certain that everything is in place before proceeding to Challenge-01.
 
 ## Background 
-The MC4H OpenHack presents a series of challenges to help learners build skills in deploying and configuring [Azure API for FHIR](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/overview), [FHIR-Proxy](https://github.com/microsoft/fhir-proxy), [Dynamics/Dataverse MC4H solutions](https://docs.microsoft.com/en-us/industry/healthcare/overview), and supporting tools. After completing the MC4H OpenHack, learners will be able to set up the system architectures featured on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
+The MC4H OpenHack presents a series of challenges to help learners build skills in deploying and configuring [Azure API for FHIR](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/overview), [FHIR-Proxy](https://github.com/microsoft/fhir-proxy), [Dynamics/Dataverse MC4H solutions](https://docs.microsoft.com/en-us/industry/healthcare/overview), and supporting tools. After completing the MC4H OpenHack, learners will be able to build the system architectures featured on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
  
 ## Learning Objectives for Challenge-00
 + Understand the learner goals of the MC4H OpenHack
