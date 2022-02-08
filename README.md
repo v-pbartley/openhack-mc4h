@@ -10,10 +10,6 @@ This hack is intended for **healthcare system integrators**, **independent healt
 2. A working knowledge of the [Fast Healthcare Interoperability Resources R4](https://hl7.org/fhir/R4/) (FHIR R4) data standard
 3. Familiarity with the [MS Dynamics/Dataverse](https://powerplatform.microsoft.com/en-us/dataverse/) platform
 
-# When is this taking place?
-
-The MC4H OpenHack is initially launching as a live event in online sessions. For those unable to attend the live event, all materials will remain available for self-paced study.
-
 # What topics are covered?
 
 + In the first portion of the hack (Challenges 0-4), you'll get direct experience deploying the Azure components used in real-world health data production environments.  
