@@ -25,7 +25,7 @@ In general, we want learners to walk away from this hack with a sense of confide
 
 + In Challenges 05-08, we cover MC4H architectures based on Microsoft Dynamics/Dataverse healthcare industry solutions. Because most participants do not have access to a Dynamics/Dataverse environment, Challenges 05-08 are presented as instructor-lead training modules. A basic knowledge of the Dynamics/Dataverse landscape will be helpful to get the most out of this portion of the training. Please visit [here](https://powerplatform.microsoft.com/en-us/dataverse/) to learn more about the Dynamics/Dataverse platform.
 
-+ For testing Azure API for FHIR, we will be using the [Postman](https://www.postman.com/api-platform/api-testing/) API testing application. We assume learners have some experience making REST API calls in Postman or in a similar type of utility.
++ For testing Azure API for FHIR, we will be using the [Postman](https://www.postman.com/api-platform/api-testing/) API testing application. We assume learners have some experience making REST API calls in Postman or a similar type of utility.
 
 ## Environment Prerequisites
 Please be sure to have the following ready in your environment before proceeding to Challenge-01.
