@@ -4,7 +4,7 @@
 Hello and welcome to the Microsoft Cloud for Healthcare (MC4H) OpenHack! This hack presents a series of hands-on activities to help you gain new skills working with Microsoft Health and Life Sciences (HLS) tools and architectures. 
 
 # Who is the MC4H OpenHack for?
-This hack is intended for **healthcare system integrators**, **independent software vendors** in the healthcare space, and other **healthcare IT professionals**. Participants are expected to have the following experience before beginning the OpenHack:
+This hack is intended for **healthcare system integrators**, **independent healthcare software vendors**, and other **healthcare IT professionals**. Participants are expected to have the following experience before beginning the OpenHack:
 
 1. A solid foundation in [MS Azure fundamentals](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-cloud-concepts/)
 2. A working knowledge of the [Fast Healthcare Interoperability Resources R4](https://hl7.org/fhir/R4/) (FHIR R4) data standard
