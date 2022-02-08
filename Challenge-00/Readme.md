@@ -15,7 +15,7 @@ In general, we want learners to walk away from this hack with a sense of confide
 
 + In deploying complex health data systems, problems will inevitably arise and need to be debugged. To help learners develop autonomy in resolving issues, the tasks in this hack require learners to locate information in technical documentation and resolve issues independently.
 
-+ Going through all of the challenges will leave learners with a strong concept of how the various system components fit together. With this knowledge, learners will be ready to take the next step and apply the components in real-world health data use cases.  
++ Going through all of the challenges will leave learners with a strong concept of how the various system components fit together. With this knowledge, learners will be ready to take the next step and apply the components in real-world health data production environments.  
 
 ## Prerequisite Knowledge for the MC4H OpenHack
 
