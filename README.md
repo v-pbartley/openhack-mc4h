@@ -44,7 +44,7 @@ The MC4H OpenHack is initially launching as a live event in online sessions. For
 
 Go to the Challenge-00 folder (accessible [here](./Challenge-00)) and read the instructions to get started. When finished with Challenge-00, move on to Challenge-01. The challenge topics build on each other, and it is recommended to go through the challenges in the order they are presented. 
 
-We wish you the best of luck!
+We wish you the best of luck on your MC4H OpenHack journey!
 
 ## Trademarks
 
