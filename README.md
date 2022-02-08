@@ -8,7 +8,7 @@ This hack is intended for **healthcare system integrators**, **independent softw
 
 1. A solid foundation in MS Azure fundamentals
 2. A working knowledge of the Fast Healthcare Interoperability Resources R4 (FHIR R4) data standard
-3. Familiarity with the MS Dynamics/Dataverse platform.
+3. Familiarity with the MS Dynamics/Dataverse platform
 
 # When is this taking place?
 
