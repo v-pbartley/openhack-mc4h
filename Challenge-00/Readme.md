@@ -42,4 +42,8 @@ __Note:__ Free Postman cloud accounts require a login via email or a Google acco
 
 Information about obtaining a Dynamics/Dataverse trial license can be found [here](https://docs.microsoft.com/en-us/power-platform/admin/trial-environments).
 
+## Next Steps
+
+Click [here](../Challenge-01/Readme.md) to proceed to the next challenge.
+
 
