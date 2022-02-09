@@ -7,7 +7,7 @@ Welcome to Challenge-01!
 In this challenge, you will use an Azure Resource Manager (ARM) template to deploy **Azure API for FHIR** (PaaS), **FHIR-Proxy** (OSS), and **FHIR-Bulk Loader** (OSS). In addition, you will set up a **Postman** environment to make REST API calls to Azure API for FHIR.
 
 ## Background
-FHIR (Fast Healthcare Interoperability Resources) is the industry standard format underlying Microsoft's cloud data platform for healthcare. Microsoft's support for FHIR rests on [Azure API for FHIR](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/overview) (PaaS) (soon to be succeeded by [Azure Healthcare APIs](https://azure.microsoft.com/en-us/services/healthcare-apis/) - currently in Public Preview).
+FHIR (Fast Healthcare Interoperability Resources) is the industry standard data format in Microsoft's cloud data platform for healthcare. Microsoft's support for FHIR rests on [Azure API for FHIR](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/overview) (PaaS) (soon to be succeeded by [Azure Healthcare APIs](https://azure.microsoft.com/en-us/services/healthcare-apis/) - currently in Public Preview).
 
 In Azure FHIR data architectures, Azure API for FHIR receives REST API requests from client apps and manages all FHIR data persistance and retrieval tasks. Meanwhile, the open-source [FHIR-Proxy](https://github.com/microsoft/fhir-proxy) acts as a checkpoint surrounding Azure API for FHIR, filtering the incoming and outgoing FHIR data according to a set of admin-defined rules.
 
