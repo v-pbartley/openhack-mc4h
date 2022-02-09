@@ -1,7 +1,7 @@
-# Challenge 9 - Export and Anonymize Data
+# Challenge-09 - Export and Anonymize Data
 ## Introduction
 
-Welcome to Challenge 9!
+Welcome to Challenge-09!
 
 In this challenge you will learn how to export anonymized data from Azure API for FHIR.
 
