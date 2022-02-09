@@ -1,10 +1,10 @@
-# Challenge  12 - DICOM
+# Challenge-12 - DICOM
 
 ## Introduction
 
-Welcome to Challenge 12!
+Welcome to Challenge-12!
 
-Congratulations for almost reaching the end. Challenge 12 is a standalone challenge. This challenge is designed to help you become familiar with Medical Imaging basics. This challenge can be performed in either your personal/ organization subscription or the subscription provided for the live hack event.
+Congratulations for almost reaching the end of this hack! Challenge-12 is a standalone challenge. This challenge is designed to help you become familiar with Medical Imaging basics. This challenge can be performed in either your personal/organization Azure subscription or the subscription provided for the live hack event.
 
 ## Background
 
