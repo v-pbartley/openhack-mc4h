@@ -52,6 +52,50 @@ Follow the instructions in the repo and return here when finished.
 + FHIR-Bulk Loader (OSS) deployed and available
 + Postman set up and able to make REST API calls to Azure API for FHIR
 
+## Step 2 - Set up Postman
+Next, you will set up your Postman environment so that you can make REST API calls to Azure API for FHIR.
+
+## Using Postman to connect to Azure API for FHIR
+
+1. [Download and install the Postman app](https://www.postman.com/downloads/) (if you haven't already).
+
+2. Create a new Postman Workspace (or select an existing one if already created).
+
+3. Click the ```Import``` button next to your workspace name. ![Import Postman](./media/postman_setup_images/postman1.png)
+
+4. Import the ```$fhirServiceName.postman_environment.json``` file that you downloaded to your desktop environment (see top):
+    + Add the file to Postman using the ```Upload Files``` button or paste in the contents of the file using the ```Raw text``` tab.
+    ![Import Postman](./media/postman_setup_images/postman2.png)
+
+5. Import the ```FHIR-CALLS-Sample-postman-collection.json``` file that you downloaded to your desktop environment (see top):
+    + Add the file to Postman using the ```Upload Files``` button or paste in the contents of the file using the ```Raw text``` tab.
+
+6. Select the ```$fhirServiceName``` Postman environment in the workspace. (e.g. ```stocore``` as seen below is a Postman environment name).
+   ![Import Postman](./media/postman_setup_images/postman3.png)
+
+7. Select the ```POST AuthorizeGetToken``` call from the ```FHIR CALLS-Sample``` collection.
+   ![Import Postman](./media/postman_setup_images/postman4.png)
+
+8. Press ```Send```. You should receive a valid token automatically set in the ```bearerToken``` variable for the Postman environment.
+   ![Import Postman](./media/postman_setup_images/postman5.png)
+
+9. Select the ```GET List Patients``` call from the ```FHIR CALLS-Sample``` collection.
+   ![Import Postman](./media/postman_setup_images/postman6.png)
+
+10. Press ```Send```. You should receive an empty bundle of patients from Azure API for FHIR.
+   ![Import Postman](./media/postman_setup_images/postman7.png)
+   
+11. For your convenience, a sample Patient Resource is included in the ```POST Save Patient``` call. Select ```POST Save Patient``` and press ```Send``` to create a Patient Resource in Azure API for FHIR.  
+
+12. Select ```GET List Patients``` again and press ```Send```. You should receive a JSON response with information about the sample patient you imported (see step 11).
+
+13. Now you can experiment with other sample calls or your own calls.  
+
+__Note:__ After token expiry (60 min), use the ```POST AuthorizeGetToken``` call again for a token refresh.
+
+
+
+
 
 ## Deployed Components 
 
