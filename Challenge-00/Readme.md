@@ -9,7 +9,7 @@ The MC4H OpenHack presents a series of challenges to help learners build skills 
 ## Learning Objectives for Challenge-00
 + Understand the learner goals of the MC4H OpenHack
 + Understand the prerequisites for the MC4H OpenHack
-+ Check environment to make sure all prerequisites are met
++ Check environment to make sure that all prerequisites are met
 
 ## What are the general learner goals of the MC4H OpenHack?
 In general, we want learners to walk away from this hack with a sense of confidence in deploying, configuring, and implementing Microsoft health data solutions.
