@@ -9,7 +9,7 @@ In this challenge, you will use an Azure Resource Manager (ARM) template to depl
 ## Background
 FHIR (Fast Healthcare Interoperability Resources) is at the center of Microsoft's cloud data platform for healthcare. Microsoft's support for FHIR rests on [Azure API for FHIR](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/overview) (PaaS) (soon to be succeeded by [Azure Healthcare APIs](https://azure.microsoft.com/en-us/services/healthcare-apis/) - currently in Public Preview).
 
-In Azure FHIR data architectures, Azure API for FHIR receives REST API requests from client apps and manages all FHIR data persistance and retrieval tasks. Meanwhile, the open-source [FHIR-Proxy](https://github.com/microsoft/fhir-proxy) acts as a checkpoint surrounding Azure API for FHIR, filtering the incoming and outgoing data according to a set of admin-defined rules.
+In Azure FHIR data architectures, Azure API for FHIR receives REST API requests from client apps and manages all FHIR data persistance and retrieval tasks. Meanwhile, the open-source [FHIR-Proxy](https://github.com/microsoft/fhir-proxy) acts as a checkpoint surrounding Azure API for FHIR, filtering the incoming and outgoing FHIR data according to a set of admin-defined rules.
 
 For bulk ingestion of FHIR data into Azure API for FHIR, Microsoft offers the open-source [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) utility. With FHIR-Bulk loader, admins can import large amounts of FHIR data into Azure API for FHIR at one time. The FHIR Bulk-Loader can import data from FHIR Bundles (compressed and non-compressed) as well as FHIR NDJSON files. 
 
