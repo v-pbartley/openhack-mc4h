@@ -53,11 +53,13 @@ Follow the instructions in the repo and return here when finished.
 + Postman set up and able to make REST API calls to Azure API for FHIR
 
 
-Deployed Components (Azure API for FHIR and FHIR-Proxy)
+## Deployed Components 
+
+### Azure API for FHIR and FHIR-Proxy)
 
 ![proxy-deployment](./media/proxy-deployment.png)
 
-Deployed Components (FHIR-Bulk Loader)
+### FHIR-Bulk Loader
 
 ![fhir-bulk](./media/install-components-small.png)
 
