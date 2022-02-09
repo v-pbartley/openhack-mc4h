@@ -8,64 +8,29 @@ In this challenge you will learn how to use the [FHIR Bulk Loader & Export](http
 
 ## Background
 
-FHIR is an evolving standard, and one area where the FHIR specification is still in its early stages of development is its coverage of bulk data ingestion. Until HL7 publishes specifications for a FHIR $import operator, implementors will have to rely on alternative methods for getting bulk FHIR data into a FHIR server. In this challenge, we will be using the current best-practice solution for bulk FHIR import into Azure API for FHIR: the FHIR Bulk Loader & Export utility (OSS).
+Bulk FHIR data ingestion is a vital capability for managing FHIR data operations at scale. Since no $import operation has been published in the FHIR standard (yet), implementors rely on alternative methods for getting bulk FHIR data into a FHIR server. In this challenge, we will be using the current best-practice solution for bulk FHIR import into Azure API for FHIR: the FHIR Bulk Loader utility (OSS).
 
 ## Learning Objectives
 
 + Understand data constraints with FHIR bulk data loading
 + Understand how to track and compare bulk FHIR imports
 
-### Azure API for FHIR, FHIR-Proxy and FHIR-Bulk Loader & Export Relationship 
-The FHIR-Bulk Loader & Export tool is designed to work directly with Azure API for FHIR through FHIR-Proxy. Advantages of using FHIR-Proxy include additional scalability, monitoring, and security. __Note:  If you are connecting to MC4H solutions in Dynamics/Dataverse, you must use FHIR-Proxy__. For the remainder of the Challenges, we assume you are using FHIR-Bulk Loader & Export with FHIR-Proxy.
+### Azure API for FHIR, FHIR-Proxy and FHIR-Bulk Loader Relationship 
+The open-source [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) utility is an Azure component designed to work directly with Azure API for FHIR. FHIR-Bulk loader can connect to Azure API for FHIR either through FHIR-Proxy or directly into Azure API for FHIR. For the remainder of this challenge, we assume you are using FHIR-Bulk Loader connected directly to Azure API for FHIR (bypassing FHIR-Proxy).
 
-Component view of Azure API for FHIR with FHIR Bulk Loader & Export and FHIR-Proxy.  
+Component view of Azure API for FHIR with FHIR Bulk Loader and FHIR-Proxy.  
 
 ![components](./media/components.png)
 
 
 ## Prerequisites
-+ Successful completion of Challenge 1
-+ Postman
-+ Text Editor
++ Successful completion of Challenge-01
++ Postman installed
++ Access to a text editor (e.g., [VS Code](https://code.visualstudio.com/))
 
 ## Getting Started
-Deploying FHIR-Bulk Loader & Export 
 For this challenge, we will walk through these steps: 
-- Login to Azure CLI (via the Portal or directly at shell.azure.com)
-- Clone the FHIR-Loader repo 
-- Execute the deployment scripts 
 - Test Data Loading 
-
-To begin the deployment process, CTRL+click (Windows or Linux) or CMD+click (Mac) on the "Launch Azure Shell" button below.  
-The Azure Cloud Shell CLI will open in a new tab.
-
-[![Launch Azure Shell](./media/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com/bash?target="_blank")
-
-Select Bash as the operating environment.
-
-## Step 1 - FHIR Bulk Loader Installation
-
-- Navigate to the FHIR-Loader repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-loader in your browser, review the main [Readme.md](https://github.com/microsoft/fhir-loader#fhir-loader), and the [Readme.md](https://github.com/microsoft/fhir-loader/blob/main/scripts/Readme.md) in the ./scripts folder.  
-
-- Clone the FHIR-Loader repo in your Azure Cloudshell environment.  
-    ```azurecli-interactive
-    git clone https://github.com/microsoft/fhir-loader.git
-    ```
-
-- Change the working directory to the ```./fhir-loader/scripts``` directory in the repo.  
-    ```azurecli-interactive
-    cd $HOME/fhir-loader/scripts
-    ```
-
-- Make the Bash scripts for deployment and setup executable.  
-    ```azurecli-interactive
-    chmod +x *.bash
-    ```
-
-- Execute the ```deployFhirBulk.bash``` script.  
-    ```azurecli-interactive
-    ./deployFhirBulk.bash
-    ```
 
 Deployed Components.  _Larger image [here](./media/install-components.png)_ 
 
