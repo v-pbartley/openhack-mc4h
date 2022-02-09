@@ -1,10 +1,10 @@
-# Challenge 13 - Deploy and demonstrate the consent capabilities of Azure API for FHIR
+# Challenge-13 - Deploy and demonstrate the consent capabilities of Azure API for FHIR
 
 ## Introduction
 
-Welcome to Challenge 13!
+Welcome to Challenge-13!
 
-In this challenge you will learn how to configure Consent Opt-Out filtering using the Secure FHIR-Proxy (OSS) solution.
+In this challenge you will learn how to configure Consent Opt-Out filtering using the FHIR-Proxy (OSS) solution.
 
 ## Background
 
@@ -12,14 +12,14 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
 
 ## Learning Objectives
 
-+ Configure Consent Opt-Out filtering in Secure FHIR-Proxy
++ Configure Consent Opt-Out filtering in FHIR-Proxy
 + Add a Consent Resource to the Healthcare APIs FHIR Service
 + Verify that Consent Opt-Out filtering performs as expected
 
 ## Prerequisites
 
 + Azure Healthcare APIs FHIR service instance with patient data
-+ Secure FHIR-Proxy successfully deployed
++ FHIR-Proxy successfully deployed
 + Postman (https://www.postman.com/downloads/) or Visual Studio Code with the REST Client extension (https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 + Multiple Azure AD users to simulate user and or administrator access to the FHIR service. 
 
@@ -30,7 +30,7 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
 ![Patient Resources](./images/patient-count-postman.png)
 3. Select a Patient resource and record the patient identifier. This will be used to create the Consent resource.
 
-Visual Studio Code with the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension may also be used to complete this challenge. See the walkthrough [here](https://docs.microsoft.com/en-us/azure/healthcare-apis/using-rest-client) for details on how to use REST Client to access Azure Healthcare APIs. Be sure to note that in all cases you will be using the Secure FHIR-Proxy endpoint to complete this challenge.
+Visual Studio Code with the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension may also be used to complete this challenge. See the walkthrough [here](https://docs.microsoft.com/en-us/azure/healthcare-apis/using-rest-client) for details on how to use REST Client to access Azure Healthcare APIs. Be sure to note that in all cases you will be using the FHIR-Proxy endpoint to complete this challenge.
 
 ## Step - 2 Post Consent Record to FHIR Service
 
@@ -39,11 +39,11 @@ Visual Studio Code with the [REST Client](https://marketplace.visualstudio.com/i
 
 ## Step - 3 Configure Secure FHIR Consent Opt-Out
 
-1. Refer to the Secure FHIR-Proxy configuration [documentation](https://github.com/microsoft/fhir-proxy/blob/main/docs/configuration.md) for additional details.
+1. Refer to the FHIR-Proxy configuration [documentation](https://github.com/microsoft/fhir-proxy/blob/main/docs/configuration.md) for additional details.
 
 ## Step - 3 Verify Consent Opt-Out filtering
 
-1. Link a user to an appropriate FHIR resource. See the Secure FHIR-Proxy configuration [documentation](https://github.com/microsoft/fhir-proxy/blob/main/docs/configuration.md) for additional details. Ensure that the linked user is not assigned to the Secure FHIR-Proxy administrator role.
+1. Link a user to an appropriate FHIR resource. See the FHIR-Proxy configuration [documentation](https://github.com/microsoft/fhir-proxy/blob/main/docs/configuration.md) for additional details. Ensure that the linked user is not assigned to the FHIR-Proxy administrator role.
 
 2. Sample query patient result.![Query patient](./images/ConsentOptOut-Withheld-2.png) 
 
