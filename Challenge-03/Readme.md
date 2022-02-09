@@ -4,11 +4,11 @@
 
 Welcome to Challenge-03!
 
-In this challenge you will learn how to use the [FHIR Bulk Loader & Export](https://github.com/microsoft/fhir-loader) tool to bulk-ingest data into Azure API for FHIR.
+In this challenge you will learn how to use the [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) tool to bulk-ingest data into Azure API for FHIR.
 
 ## Background
 
-Bulk FHIR data ingestion is a vital capability for managing FHIR data operations at scale. Since no $import operation has been published in the FHIR standard (yet), implementors rely on alternative methods for getting bulk FHIR data into a FHIR server. In this challenge, we will be using the current best-practice solution for bulk FHIR import into Azure API for FHIR: the FHIR Bulk Loader utility (OSS).
+Bulk FHIR data ingestion is a vital capability for managing FHIR data operations at scale. Since no $import operation has been published in the FHIR standard (yet), implementors rely on alternative methods for getting bulk FHIR data into a FHIR server. In this challenge, we will be using the current best-practice solution for bulk FHIR import into Azure API for FHIR: the FHIR-Bulk Loader utility (OSS).
 
 ## Learning Objectives
 
@@ -16,7 +16,7 @@ Bulk FHIR data ingestion is a vital capability for managing FHIR data operations
 + Understand how to track and compare bulk FHIR imports
 
 ### Azure API for FHIR, FHIR-Proxy and FHIR-Bulk Loader Relationship 
-The open-source [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) utility is an Azure component designed to work directly with Azure API for FHIR. FHIR-Bulk loader can connect to Azure API for FHIR either through FHIR-Proxy or directly into Azure API for FHIR. For the remainder of this challenge, we assume you are using FHIR-Bulk Loader connected directly to Azure API for FHIR (bypassing FHIR-Proxy).
+The open-source [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) utility is an Azure component designed to work directly with Azure API for FHIR, or through FHIR-Proxy into Azure API for FHIR. For the remainder of this challenge, we assume you are using FHIR-Bulk Loader connected directly to Azure API for FHIR (bypassing FHIR-Proxy).
 
 Component view of Azure API for FHIR with FHIR Bulk Loader and FHIR-Proxy.  
 
