@@ -12,6 +12,7 @@ Bulk FHIR data ingestion is a vital capability for managing FHIR data operations
 
 ## Learning Objectives
 
++ Practice identifying issues in importing FHIR bulk data
 + Understand data constraints with FHIR bulk data loading
 + Understand how to track and compare bulk FHIR imports
 
