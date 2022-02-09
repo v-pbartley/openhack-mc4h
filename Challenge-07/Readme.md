@@ -1,8 +1,8 @@
-#  Challenge 7 - Dataverse Writing Data (Instructor Lead Training)
+#  Challenge-07 - Dataverse Writing Data (Instructor Lead Training)
 
 ## Introduction
 
-Welcome to Challenge 7!
+Welcome to Challenge-07!
 
 **Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
 
@@ -16,9 +16,9 @@ The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for
 
 
 ## Prerequisites
-+ Successful completion of Challenge 1 
-+ Successful completion of Challenge 5
-+ Successful completion of Challenge 6
++ Successful completion of Challenge-01 
++ Successful completion of Challenge-05
++ Successful completion of Challenge-06
 
 ---
 
