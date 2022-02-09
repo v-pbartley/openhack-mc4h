@@ -1,8 +1,8 @@
-# Challenge 6 - Dataverse Entity and Attribute Mapping (Instructor Lead Training)
+# Challenge-06 - Dataverse Entity and Attribute Mapping (Instructor Lead Training)
 
 ## Introduction
 
-Welcome to Challenge 6!
+Welcome to Challeng-06!
 
 **Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
 
@@ -16,8 +16,8 @@ The FHIR data store in Microsoft Cloud for Healthcare (MC4H) is **Azure API for 
 + Test mapping between Azure API for FHIR and Dynamics 
 
 ## Prerequisites
-+ Successful completion of Challenge 1 
-+ Successful completion of Challenge 5
++ Successful completion of Challenge-01 
++ Successful completion of Challenge-05
 
 ---
 
