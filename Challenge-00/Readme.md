@@ -1,7 +1,7 @@
 # Challenge-00 - Welcome!
 
 ## Introduction 
-In this preliminary challenge, you will be checking your Azure subscription and other parts of your environment to make sure that you can deploy the Microsoft Health and Life Sciences (HLS) components used in this OpenHack. Please make certain that everything is in place before proceeding to Challenge-01.
+In this preliminary challenge, you will be checking your Azure Subscription and other pieces of your environment to make sure that all prerequisites are met before deploying the Microsoft Health and Life Sciences (HLS) components used in this OpenHack. Please make certain that everything is in place before proceeding to Challenge-01.
 
 ## Background 
 The MC4H OpenHack presents a series of challenges to help learners build skills in deploying and configuring [Azure API for FHIR](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/overview), [FHIR-Proxy](https://github.com/microsoft/fhir-proxy), [Dynamics/Dataverse MC4H solutions](https://docs.microsoft.com/en-us/industry/healthcare/overview), and supporting tools. After completing the MC4H OpenHack, learners will be able to build the system architectures featured on __[Microsoft Health Architectures](https://microsoft.github.io/health-architectures/)__.
@@ -9,13 +9,16 @@ The MC4H OpenHack presents a series of challenges to help learners build skills 
 ## Learning Objectives for Challenge-00
 + Understand the learner goals of the MC4H OpenHack
 + Understand the prerequisites for the MC4H OpenHack
++ Check your environment to make sure that all prerequisites are met
 
 ## What are the general learner goals of the MC4H OpenHack?
 In general, we want learners to walk away from this hack with a sense of confidence in deploying, configuring, and implementing Microsoft health data solutions.
 
-+ In deploying complex health data systems, problems will inevitably arise and need to be debugged. To help learners develop autonomy in resolving issues, the tasks in this hack require learners to locate information in technical documentation and resolve issues independently.
++ In doing this hack, learners will be able to set up, connect, and use Microsoft health data components in the cloud.
 
-+ Going through all of the challenges will leave learners with a strong concept of how the various system components fit together. With this knowledge, learners will be ready to take the next step and apply the components in real-world health data production environments.  
++ The tasks in this hack require learners to locate information in technical documentation and resolve issues independently. This will help learners develop autonomy in resolving issues.
+
++ The challenges will leave learners with a strong concept of how the system components fit together. With this knowledge, learners will be ready to take the next step and apply the components in real-world health data production environments.  
 
 ## Prerequisite Knowledge for the MC4H OpenHack
 
