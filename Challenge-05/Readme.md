@@ -1,130 +1,67 @@
-# Challenge-05 - FHIR SyncAgent (Instructor Lead Training)
-
+# Challenge-09 - Export and Anonymize Data
 ## Introduction
 
-Welcome to Challenge-05!
+Welcome to Challenge-09!
 
-**Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
-  
-In this challenge you will learn how to download and install the Microsoft Cloud for Healthcare FHIR-SyncAgent. 
+In this challenge you will learn how to export anonymized data from Azure API for FHIR.
 
 ## Background
-FHIR data in MC4H is managed in the **Azure API for FHIR** data store, while MC4H model-driven apps are based on the **Dynamics** health industry data model in **Dataverse**. Leveraging Dataverse enables organizations to quickly stand up Power Apps for their unique needs. The FHIR-SyncAgent is a function app designed to keep data synchronized between the two data stores (Azure API for FHIR and Dataverse).  
 
-Installing the FHIR-SyncAgent requires configuration in both Azure and Dynamics. The Azure installation is accomplished using the Azure Cloud Shell - Bash Shell environment, and the install on the Dynamics end is carried out via the Dynamics Solution Center.  
+Healthcare organizations and payors frequently partner with outside research groups, and the data used in these research projects generally comes from patients' medical records. If the purpose of the research is academic and not for treatment, payment, or healthcare operations, researchers are not allowed to access patients' Personal Health Information (PHI) *unless* the information has been de-identified. De-identification of PHI involves removing details from patients' medical data that could reveal the patients' identities. In the U.S., de-identification (or anonymization) of PHI is regulated under the Health Insurance Portability and Accountability Act (HIPAA).
 
 ## Learning Objectives
-+ Install and Configure the FHIR-SyncAgent service using the bash shell scripts 
-+ Deploy and Config the Sync Admin for FHIR administration application 
+By the end of this challenge you will be able to
+* Configure bulk export of FHIR data from Azure API for FHIR
+* Use the sample anonymization config file to de-identify FHIR data on export
+* Export anonymized data to an ADLS Gen2 account
+* Share anonymized data with a group not affiliated with your organization
 
-### SyncAgent, API for FHIR and Dynamics Relationship 
-The SyncAgent acts as a 2-way communication processor between Azure API for FHIR and Dynamics. Requirements (not all pictured below) include 
-- FHIR-Proxy deployed with Azure API for FHIR
-- Service Client information from the Dynamics Tenant (the Dynamics Tenant must be separate from the Azure API for FHIR/FHIR-Proxy tenant)
+## Prerequisites 
+* An Azure environment with a working instance of Azure API for FHIR. 
+* FHIR data loaded into Azure API for FHIR. If the data you have loaded does not include Immunization or Patient Resources, go ahead and [load this bundle](https://github.com/kamoclav/openhack-mc4h-2/blob/main/Challenge-9/synthea_sample_data_fhir_r4%20OpenHack.zip) for a small dataset or check out [Synthea](https://synthetichealth.github.io/synthea/) for a larger dataset.
+* Azure Data Lake Storage Gen2 deployed in your Azure environment.
 
+## Step 1: Review sample anonymization configuration and customize if needed
+Microsoft provides a sample configuration file to anonymize data according to HIPAA Safe Harbor specifications. It's important to review the sample configuration and the HIPAA Safe Harbor rules to determine if the sample configuration will work for your organization. If the sample configuration doesn't meet your organization's requirements for PHI de-identification, you will need to implement your own anonymization rules in the configuration file.
 
-![deploy](./media/deploy-components.png)
+More information on HIPAA de-identification rules can be found [here](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html).
 
-## Prerequisites
-+ Successful completion of Challenge 1 
-+ Access to the Private GitHub Repo holding the FHIR-SyncAgent (Microsoft personnel)
-+ A Personal Access Token to clone the private repo (Microsoft personnel)
+**Task:**  
+Configure your Azure API for FHIR for export to a storage account following the instructions [here](https://docs.microsoft.com/en-us/azure/healthcare-apis/data-transformation/configure-export-data). <br>
 
-## Getting Started
-Azure FHIR Sync Agent includes two components:
-- FHIR Sync Agent service (Azure)
-- Sync admin for FHIR application (Dynamics)
+Note: You are enabling a managed identity on the Azure API for FHIR resource. That managed identity is what needs to be added to the storage account with Storage Blob Data Contributor privledges. Be careful not to add the service client or a service principle by mistake. <br>
 
-Both components are required in order for clinical information to properly flow between Azure API for FHIR and Dataverse.
-  
-The FHIR Sync Agent service consists of Azure services that are deployed directly within your Azure Subscription. 
-  
-Sync admin for FHIR is deployed automatically when you deploy any of the Dynamics 365 healthcare solutions through the Microsoft Cloud Solution Center.
+For more information on the sample anonymization file, check out [de-identified-export-operation-on-the-fhir-server](https://github.com/microsoft/Tools-for-Health-Data-Anonymization/blob/master/docs/FHIR-anonymization.md#how-to-perform-de-identified-export-operation-on-the-fhir-server).
 
-### Azure 
-Deploying MC4H FHIR-SyncAgent service
-For this challenge, we will walk through these steps: 
-- Login to Azure CLI (via the Portal or directly at shell.azure.com)
-- Clone the FHIR-CDS-Agent repo  
-- Execute the deployment and setup scripts 
-
-### Dynamics 
-- Configure a sync agent application user  
-- Update the Sync admin for FHIR - > Integration Settings 
-
-_Challenge 6 is where we will test data flow between Azure API for FHIR and Dynamics_
+For a general overview of the $export operation's query parameters for de-identification, check out [this documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/data-transformation/de-identified-export).
 
 
-## Step 1 - Create a Sync Agent Application User in your Dynamics Tenant 
-_Note for Instructor led training a tenant and ID will be provided_ 
+## Step 2: Export anonymized data to a storage account
 
-- Navigate to docs.microsoft.com and follow the following steps to create a Sync Agent Application User 
-https://docs.microsoft.com/en-us/dynamics365/industry/healthcare/configure-sync-clinical-data#step-1-create-a-sync-agent 
+**Task:**  
+Perform a de-identified $export on Azure API for FHIR. If you get stuck, refer to the documentation in Step 1. <br>
 
-- Save the Dynamics instance URL, the User ID and Client Secret as you will need this for the Azure Setup Step 1.  
+The general format of the query will be <br>
+`https://<<FHIR service base URL>>/$export?_container=<<container_name>>&_anonymizationConfig=<<config file name>>&_anonymizationConfigEtag=<<ETag on storage>>`
 
-## Step 2 - FHIR SyncAgent deployment 
-_Note this step assumes you have a Personal Access Token for Github.  If you do not, please read [PrivateRepo.md](./PrivateRepo.md)_
+The $export operation has required headers 
+* Accept: application/fhir+json
+* Authorization: Bearer{{bearerToken}}
+* Prefer: respond-async. <br>
 
-To begin the deployment process, click on the "Launch Azure Shell" button.
+![export-header](./media/Export_Headers.png) <br>
 
-[![Launch Azure Shell](./media/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com/bash?target="_blank")
+For more information on headers check out this [documentation] (https://hl7.org/Fhir/uv/bulkdata/export/index.html#headers)
 
-Select Bash Shell as the operating environment.
+## Step 3: Securely transfer the file to the research team
+Researchers from outside organizations cannot have direct access to Healthcare or Payor organizations' Azure tennants. You will need to set up a way to securely transfer the anonymized datasets to these external groups.
 
-- Navigate to the FHIR-SyncAgent repo https://github.com/microsoft/fhir-cds-agent in your browser, review the main Readme.md, and the [Readme.md](https://github.com/microsoft/fhir-cds-agent/blob/main/scripts/Readme.md) in the ./scripts folder.  
+**Task:**  
+Set up a shared access signature (SAS) token to allow a research team to access the anonymized datasets that you exported.
 
-- Clone the Repo in your Azure Cloudshell environment.  _You will need a Personal Access Token to clone this repo_  
-    ```azurecli-interactive
-    git clone https://github.com/microsoft/fhir-cds-agent.git
-    ```
-
-- Change the working directory to the ```./fhir-cds-agent/scripts``` directory in the repo.  
-    ```azurecli-interactive
-    cd $HOME/fhir-cds-agent/scripts
-    ```
-
-- Make the Bash scripts for deployment and setup executable.  
-    ```azurecli-interactive
-    chmod +x *.bash
-    ```
-
-- Execute the ```deploysyncagent.bash``` script _(wait for it to complete)_   
-    ```azurecli-interactive
-    ./deploysyncagent.bash
-    ```
-
-
-
-## Step 3 - FHIR SyncAgent Setup
- 
-**Note** Once the ```deploysyncagent.bash``` script is complete, you will be prompted to run the ```setupsyncagent.bash``` script. These two scripts are _interdependent_ but can be _ran at seperate times_. Moreover, the deploysyncagent.bash script needs only to be run once, however __the setupsyncagent.bash script can be re-run to connect to a different Dynamics environment without re-running the deploysyncagent.bash script__
-
-
-- Execute the ```setupsyncagent.bash``` script _(you will need the URL and Sync Agent Client ID and Secret from Step 1)_
-    ```azurecli-interactive
-    ./setupsyncagent.bash
-    ```
-
-![deploy-setup](./media/setup-components.png)
-
-**Note** The ```setupsyncagent.bash``` script outputs Service Bus Namespace and Queue information to be loaded into the Dynamics Sync Admin for FHIR application. This information is necessary for Step 4.  
-  
-
-## Step 4 - Update Dynamics Sync admin for FHIR Integration 
-The FHIR-Sync Agent ```setupsyncagent.bash``` script will output the following pieces of information, all of which need to be entered into the Integration settings page. 
-- Service Bus URL
-- Service Queue name 
-- Service Queue Access Policy name 
-- Service Bus Access Key 
-
-Select both **Enable Integration** and **Enable Logging**
-
-Click on **Save**
-
-Example Integration Settings page **[example](./SyncAgent-Setup.md)**
-
+If you get stuck, check out [Create SAS Tokens](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/document-translation/create-sas-tokens?tabs=Containers).
 
 ## Challenge Success
-+ Successful installation of the FHIR-SyncAgent
 
++ Successfully utilize an anonymization configuration file and the $export operator to export an anonymized dataset from Azure API for FHIR
++ Successfully set up a SAS token to allow access to the anonymized dataset

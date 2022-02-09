@@ -1,156 +1,106 @@
-#  Challenge-08 - Debugging, Operations, and Maintenance (Instructor Lead Training)
+# Challenge-12 - DICOM
 
 ## Introduction
 
-Welcome to Challenge-08!
+Welcome to Challenge-12!
 
-**Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
-
-In this challenge you will learn to recoginize and address some of the issues that can happen with MC4H.  
+Congratulations for almost reaching the end of this hack! Challenge-12 is a standalone challenge. This challenge is designed to help you become familiar with Medical Imaging basics. This challenge can be performed in either your personal/organization Azure subscription or the subscription provided for the live hack event.
 
 ## Background
-The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for FHIR**, while MC4H model-driven apps leverage the **Dynamics** health industry data model in **Dataverse**. Synchronizing data between FHIR and the Dataverse model requires several layers of mapping, most of which is set up and managed via the **SyncAdmin for FHIR** settings in Dynamics.
+
+Research is broadening beyond text based research. These research initiatives require more resources than on-prem datacenters can provide. DICOM datasets are pushing into the 10s of Petabytes, which is pushing the limits of on-prem storage. These larger datasets need a standardized place to reside. The Microsoft Medical Imaging Service provides a DICOMweb standard method for storing these images. This challenge will give learners some hands-on experience with how Microsoft's DICOM Service ingests, stores, retrieves, and updates images.
 
 ## Learning Objectives
-+ Recognize and address some of the more common issues with integrating Azure and Dynamics  
 
-## Prerequisites
-+ Successful completion of Challenge-01 
-+ Successful completion of Challenge-05
-+ Successful completion of Challenge-06
-+ Successful completion of Challenge-07
+- Setup a DICOM Service instance within Azure Healthcare APIs
+- Submit DICOM files to the service
+- Successfully view the files with a DICOM Viewer connected to the Azure Healthcare APIs
 
+*Note: Azure Healthcare APIs is still in Public Preview. For customers looking to move to production prior to GA please use the OSS Imaging Service or contact this team.*
 
----
+## Initial Setup
 
-## Step 1 - Enable Send and Receive Logging 
-There are two approaches to troublshooting issues in MC4H. Either "You will use things to do stuff and then there will be stuff in Dataverse," or "Enable logging and follow the API calls." This step is about the latter. 
+### Step 1 - Clone these repos
 
-As noted in the Challenge-5 SyncAgent Deployment Readme.md, there is a setting in the Application Configuration file that will enable greater logging detail.  
+&nbsp;&nbsp;&nbsp;&nbsp; This hackathon repo (If not already complete)
 
-FHIR-SyncAgent Optional Application Settings - __NOT__ included in the setup scripts at this time - they will be added automatically to the seetings in the next release. 
-  
-
-Name                                       | Value                      | Located 
--------------------------------------------|----------------------------|--------------------
-AzureWebJobs.FHIRNDJsonFileLoader.Disabled | 1                          | Disables the bootstrap Loader  
-SA-LOGREQRESP                              | True                       | Additional logging
-
-Once Enabled, you will be able to view detailed logging information at:
-
-Function App -> Functions -> FHIRUpdate (update to Dataverse)
-
-![function2](./media/function2.png)
-
-
- -> Functions -> Monitor
-
-![monitor](./media/monitor.png)
-
-
-
-## Step 2 - Understanding the Messages 
-Note the 403-Forbidden response from CDS in the picture below. This tells us that the application ID we are using is un-authorized to write to CDS (ie Dataverse).
-
-Solution:  Contact your Dataverse administrator and have them update the Sync Agent Client ID for write access to DV **[link](https://docs.microsoft.com/en-us/dynamics365/industry/healthcare/configure-sync-clinical-data#update-integration-settings)** 
-  
-![unable-to-write](./media/unable-to-write.png)
-
-
-**Q:** Why does the monitor show Success even though there is an error in the file?  
-
-**A:**  Technically the connection was a success. We sent a package and received a reply. Therefore the communication is deemed successful even through it may not have included the result you wanted.
-
-
-## Step 3 - Testing from Postman 
-The best method for testing FHIR to Dataverse is to start with Postman.  **Remember** data that is in FHIR will not automatically be sync'd to Dataverse once an Entity is enabled; rather, the data must be *updated* in the FHIR server to trigger a sync. This is due to the trigger function in the FHIR-Proxy:
-
-+ FHIR data enters the FHIR-Proxy either via Bundle or HTTPS
-+ The FHIR-Proxy performs any Pre-Process task (ie converting a Transaction Bundle into a Batch Bundle)
-+ The FHIR-Proxy Post-Process _FHIRProxy.postprocessors.FHIRCDSSyncAgentPostProcess2_ send the MSG and Patient ID to the FHIR-SyncAgent for processing
-+ The FHIR-SyncAgent calls the Dataverse API with the FHIR resource for processing 
-
-You should have already loaded the MC4H Testing collection, here is the link again: [MC4H Testing.postman_collection.zip](./samples/MC4H_Testing.postman_collection.zip)  
-
-The Patient Data in the MC4H Testing collection is structured in a way to help you track the users you create by ID. In this example we are creating a Patient with a known ID that we can track.
-
-```al
-PUT {{fhirurl}}/Patient/D000000001
-```
-The JSON for Patient D000000001 is in the body of the Postman message (shortened for readability)
-
-```al
-{
-    "resourceType": "Patient",
-    "id": "D000000001",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-        ]
-    }
-...
-}
+```azurecli
+git clone https://github.com/microsoft/openhack-mc4h
 ```
 
-First, obtain a new Token from AAD
+&nbsp;&nbsp;&nbsp;&nbsp; The Medical Imaging Server for Azure
 
-![postman-token](./media/postman-token.png)
-
-Select a Patient to test with - note the Patient ID - ensure you have a 200 OK return message from FHIR-Proxy 
-
-![postman-patient](./media/postman-patient.png)
+```azurecli
+git clone https://github.com/microsoft/dicom-server
+```
 
 
-Check the Post Processor in FHIR-Proxy to ensure that it was successful 
-
-![proxy-monitor](./media/proxy-monitor.png)
-
-
-Check the FHIRUpdates Monitor 
-
-![function-monitor](./media/function-monitor.png)
-
-![function-monitor2](./media/function-monitor2.png)
+### Step 2 - Setup an Azure Healthcare APIs Workspace using Azure Portal
+ 
+ [Deploy workspace in the Azure portal - Azure Healthcare APIs | Microsoft Docs](https://docs.microsoft.com/en-us/azure/healthcare-apis/healthcare-apis-quickstart)
 
 
+### Step 3 - Setup DICOM Service using Azure Portal
 
-## Step 4 - Testing from FHIR-Loader (Challenge 3)
-Testing from FHIR-Loader is similar to that of FHIR-Proxy, except that the FHIR Message format is different.  FHIR-Loader expects Bundle formatted messages
+[Deploy DICOM service using the Azure portal](https://docs.microsoft.com/en-us/azure/healthcare-apis/dicom/deploy-dicom-services-in-azure)
 
-```al
-{
-  "resourceType": "Bundle",
-  "type": "transaction",
-  "entry": [
-    {
-      "fullUrl": "urn:uuid:67816396-e325-496d-a6ec-c047756b7ce4",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "67816396-e325-496d-a6ec-c047756b7ce4",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated by <a href=\"https://github.com/synthetichealth/synthea\">Synthea</a>.Version identifier: v2.4.0-404-ge7ce2295\n .   Person seed: 5358307146659318376  Population seed: 0</div>"
-        }
-...
-    }
-  ]
-}
-``` 
+### Step 4 - Choose a path for the rest of the Challenge
 
-Note the extra FHIR Resource of the Bundle and how items contained within it are "entrys" in an arrary. A bundle is similar to C-CDA in that it holds multiple entries about a patient. 
+Here you need to choose a path for completing the challenge. There are two paths:
+Basic Path and Advanced Path.
 
-### FHIR-Loader Container (Challenge 3)
+**Basic Path** - GUI-based operations for uploading Images to the DICOM Service
 
-![bundle-processed](./media/bundle-processed1.png)
+**Advanced Path** - Programatic method for uploading images to DICOM Service
 
-Find a ".result" file and select Edit or Download to review it.
+## Basic Path
 
-![bp-edit](./media/bundle-processed-edit.png)
+This path will use a tool to upload images to the DICOM Service. You will need to setup the upload tool. Configure with the URL you created Step 3. Then upload the image studies.
 
-Look for the RESTful Status 
+### Step 1 - Install upload tool
 
-![bp-edit](./media/bundle-processed-edit2.png)
+The upload tool is part of the OSS Medicial Imaging Service for DICOM. You cloned it in Step 2. Follow the instructions [here](https://github.com/microsoft/dicom-server/tree/main/tools/dicom-web-electron) to install and configure the tool. Where you see localhost, replace with the URL from the DICOM Service created in Step 3.
 
-Same view in VS Code 
+If you have not installed Node.js in prior challenges, go to [nodejs.org](https://nodejs.org/), download and install the latest version.
 
-![bp-edit](./media/bundle-processed-edit3.png)
+### Step 2 - Upload images
+
+Once the tool in the prior step is setup and configured, follow the steps to upload the same images from the [dicom-server repo](https://github.com/microsoft/dicom-server/tree/main/docs/dcms). There should be three images.
+
+### Step 3 - Open Viewer and View images
+
+The DICOM Service has a built in DICOM Viewer. By copying and pasting the main URL for the DICOM Service into a web browswer, you can see the list of uploaded Studies.
+
+If you see 3 Studies listed and they open, then you have successful completed this part of the challenge. Move to Part 2 of the challenge.
+
+## Advanced Path
+
+### Step 1 - Choose a method for uploading images (C#, cURL, or Python)
+
+C# - https://docs.microsoft.com/en-us/azure/healthcare-apis/dicom/dicomweb-standard-apis-c-sharp
+
+cURL - https://docs.microsoft.com/en-us/azure/healthcare-apis/dicom/dicomweb-standard-apis-curl
+
+Python - https://docs.microsoft.com/en-us/azure/healthcare-apis/dicom/dicomweb-standard-apis-python
+
+### Step 2 - Perform the sample tasks of uploading the files from the link(s) above
+
+Note: The sample files for the link above were downloaded via the second repo clone in Step 1. 
+
+### Step 3 - View Images in Browser
+
+The DICOM Service has a built in DICOM Viewer. By copying and pasting the main URL for the DICOM service into a web browswer you can see the list of uploaded Studies.
+
+If you see three Studies listed and they open, then you have successfully completed this part of the challenge.
+
+## Part 2
+
+Depending on the path you took (Basic or Advanced) repeat your path using the image studies provided in the SampleData folder of this Challenge's repo.
+
+Success is seeing actual human images in your studies in the DICOM Service.
+
+## Part 3 - BONUS Challenge
+
+The bonus part of the challenge is to repeat your path but this time deploy the OSS Medical Imaging Server for DICOM. You have already cloned the repo for the tools.
+
+Tip - The GitHub repo site has a Deploy to Azure button built in.
