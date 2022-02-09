@@ -38,7 +38,7 @@ Please be sure to have the following ready in your environment before proceeding
 + GitHub account ([link](https://github.com/))
 + Postman installed - either desktop or web client app ([link](https://www.postman.com/))
 
-__Note:__ To access some of the materials used with Postman in this hack, learners will need a Postman account. Free Postman cloud accounts require a login via email or a Google account. Additionally, Postman recommends that if you choose to use the web client, you should also download the desktop application. You can read more and download the web desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
+__Note:__ To access some of the materials used with Postman in this hack, learners will need a Postman account. Free Postman cloud accounts require a login via email or a Google account. Additionally, Postman recommends that if you choose to use the web client, you should also download the desktop application. You can read more and download the desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
 
 ## Optional Components (for Challenges 05-08)
 + Dynamics/Dataverse Environment + MC4H temporary license and solution set
