@@ -12,7 +12,7 @@ Bulk FHIR data ingestion is a vital capability for managing FHIR data operations
 
 ## Learning Objectives
 
-+ Practice identifying issues in importing FHIR bulk data
++ Practice identifying issues in FHIR bulk data
 + Understand data constraints with FHIR bulk data loading
 + Understand how to track and compare bulk FHIR imports
 
@@ -30,20 +30,20 @@ Below is a component view of Azure API for FHIR with FHIR-Bulk Loader and FHIR-P
 + Access to a text editor (e.g., [VS Code](https://code.visualstudio.com/))
 
 ## Getting Started
-For this challenge, we will take you through the steps in downloading 
-- Test Data Loading 
+For this challenge, you will prepare FHIR data for import into Azure API for FHIR using the FHIR-Bulk Loader utility. You will also need to examine some of the data for problems and determine what the issue is.
 
-## Step 2 - Download Sample Data
+
+## Step 1 - Download Sample Data
 
 1. Download the following files to your desktop
     + [good_bundles.zip](/docs/assets/zip/good_bundles.zip)
     + [bad_bundles.zip](/docs/assets/zip/bad_bundles.zip)
 
-## Step 3 - Upload Sample Data
+## Step 2 - Upload Sample Data
 
-1. In the Azure Portal, navigate to the FHIR Bulk Loader Blob Storage resource that was created in `Step 1`
+1. In the Azure Portal, navigate to the FHIR-Bulk Loader Blob Storage resource that was created in Challenge-01.
 
-2. Click on `Storage browser (preview)` and then click on `Blob container`
+2. Click on `Storage browser (preview)` and then click on `Blob container`.
 ![Blob Containers](./media/portal-browser-container.png)  
 
 3. Using the `good_bundles.zip` file downloaded in Step 1:
@@ -52,10 +52,10 @@ For this challenge, we will take you through the steps in downloading
 4. Using  the `bad_bundles.zip` file downloaded in Step 1:
     + Determine which container this file should be uploaded to.
 
-> Refer to the Troubleshooting section below or FHIR Bulk Loader [testing](https://github.com/microsoft/fhir-loader/blob/main/docs/testing.md) documentation for more information
+> Refer to the Troubleshooting section below or FHIR Bulk Loader [testing](https://github.com/microsoft/fhir-loader/blob/main/docs/testing.md) documentation for more information.
 
 
-## Challenge Success
+## What does success look like for Challenge-03?
 
 + Successfully upload and import data from the file `good_bundles.zip`
 + Successfully identify the problem in the `bad_bundles.zip` file.  Use the Troubleshooting tips below to help. 
@@ -77,3 +77,7 @@ Click on a **.result** file, then click on Edit
 In the Editor view, look for status codes, here a 201 is successful, and the logs show the FHIR Resource now containing the information. 
 
 ![bundle-edit-status](./media/bundle-edit-status.png)
+
+## Next Steps
+
+Click [here](../Challenge-04/Readme.md) to proceed to the next challenge.
