@@ -30,14 +30,8 @@ Below is a component view of Azure API for FHIR with FHIR-Bulk Loader and FHIR-P
 + Access to a text editor (e.g., [VS Code](https://code.visualstudio.com/))
 
 ## Getting Started
-For this challenge, we will walk through these steps: 
+For this challenge, we will take you through the steps in downloading 
 - Test Data Loading 
-
-Deployed Components.  _Larger image [here](./media/install-components.png)_ 
-
-![fhir-bulk](./media/install-components-small.png)
-
-
 
 ## Step 2 - Download Sample Data
 
