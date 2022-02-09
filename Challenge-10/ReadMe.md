@@ -1,7 +1,7 @@
-# Challenge 10  - Research Azure Data Analytics
+# Challenge-10  - Research Azure Data Analytics
 
 ## Introduction
-Welcome to challenge 10!
+Welcome to Challenge-10!
 
 Data shared and aggregated using the FHIR standard offers rich analytics potential.
 
