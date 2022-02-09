@@ -55,11 +55,11 @@ Follow the instructions in the repo and return here when finished.
 
 ## Deployed Components 
 
-### Azure API for FHIR and FHIR-Proxy)
+Azure API for FHIR and FHIR-Proxy
 
 ![proxy-deployment](./media/proxy-deployment.png)
 
-### FHIR-Bulk Loader
+FHIR-Bulk Loader
 
 ![fhir-bulk](./media/install-components-small.png)
 
