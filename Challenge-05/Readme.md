@@ -1,8 +1,8 @@
-# Challenge 5 - FHIR SyncAgent (Instructor Lead Training)
+# Challenge-05 - FHIR SyncAgent (Instructor Lead Training)
 
 ## Introduction
 
-Welcome to Challenge 5!
+Welcome to Challenge-05!
 
 **Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
   
