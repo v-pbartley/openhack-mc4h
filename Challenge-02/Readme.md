@@ -8,7 +8,7 @@ In this challenge you will learn how to use the FHIR server's custom operation, 
 
 ## Background
 
-In today's rapidly changing healthcare data landscape, the FHIR R4 format is fast becoming the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and C-CDA. In this challenge, we will explore how to convert these formats into FHIR using MC4H tools.
+In today's rapidly changing healthcare data landscape, the FHIR R4 format has become the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and C-CDA. In this challenge, we will explore how to convert these formats into FHIR using MC4H tools.
 
 ## Learning Objectives
 
@@ -81,3 +81,7 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
 
 + Successfully received a FHIR bundle from calling $convert-data with HL7 data
 + Successfully received a FHIR bundle from calling $convert-data with C-CDA data
+
+## Next Steps
+
+Click [here](../Challenge-03/Readme.md) to proceed to the next challenge.
