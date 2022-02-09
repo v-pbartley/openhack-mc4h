@@ -1,8 +1,8 @@
-#  Challenge 4 - Query and Search FHIR
+#  Challenge-04 - Query and Search FHIR
 
 ## Introduction
 
-Welcome to Challenge 4!
+Welcome to Challenge-04!
 
 In this challenge you will learn how to use the search operations in Azure API for FHIR.
 
