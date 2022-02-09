@@ -1,8 +1,8 @@
-# Challenge 2 - Convert HL7 and C-CDA to FHIR
+# Challenge-02 - Convert HL7 and C-CDA to FHIR
 
 ## Introduction
 
-Welcome to Challenge 2!
+Welcome to Challenge-02!
 
 In this challenge you will learn how to use the FHIR server's custom operation, `$convert-data`, to convert HL7 and C-CDA files into FHIR.
 
