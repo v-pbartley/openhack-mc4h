@@ -29,7 +29,7 @@ Component View of Azure API for FHIR and FHIR-Proxy.  _Larger image available [h
 
 ## Prerequisites 
 
-Before deploying Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader, please make sure that you have the following permissions in your Azure environment:
+Before deploying Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader, please make sure that you as a user have the following permissions in your Azure environment:
 
 + **Azure Subscription Prerequisite:** User must have rights to deploy resources at the Resource Group scope (i.e. [Contributor](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) built-in role).
 
