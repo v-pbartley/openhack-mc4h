@@ -1,18 +1,17 @@
-# Challenge  11 - IoT Connector for FHIR
+# Challenge-11 - IoT Connector for FHIR
 
 ## Introduction
 
-Welcome to Challenge 11!
+Welcome to Challenge-11!
 
-Challenges 11 and 12 are designed to introduce you to the upcoming PaaS release of the Azure API for FHIR IoT Connector and the Azure Healthcare APIs DICOM Service. Challenges 11 and 12 can be performed in any subscription and are not dependent on the work from prior challenges.
+Challenge-11 and Challenge-12 are designed to introduce you to the upcoming PaaS release of the Azure API for FHIR IoT Connector and the Azure Healthcare APIs DICOM Service. These challenges can be performed in any subscription and are not dependent on the work from prior challenges.
 
-This challenge will help you become familiar with the data flow for IoT to FHIR. Building on the skills learned in prior challenges, Challenge 11 will broaden your knowledge of Remote Patient Monitoring scenarios.
+Challenge-11 introduces the IoT Connector for the Azure API for FHIR PaaS, with the OSS deployments offered as a bonus challenge. This will help you become familiar with the data flow for IoT to FHIR and will broaden your knowledge of Remote Patient Monitoring scenarios.
 
-Challenge 11 introduces the IoT Connector for the Azure API for FHIR PaaS, with the OSS deployments offered as a bonus challenge.
 
 ## Background
 
-With the rise of wearable devices, Remote Patient Monitoring (RPM) has exploded in the marketplace. Many hardware vendors have tried a proprietary approach for providing the hardware and monitoring software. Microsoft has taken an agnostic approach to Remote Patient Monitoring and wearable data ingestion. Microsoft has created a tool kit for converting the output from any wearable into FHIR resources.
+With the rise of wearable devices, Remote Patient Monitoring (RPM) has exploded in the healthcare marketplace. Many hardware vendors have tried a proprietary approach for providing the hardware and monitoring software. Microsoft has taken an agnostic approach to Remote Patient Monitoring and wearable data ingestion. Microsoft has created a tool kit for converting the output from any wearable into FHIR resources.
 
 ## Learning Objectives
 
