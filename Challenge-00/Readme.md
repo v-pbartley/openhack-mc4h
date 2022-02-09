@@ -38,11 +38,6 @@ Please be sure to have the following ready in your environment before proceeding
 
 __Note:__ To access some of the materials used with Postman in this hack, learners will need a Postman account. Free Postman cloud accounts require a login via email or a Google account. Additionally, Postman recommends that if you choose to use the web client, you should also download the desktop application. You can read more and download the desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
 
-## Optional Components (for Challenges 05-08)
-+ Dynamics/Dataverse Environment + MC4H temporary license and solution set
-
-Information about obtaining a Dynamics/Dataverse trial license can be found [here](https://docs.microsoft.com/en-us/power-platform/admin/trial-environments).
-
 ## Next Steps
 
 Click [here](../Challenge-01/Readme.md) to proceed to the next challenge.
