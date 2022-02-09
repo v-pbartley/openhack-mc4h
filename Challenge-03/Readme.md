@@ -4,7 +4,7 @@
 
 Welcome to Challenge-03!
 
-In this challenge you will learn how to use the [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) tool to bulk-ingest data into Azure API for FHIR.
+In this challenge, you will learn how to use the [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) tool to bulk-ingest data into Azure API for FHIR.
 
 ## Background
 
