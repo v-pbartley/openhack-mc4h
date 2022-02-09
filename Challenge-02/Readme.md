@@ -18,9 +18,9 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
 
 ## Prerequisites
 
-+ Successful completion of Challenge 1
-+ Postman
-+ [7Edit](http://7edit.com/home/) (optional)
++ Successful completion of Challenge-01
++ Postman installed
++ [VS Code](https://code.visualstudio.com/) or [7Edit](http://7edit.com/home/) (optional)
 + [VS Code HL7 Language Support](https://marketplace.visualstudio.com/items?itemName=pbrooks.hl7) (optional)
 
 ---
@@ -77,7 +77,7 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
 
 > Note: You may have to escape certain values in the C-CDA before executing the request.
 
-## Challenge Success
+## What does success look like for Challenge-02?
 
 + Successfully received a FHIR bundle from calling $convert-data with HL7 data
 + Successfully received a FHIR bundle from calling $convert-data with C-CDA data
