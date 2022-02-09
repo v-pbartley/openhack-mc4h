@@ -61,7 +61,7 @@ Next, you will set up your Postman environment so that you can make REST API cal
 
 2. [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/15998620-44558319-b188-4a0b-92f4-20e278cc6f6f?action=collection%2Ffork&collection-url=entityId%3D15998620-44558319-b188-4a0b-92f4-20e278cc6f6f%26entityType%3Dcollection%26workspaceId%3D39665fda-b424-466f-88ea-758306bb9d71)
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/15998620-d532e349-a060-4e62-84b1-b38691bc45ba?action=collection%2Ffork&collection-url=entityId%3D15998620-d532e349-a060-4e62-84b1-b38691bc45ba%26entityType%3Dcollection%26workspaceId%3D39665fda-b424-466f-88ea-758306bb9d71)
+   [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/15998620-d532e349-a060-4e62-84b1-b38691bc45ba?action=collection%2Ffork&collection-url=entityId%3D15998620-d532e349-a060-4e62-84b1-b38691bc45ba%26entityType%3Dcollection%26workspaceId%3D39665fda-b424-466f-88ea-758306bb9d71)
 
 3. Click the ```Import``` button next to your workspace name. ![Import Postman](./media/postman_setup_images/postman1.png)
 
