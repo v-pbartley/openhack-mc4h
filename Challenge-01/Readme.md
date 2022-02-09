@@ -31,9 +31,9 @@ Component View of Azure API for FHIR and FHIR-Proxy.  _Larger image available [h
 
 Before deploying Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader, please make sure to have the following permissions in your Azure environment:
 
-+ **Azure Subscription Prerequisite:** User must have rights to deploy resources at the Resource Group scope (i.e. Contributor role or Owner role).
++ **Azure Subscription Prerequisite:** User must have rights to deploy resources at the Resource Group scope (i.e. [Contributor](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) built-in role).
 
-+ **Azure Active Directory (AAD) Prerequisite:** User must have Application Administrator rights for the AAD tenant attached to the Azure Subscription.
++ **Azure Active Directory (AAD) Prerequisite:** User must have [Application Administrator](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator) rights for the AAD tenant attached to the Azure Subscription.
 
 
 ## Step 1 - Deploy Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader
