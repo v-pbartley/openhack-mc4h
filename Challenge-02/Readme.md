@@ -40,11 +40,15 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 ## Step 2 - Setup Request Parameters
 
-1. Download the sample HL7 file [ADT_A01.hl7](./samples/ADT_A01.hl7) from the Challenge 2 samples folder.
+1.	Review the instructions for the ```$convert-data``` operation in the Azure API for FHIR [documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/convert-data). 
 
-2. [Optional] Review the contents of the HL7 file using 7Edit or open the HL7 file in VS Code and view it using the HL7 extension.
+2. 	Click on [ADT_A01.hl7](./samples/ADT_A01.hl7) to view a sample HL7v2 message. 
 
-3. Refer to the Azure API for FHIR [documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/convert-data) on how to set up request parameters for a ```$convert-data``` call.
+3.	Copy and paste the HL7v2 message into the body of the `Convert Data – HL7` request that you created in Postman*.
+
+4.	After you paste the HL7v2 message, you will need to make some slight alterations so that the formatting of the message follows the example given in the `$convert-data` documentation.
+
+*Optional – prepare the HL7v2 message in VS Code (with the HL7 extension installed) or in 7Edit first before pasting into the body of the Postman request.
 
 ## Step 3 - Convert Data
 
