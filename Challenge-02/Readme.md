@@ -40,7 +40,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 ## Step 2 - Setup Request Parameters
 
-1. Download the sample HL7 file, [ADT_A01.hl7](./samples/ADT_A01.hl7), from the Challenge 2 samples folder.
+1. Download the sample HL7 file [ADT_A01.hl7](./samples/ADT_A01.hl7) from the Challenge 2 samples folder.
 
 2. [Optional] Review the contents of the HL7 file using 7Edit or open the HL7 file in VS Code and view it using the HL7 extension.
 
@@ -66,7 +66,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 ## Step 5 - Setup Request Parameters
 
-1. Download the sample C-CDA file [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml), from the Challenge 2 samples folder.
+1. Download the sample C-CDA file [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml) from the Challenge 2 samples folder.
 
 2. Refer to the FHIR server [documentation](https://github.com/microsoft/fhir-server/blob/main/docs/ConvertDataOperation.md#2-make-api-call) for ```$convert-data``` on how to create a parameter request.
 
