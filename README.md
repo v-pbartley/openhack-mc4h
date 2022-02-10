@@ -8,7 +8,7 @@ This hack is intended for **healthcare system integrators**, **independent healt
 
 1. A solid foundation in [MS Azure fundamentals](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-cloud-concepts/)
 2. A working knowledge of the [Fast Healthcare Interoperability Resources R4](https://hl7.org/fhir/R4/) (FHIR R4) data standard
-3. Familiarity with using [Postman](https://www.postman.com/api-platform/api-testing/) (or a similar tool) to make test API calls
+3. Familiarity with using [Postman](https://www.postman.com/api-platform/api-testing/) (or a similar tool) to make REST API calls
 
 # What topics are covered?
 
