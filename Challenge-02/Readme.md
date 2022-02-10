@@ -27,7 +27,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 ## Step 1 - Postman Setup
 
-1. Create a `New Request` in the Postman collection imported in Challenge-01.
+1. Create a new API request by clicking `Add request` in the Postman collection imported in Challenge-01.
 ![New Postman Request Image](./media/add_request.jpg)
 2. Rename the new request to `Convert Data - HL7`.
 3. Change the HTTP operation type from **GET** to **POST**.
