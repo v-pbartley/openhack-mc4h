@@ -91,4 +91,4 @@ To create a new search parameter, you need to POST the SearchParameter resource 
 
 ## Next Steps
 
-Click [here](../Challenge-05/ReadMe.md) to proceed to the next challenge.
+Click [here](../Challenge-05/Readme.md) to proceed to the next challenge.
