@@ -1,7 +1,7 @@
 # Challenge-10  - Research Azure Data Analytics
 
 ## Introduction
-Welcome to Challenge-10!
+Welcome to Challenge-06!
 
 Data shared and aggregated using the FHIR standard offers rich analytics potential.
 
@@ -80,3 +80,7 @@ Information on group by aggregations can be found [here](https://docs.microsoft.
 + Successfully load parquet data into Azure Synapse
 + Successfully explore Synapse data in PowerBi
 + Successfully produce a report of vaccination rate by postal code
+
+## Next Steps
+
+Click [here](../Challenge-07/Readme.md) to proceed to the next challenge.
