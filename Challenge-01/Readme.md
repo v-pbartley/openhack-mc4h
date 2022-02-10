@@ -46,22 +46,21 @@ To begin, **CTRL+click** (Windows or Linux) or **CMD+click** (Mac) on the link b
 
 Follow the instructions in the repo and return here when finished.
 
+
+## Step 2 - Set up Postman
+In the next part of this challenge, you will
+- Visit another repo and read the instructions on setting up Postman
+- Make API calls to test Azure API for FHIR using Postman
+
+To begin, **CTRL+click** (Windows or Linux) or **CMD+click** (Mac) on the link below to visit the fhir-starter quickstart repo (https://github.com/microsoft/health-architectures/blob/main/Postman/README.md) in a new browser tab.
+
+Follow the instructions in the repo and return here when finished.
+
 ## What does success look like for Challenge-01?
 + Azure API for FHIR (PaaS) deployed and available
 + FHIR-Proxy (OSS) deployed and able to communicate with Azure API for FHIR
 + FHIR-Bulk Loader (OSS) deployed and available
 + Postman set up and able to make REST API calls to Azure API for FHIR
-
-## Step 2 - Set up Postman
-Next, you will set up your Postman environment so that you can make REST API calls to Azure API for FHIR.
-
-## Using Postman to connect to Azure API for FHIR
-
-
-
-
-
-
 
 ## Deployed Components 
 
