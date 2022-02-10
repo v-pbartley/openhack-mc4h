@@ -65,3 +65,7 @@ If you get stuck, check out [Create SAS Tokens](https://docs.microsoft.com/en-us
 
 + Successfully utilize an anonymization configuration file and the $export operator to export an anonymized dataset from Azure API for FHIR
 + Successfully set up a SAS token to allow access to the anonymized dataset
+
+## Next Steps
+
+Click [here](../Challenge-06/Readme.md) to proceed to the next challenge.
