@@ -1,4 +1,4 @@
-# Challenge-10  - Research Azure Data Analytics
+# Challenge-06  - Research Azure Data Analytics
 
 ## Introduction
 Welcome to Challenge-06!
