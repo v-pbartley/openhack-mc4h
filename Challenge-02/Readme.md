@@ -8,13 +8,13 @@ In this challenge you will learn how to use the FHIR server's custom operation, 
 
 ## Background
 
-In today's healthcare data landscape, the FHIR R4 format has become the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and C-CDA. In this challenge, we will explore how to convert these formats into FHIR using Microsoft health data tools.
+In today's healthcare data landscape, the FHIR R4 format has become the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and C-CDA. In this challenge, we will explore how to convert these formats into FHIR using Microsoft health data solutions.
 
 ## Learning Objectives
 
-+ Creating a Postman request for a FHIR API operation
-+ Specifying request parameters
-+ Preparing/cleaning data for conversion into FHIR
++ Use Postman to create an API request for a FHIR API operation 
++ Specify API request parameters in Postman
++ Prepare/clean data for conversion into FHIR
 
 ## Prerequisites
 
