@@ -1,12 +1,12 @@
-# Challenge-11 - IoT Connector for FHIR
+# Challenge-07 - IoT Connector for FHIR
 
 ## Introduction
 
-Welcome to Challenge-11!
+Welcome to Challenge-07!
 
-Challenge-11 and Challenge-12 are designed to introduce you to the upcoming PaaS release of the Azure API for FHIR IoT Connector and the Azure Healthcare APIs DICOM Service. These challenges can be performed in any subscription and are not dependent on the work from prior challenges.
+Challenge-07 and Challenge-08 are designed to introduce you to the upcoming PaaS release of the Azure API for FHIR IoT Connector and the Azure Healthcare APIs DICOM Service. These challenges can be performed in any subscription and are not dependent on the work from prior challenges.
 
-Challenge-11 introduces the IoT Connector for the Azure API for FHIR PaaS, with the OSS deployments offered as a bonus challenge. This will help you become familiar with the data flow for IoT to FHIR and will broaden your knowledge of Remote Patient Monitoring scenarios.
+Challenge-07 introduces the IoT Connector for the Azure API for FHIR PaaS, with the OSS deployments offered as a bonus challenge. This will help you become familiar with the data flow for IoT to FHIR and will broaden your knowledge of Remote Patient Monitoring scenarios.
 
 
 ## Background
@@ -23,15 +23,15 @@ With the rise of wearable devices, Remote Patient Monitoring (RPM) has exploded 
 
 ## Challenges
 
-### Challenge 11a
+### Challenge-07a
 
-Let us begin with a basic walk through, performing the steps in this [IoT Quickstart](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/iot-fhir-portal-quickstart). Success for 12a means you can query the IoT FHIR Observation resource via Postman.
+Let us begin with a basic walk through, performing the steps in this [IoT Quickstart](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/iot-fhir-portal-quickstart). Success for Challenge-07a means you can query the IoT FHIR Observation resource via Postman.
 
 Link - https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/iot-fhir-portal-quickstart
 
 __Note:__ Azure IoT Central is no longer needed. Please delete your Azure IoT Central instance prior to moving forward.
 
-### Challenge 11b - Building Mappings from Sample Data
+### Challenge-07b - Building Mappings from Sample Data
 
 Now let's go a step forward. This time let's create our own mappings using sample data.
 
@@ -79,7 +79,7 @@ Upload your newly created sample mappings to the IoT Connector via the portal.
 - Figure out the steps for uploading a device mapping.
 - Repeat for FHIR mapping.
 
-## Challenge 11c
+## Challenge-07c
 
 This is the most difficult challenge. However, this could be one of the most crucial to the success of an IoMT/ RPM project.
 
@@ -91,9 +91,13 @@ Answers are in the 'Answer' folder if you get stuck. Final mappings may vary fro
 
 Hint - You may need to create multiple maps and combine the output into a single JSON file.
 
-## [BONUS] Challenge 11d
+## [BONUS] Challenge-07d
 
-This challenge is a variation of Challenge 11a.  
+This challenge is a variation of Challenge-07a.  
 Deploy and configure the OSS IoMT FHIR Connector for Azure. Use Azure IoT Central as the source and the mappings from the Quickstart.
 
 Link to OSS - https://github.com/microsoft/iomt-fhir
+
+## Next Steps
+
+Click [here](../Challenge-08/Readme.md) to proceed to the next challenge.
