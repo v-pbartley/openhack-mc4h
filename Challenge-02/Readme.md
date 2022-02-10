@@ -89,8 +89,8 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 ## What does success look like for Challenge-02?
 
-+ Successfully received a FHIR bundle from calling ```$convert-data``` with HL7 data.
-+ Successfully received a FHIR bundle from calling ```$convert-data``` with C-CDA data.
++ Successfully receive a FHIR bundle response after calling ```$convert-data``` with HL7 data.
++ Successfully receive a FHIR bundle response after calling ```$convert-data``` with C-CDA data.
 
 ## Next Steps
 
