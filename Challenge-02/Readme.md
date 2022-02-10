@@ -4,15 +4,15 @@
 
 Welcome to Challenge-02!
 
-In this challenge you will learn how to use the FHIR server's custom operation, `$convert-data`, to convert HL7 and C-CDA files into FHIR.
+In this challenge you will learn how to use the custom `$convert-data` operation in Azure API for FHIR to convert HL7 and C-CDA files into FHIR.
 
 ## Background
 
-In today's health industry, the FHIR R4 format has become the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and C-CDA. In this challenge, we will explore how to convert these formats into FHIR using Microsoft health data solutions.
+In today's health industry, the FHIR R4 format has become the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and C-CDA. In this challenge, we will explore how to convert these formats into FHIR using Azure API for FHIR.
 
 ## Learning Objectives
 
-+ Use Postman to create an API request for a FHIR API operation 
++ Make an API call for a FHIR API operation 
 + Specify API request parameters in Postman
 + Prepare/clean data for conversion into FHIR
 
@@ -44,7 +44,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 2. [Optional] Review the contents of the HL7 file using 7Edit or open the HL7 file in VS Code and view it using the HL7 extension.
 
-3. Refer to the FHIR server [documentation](https://github.com/microsoft/fhir-server/blob/main/docs/ConvertDataOperation.md#2-make-api-call) for $convert-data on how to create a parameter request.
+3. Refer to the Azure API for FHIR [documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/convert-data) on how to set up request parameters for a ```$convert-data``` call.
 
 ## Step 3 - Convert Data
 
@@ -68,7 +68,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 1. Download the sample C-CDA file [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml), from the Challenge 2 samples folder.
 
-2. Refer to the FHIR server [documentation](https://github.com/microsoft/fhir-server/blob/main/docs/ConvertDataOperation.md#2-make-api-call) for $convert-data on how to create a parameter request.
+2. Refer to the FHIR server [documentation](https://github.com/microsoft/fhir-server/blob/main/docs/ConvertDataOperation.md#2-make-api-call) for ```$convert-data``` on how to create a parameter request.
 
 ## Step 6 - Convert Data
 
@@ -79,8 +79,8 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 ## What does success look like for Challenge-02?
 
-+ Successfully received a FHIR bundle from calling $convert-data with HL7 data
-+ Successfully received a FHIR bundle from calling $convert-data with C-CDA data
++ Successfully received a FHIR bundle from calling ```$convert-data``` with HL7 data
++ Successfully received a FHIR bundle from calling ```$convert-data``` with C-CDA data
 
 ## Next Steps
 
