@@ -1,14 +1,14 @@
-# Challenge-13 - Deploy and demonstrate the consent capabilities of Azure API for FHIR
+# Challenge-09 - Deploy and demonstrate the consent capabilities of Azure API for FHIR
 
 ## Introduction
 
-Welcome to Challenge-13!
+Welcome to Challenge-09!
 
 In this challenge you will learn how to configure Consent Opt-Out filtering using the FHIR-Proxy (OSS) solution.
 
 ## Background
 
-In today's rapidly changing healthcare data landscape, the FHIR R4 format is fast becoming the HLS industry standard for storage and exchange of health data. Healthcare consumers expect that their directives related to privacy, treatment, research, and advanced care are respected.
+In today's rapidly changing healthcare data landscape, the FHIR R4 format is has become the HLS industry standard for storage and exchange of health data. Healthcare consumers expect that their directives related to privacy, treatment, research, and advanced care are respected.
 
 ## Learning Objectives
 
@@ -25,7 +25,7 @@ In today's rapidly changing healthcare data landscape, the FHIR R4 format is fas
 
 ## Step - 1 Configure Postman
 
-1. Configure postman using the guidance provided in [Challenge 1](../Challenge-1/Readme.md).
+1. Configure postman using the guidance provided in [Challenge 1](../Challenge-01/Readme.md).
 2. Confirm that the FHIR service contains Patient resources.
 ![Patient Resources](./images/patient-count-postman.png)
 3. Select a Patient resource and record the patient identifier. This will be used to create the Consent resource.
@@ -52,3 +52,7 @@ Visual Studio Code with the [REST Client](https://marketplace.visualstudio.com/i
 
 + Successfully POST a consent record to the Azure Healthcare APIs FHIR service
 + Verify that Consent Opt-Out properly filters resources
+
+## Next Steps
+
+Click [here](../Challenge-10/Readme.md) to proceed to the next challenge.
