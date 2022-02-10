@@ -89,6 +89,13 @@ Using the Postman file provided, search for PractitionerRole including the Pract
 ## Step 6 - Defining a Custom Search parameter 
 To create a new search parameter, you need to POST the SearchParameter resource to the database.  See the Postman file provided for an example.  Read through the full example at https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/how-to-do-custom-search.
 
+## What does success look like for Challenge-04?
+
++ Developed a basic understanding of how to perform FHIR search operations in Azure API for FHIR
++ Performed several FHIR search queries using paired/multiple parameters for Common and Composite Search
++ Completed at least one Chained and Reverse Chained FHIR search query
++ Completed at least one Include and Reverse Include FHIR search query
+
 ## Next Steps
 
 Click [here](../Challenge-05/Readme.md) to proceed to the next challenge.
