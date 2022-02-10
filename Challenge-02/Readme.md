@@ -12,7 +12,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 ## Learning Objectives
 
-+ Make an API call for a FHIR API operation 
++ Make an API call to convert data into FHIR
 + Specify API request parameters in Postman
 + Prepare/clean data for conversion into FHIR
 
