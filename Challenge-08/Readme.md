@@ -1,10 +1,10 @@
-# Challenge-12 - DICOM
+# Challenge-08 - DICOM
 
 ## Introduction
 
-Welcome to Challenge-12!
+Welcome to Challenge-08!
 
-Congratulations for almost reaching the end of this hack! Challenge-12 is a standalone challenge. This challenge is designed to help you become familiar with Medical Imaging basics. This challenge can be performed in either your personal/organization Azure subscription or the subscription provided for the live hack event.
+Congratulations for almost reaching the end of this hack! Challenge-08 is a standalone challenge. This challenge is designed to help you become familiar with Medical Imaging basics. This challenge can be performed in either your personal/organization Azure subscription or the subscription provided for the live hack event.
 
 ## Background
 
@@ -104,3 +104,7 @@ Success is seeing actual human images in your studies in the DICOM Service.
 The bonus part of the challenge is to repeat your path but this time deploy the OSS Medical Imaging Server for DICOM. You have already cloned the repo for the tools.
 
 Tip - The GitHub repo site has a Deploy to Azure button built in.
+
+## Next Steps
+
+Click [here](../Challenge-09/Readme.md) to proceed to the next challenge.
