@@ -1,9 +1,9 @@
 
-# Challenge-14 - FhirBlaze (Blazor app dev + FHIR)
+# Challenge-10 - FhirBlaze (Blazor app dev + FHIR)
 
 ## Introduction
 
-Welcome to Challenge-14!
+Welcome to Challenge-10!
 
 In this challenge you will practice using Azure API for FHIR to read and write data – as from an app developer's perspective.
 
