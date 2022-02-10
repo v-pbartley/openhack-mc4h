@@ -47,7 +47,7 @@ To begin, **CTRL+click** (Windows or Linux) or **CMD+click** (Mac) on the link b
 Follow the instructions in the repo and return here when finished.
 
 
-## Step 2 - Set up Postman
+## Step 2 - Set up Postman and test Azure API for FHIR
 In the next part of this challenge, you will
 - Visit another repo and read the instructions on setting up Postman
 - Make API calls to test Azure API for FHIR using Postman
