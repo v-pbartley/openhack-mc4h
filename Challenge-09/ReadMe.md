@@ -55,4 +55,4 @@ Visual Studio Code with the [REST Client](https://marketplace.visualstudio.com/i
 
 ## Next Steps
 
-Click [here](../Challenge-10/Readme.md) to proceed to the next challenge.
+Click [here](../Challenge-10/ReadMe.md) to proceed to the next challenge.
