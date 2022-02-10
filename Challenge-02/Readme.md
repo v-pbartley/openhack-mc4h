@@ -70,7 +70,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 ## Step 5 - Set up Request Parameters
 
-1. Click on [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml) to view some sample C-CDA data.
+1. Click on [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml) to view sample C-CDA data.
 
 2. Copy and paste the C-CDA data into VS Code or a text editor of your choice. 
 
