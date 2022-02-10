@@ -17,7 +17,7 @@ Bulk FHIR data ingestion is a vital capability for managing FHIR data operations
 + Understand how to track and compare bulk FHIR imports
 
 ### Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader Relationship 
-The open-source [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) tool is an Azure component designed to expedite bulk import of FHIR data into Azure API for FHIR. The process involves uploading FHIR data to the FHIR-Bulk Loader's designated blob storage in Azure, from where FHIR-Bulk Loader automatically loads the data for persistence in Azure API for FHIR. For the remainder of this challenge, we assume you are using FHIR-Bulk Loader connected directly to Azure API for FHIR (bypassing FHIR-Proxy).
+The open-source [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) tool is an Azure component designed to expedite bulk import of FHIR data into Azure API for FHIR. The process involves uploading FHIR data to the FHIR-Bulk Loader's designated blob storage in Azures, from where FHIR-Bulk Loader automatically loads the data for persistence in Azure API for FHIR. For the remainder of this challenge, we assume you are using FHIR-Bulk Loader connected directly to Azure API for FHIR (bypassing FHIR-Proxy).
 
 Below is a component view of Azure API for FHIR with FHIR-Bulk Loader and FHIR-Proxy.  
 
