@@ -8,7 +8,7 @@ In this challenge you will learn how to use the custom `$convert-data` operation
 
 ## Background
 
-In today's health industry, the FHIR R4 format has become the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and C-CDA. In this challenge, we will explore how to convert these formats into FHIR using Azure API for FHIR.
+In today's health industry, the FHIR R4 format has become the HLS industry standard for storage and exchange of health data. As FHIR interoperability spreads throughout the industry, health IT operations are deploying conversion pipelines for ingesting and transforming legacy data formats into FHIR. Two of the most common legacy formats still in use are HL7v2 and C-CDA. In this challenge, we will explore how to convert these formats into FHIR using the Microsoft health data platform.
 
 ## Learning Objectives
 
