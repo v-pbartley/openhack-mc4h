@@ -20,7 +20,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
 + Successful completion of Challenge-01
 + Postman installed
-+ [VS Code](https://code.visualstudio.com/) or [7Edit](http://7edit.com/home/) (optional)
++ A text editor - [VS Code](https://code.visualstudio.com/) or [7Edit](http://7edit.com/home/) (recommended)
 + [VS Code HL7 Language Support](https://marketplace.visualstudio.com/items?itemName=pbrooks.hl7) (optional)
 
 ---
@@ -38,7 +38,7 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
     + ![Request Authorization Tab](./media/request-auth.jpg)
 
-## Step 2 - Setup Request Parameters
+## Step 2 - Set up Request Parameters
 
 1.	Review the instructions for the ```$convert-data``` operation in the Azure API for FHIR [documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/convert-data). 
 
@@ -68,18 +68,24 @@ In today's health industry, the FHIR R4 format has become the HLS industry stand
 
     + ![Request Authorization Tab](./media/request-auth.jpg)
 
-## Step 5 - Setup Request Parameters
+## Step 5 - Set up Request Parameters
 
-1. Download the sample C-CDA file [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml) from the Challenge 2 samples folder.
+1. Click on [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml) to view some sample C-CDA data.
 
-2. Refer to the FHIR server [documentation](https://github.com/microsoft/fhir-server/blob/main/docs/ConvertDataOperation.md#2-make-api-call) for ```$convert-data``` on how to create a parameter request.
+2. Copy and paste the C-CDA data into VS Code or a text editor of your choice. 
+
+3. Refer back to the Azure API for FHIR [documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/convert-data) for ```$convert-data``` on how to create a parameter request.
+
+4. You will need to format the C-CDA data so that it sits correctly in the JSON request body.
+
+5. When ready, copy and paste the C-CDA data into the body of the `Convert Data - CCDA` request in Postman.
 
 ## Step 6 - Convert Data
 
 1. Get a new Bearer token from the FHIR server via Postman.
 2. Execute the `Convert Data - CCDA` request.
 
-> Note: You may have to escape certain values in the C-CDA before executing the request.
+> Note: If it doesn't work, you may want to check to make sure that characters are properly escaped in the C-CDA text.
 
 ## What does success look like for Challenge-02?
 
