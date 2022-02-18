@@ -14,19 +14,19 @@ The MC4H OpenHack presents a series of challenges to help learners build skills 
 ## What are the general learner goals of the MC4H OpenHack?
 In general, we want learners to walk away from this hack with a sense of confidence in deploying, configuring, and implementing Microsoft health data solutions.
 
-+ In doing this hack, learners will know how to ingest, transform, and connect health data using the Microsoft Azure health data platform.
++ In doing this hack, learners will know how to **ingest**, **transform**, and **connect** health data using the Microsoft Azure health data platform.
 
-+ The tasks in this hack require learners to locate information in technical documentation and resolve issues independently. This will help learners develop autonomy in resolving issues.
++ The tasks in this hack require learners to locate information in technical documentation and **resolve issues independently**. This will help learners develop autonomy in resolving issues.
 
-+ The challenges will leave learners with a strong concept of how the system components fit together. With this knowledge, learners will be ready to take the next step and apply the components in real-world health data production environments.  
++ The challenges will leave learners with a strong concept of how the components fit together. With this knowledge, learners will be ready to **apply Microsoft Health & Life Sciences (HLS) tools in real-world production environments**.  
 
 ## Prerequisite Knowledge for the MC4H OpenHack
 
-+ Participants in the MC4H OpenHack are expected to have a solid foundation in Azure fundamentals. If you are new to Microsoft Azure, please visit [here](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-cloud-concepts/) to learn more about the platform.
++ A solid foundation in **Azure fundamentals**. If you are new to Microsoft Azure, please visit [here](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-cloud-concepts/) to learn more about the platform.
 
-+ Since this OpenHack is intended for healthcare IT professionals, we assume learners have a basic familiarity with general topics related to health data interoperability. In particular, learners are expected to have a working knowledge of the FHIR R4 data standard. Please visit [here](https://hl7.org/fhir/R4/) for more information about the FHIR R4 specification.
++ Familiarity with health data interoperability and the **FHIR R4 data standard**. Please visit [here](https://hl7.org/fhir/R4/) for more information about the FHIR R4 specification.
 
-+ For testing Azure API for FHIR, we will be using the [Postman](https://www.postman.com/api-platform/api-testing/) API testing application. We assume learners have some experience making REST API calls in Postman or a similar type of utility.
++ Experience with making **REST API calls** using [Postman](https://www.postman.com/api-platform/api-testing/) or a similar API testing utility.
 
 ## Environment Prerequisites
 Please be sure to have the following ready in your environment before proceeding to Challenge-01.
@@ -36,10 +36,10 @@ Please be sure to have the following ready in your environment before proceeding
 + GitHub account ([link](https://github.com/))
 + Postman installed - either desktop or web client app ([link](https://www.postman.com/))
 
-__Note:__ To access some of the materials used with Postman in this hack, learners will need a Postman account. Free Postman cloud accounts require a login via email or a Google account. Additionally, Postman recommends that if you choose to use the web client, you should also download the desktop application. You can read more and download the desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
+__Note:__ Free Postman cloud accounts require a login via email or a Google account. Additionally, Postman recommends that if you choose to use the web client, you should also download the desktop application. You can read more and download the desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
 
 ## Next Steps
 
-Click [here](../Challenge-01/Readme.md) to proceed to the next challenge.
+Click [here](../Challenge-01/Readme.md) to proceed to Challenge-01.
 
 
