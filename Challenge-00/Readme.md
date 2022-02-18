@@ -33,8 +33,9 @@ Please be sure to have the following ready in your environment before proceeding
 
 + Azure Subscription with [Contributor/Co-Owner rights](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
 + [Application Administrator](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#all-roles) role in your [Azure Active Directory (AAD) tenant](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis#:~:text=Azure%20tenant,tenant%20represents%20a%20single%20organization.)
-+ GitHub account ([link](https://github.com/))
 + Postman installed - either desktop or web client app ([link](https://www.postman.com/))
++ Optional - GitHub account ([link](https://github.com/))
+
 
 __Note:__ Free Postman cloud accounts require a login via email or a Google account. Additionally, Postman recommends that if you choose to use the web client, you should also download the desktop application. You can read more and download the desktop client [here](https://www.postman.com/downloads/?utm_source=postman-home).
 
