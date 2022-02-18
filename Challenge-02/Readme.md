@@ -59,7 +59,7 @@ After making the call, you should receive a FHIR bundle response with the with H
 
 ## Step 4 - Convert C-CDA Data
 
-1. Click on `Add request` again to create another API request in the Postman collection created in Challenge-01.
+1. Click on `Add request` again to create another API request in the `FHIR CALLS` collection imported in Challenge-01.
 ![New Postman Request Image](./media/add_request.jpg)
 2. Rename the new request to `Convert Data - CCDA`.
 3. Change the HTTP operation type from **GET** to **POST**.
@@ -72,7 +72,7 @@ After making the call, you should receive a FHIR bundle response with the with H
 
 ## Step 5 - Set up Request Parameters
 
-1. Click on [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml) to view a sample of C-CDA data.
+1. Click on [CCDA_Ford_Elaine.xml](./samples/CCDA_Ford_Elaine.xml) to view a sample C-CDA data file.
 
 2. Copy and paste the C-CDA data into VS Code or a text editor of your choice. 
 
@@ -91,7 +91,7 @@ After making the call, you should receive a FHIR bundle response with the with H
 
 ## What does success look like for Challenge-02?
 
-+ Successfully receive a FHIR bundle response after calling ```$convert-data``` with HL7 data.
++ Successfully receive a FHIR bundle response after calling ```$convert-data``` with HL7v2 data.
 + Successfully receive a FHIR bundle response after calling ```$convert-data``` with C-CDA data.
 
 ## Next Steps
