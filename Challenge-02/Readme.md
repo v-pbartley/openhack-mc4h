@@ -12,8 +12,8 @@ In today's health industry, the FHIR R4 format has become the industry standard 
 
 ## Learning Objectives
 
-+ Prepare/clean data for conversion into FHIR
 + Specify API request parameters for converting data into FHIR
++ Prepare/clean data for conversion into FHIR
 + Make API calls to convert HL7v2 and C-CDA data into FHIR
 
 ## Prerequisites
@@ -27,7 +27,7 @@ In today's health industry, the FHIR R4 format has become the industry standard 
 
 ## Step 1 - Postman Setup
 
-1. Create a new API request by clicking `Add request` in the Postman collection imported in Challenge-01.
+1. Create a new API request by clicking `Add request` in the `FHIR CALLS` Postman collection imported in Challenge-01.
 ![New Postman Request Image](./media/add_request.jpg)
 2. Rename the new request to `Convert Data - HL7`.
 3. Change the HTTP operation type from **GET** to **POST**.
@@ -46,14 +46,16 @@ In today's health industry, the FHIR R4 format has become the industry standard 
 
 3.	Copy and paste the HL7v2 message into the body of the `Convert Data – HL7` request that you created in Postman*.
 
-4.	After you paste the HL7v2 message, you will need to make some slight alterations so that the formatting of the message follows the example given in the `$convert-data` documentation.
+4.	After you paste the HL7v2 message, you will need to make some character alterations so that the formatting of the message follows the example given in the `$convert-data` [documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/convert-data).
 
 *Optional – prepare the HL7v2 message in VS Code (with the HL7 extension installed) or in 7Edit first before pasting into the body of the Postman request.
 
 ## Step 3 - Convert Data
 
-1. Get a new Bearer token from the FHIR server via Postman.
+1. Get a new access token from AAD via Postman (`POST AuthorizeGetToken`).
 2. Execute the `Convert Data - HL7` request.
+
+After making the call, you should receive a FHIR bundle response with the with HL7v2 data. 
 
 ## Step 4 - Convert C-CDA Data
 
@@ -82,7 +84,7 @@ In today's health industry, the FHIR R4 format has become the industry standard 
 
 ## Step 6 - Convert Data
 
-1. Get a new Bearer token from the FHIR server via Postman.
+1. Get a new access token from AAD via Postman (`POST AuthorizeGetToken`).
 2. Execute the `Convert Data - CCDA` request.
 
 > Note: If it doesn't work, you may want to check to make sure that characters are properly escaped in the C-CDA text.
