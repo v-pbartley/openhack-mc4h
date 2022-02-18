@@ -16,7 +16,7 @@ In general, we want learners to walk away from this hack with a sense of confide
 
 + In doing this hack, learners will know how to **ingest**, **transform**, and **connect health data** using the Microsoft Azure health data platform.
 
-+ The tasks in this hack require learners to locate information in technical documentation and **resolve issues independently**. This will help learners develop autonomy in resolving issues.
++ The tasks in this hack require learners to locate information in technical documentation and **resolve issues independently**.
 
 + The challenges will leave learners with a strong concept of how the components fit together. With this knowledge, learners will be ready to **apply Microsoft Health & Life Sciences (HLS) tools in real-world production environments**.  
 
