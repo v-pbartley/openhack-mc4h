@@ -55,7 +55,7 @@ In the next part of this challenge, you will
 - Visit another repo and read the instructions on setting up Postman
 - Make API calls to test Azure API for FHIR using Postman
 
-To begin, **CTRL+click** (Windows or Linux) or **CMD+click** (Mac) on the link below to visit the Postman tutorial repo (https://github.com/v-pbartley/health-architectures/tree/main/Postman) in a new browser tab.
+To begin, **CTRL+click** (Windows or Linux) or **CMD+click** (Mac) on the link below to visit the Postman tutorial repo (https://github.com/microsoft/health-architectures/tree/main/Postman) in a new browser tab.
 
 Follow the instructions in the repo and return here when finished.
 
