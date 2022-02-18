@@ -63,7 +63,7 @@ Follow the instructions in the repo and return here when finished.
 + FHIR-Proxy (OSS) deployed and able to communicate with Azure API for FHIR
 + FHIR-Bulk Loader (OSS) deployed and available
 + Postman set up and able to connect with Azure API for FHIR
-    + You received a Capabilities Statement from the Azure API for FHIR server.
+    + Capabilities Statement from the Azure API for FHIR server - received
     ```
     {
     "resourceType": "CapabilityStatement",
@@ -77,9 +77,9 @@ Follow the instructions in the repo and return here when finished.
     ...
     }
     ```
-    + You used the `POST AuthorizeGetToken` call in Postman to obtain an AAD access token.
-    + You used the `POST Save Patient` call in Postman to populate Azure API for FHIR with a Patient Resource.
-    + You used the `GET List Patients` call in Postman to retrieve a bundle of all Patient Resources stored in Azure API for FHIR.
+    + `POST AuthorizeGetToken` call in Postman to obtain an AAD access token - succeeded
+    + `POST Save Patient` call in Postman to populate Azure API for FHIR with a Patient Resource - succeeded
+    + `GET List Patients` call in Postman to retrieve a bundle of all Patient Resources stored in Azure API for FHIR - succeeded
 
 ## Deployed Components 
 
