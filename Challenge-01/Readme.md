@@ -78,8 +78,8 @@ Follow the instructions in the repo and return here when finished.
     }
     ```
     + You used the `POST AuthorizeGetToken` call in Postman to obtain an AAD access token.
-    + You were able to make the `POST Save Patient` call in Postman to populate Azure API for FHIR with a Patient Resource.
-    + You were able to use the `GET List Patients` call in Postman to retrieve a bundle of all Patient Resources stored in Azure API for FHIR.
+    + You used the `POST Save Patient` call in Postman to populate Azure API for FHIR with a Patient Resource.
+    + You used the `GET List Patients` call in Postman to retrieve a bundle of all Patient Resources stored in Azure API for FHIR.
 
 ## Deployed Components 
 
