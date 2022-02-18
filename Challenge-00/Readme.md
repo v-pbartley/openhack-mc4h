@@ -14,7 +14,7 @@ The MC4H OpenHack presents a series of challenges to help learners build skills 
 ## What are the general learner goals of the MC4H OpenHack?
 In general, we want learners to walk away from this hack with a sense of confidence in deploying, configuring, and implementing Microsoft health data solutions.
 
-+ In doing this hack, learners will know how to **ingest**, **transform**, and **connect** health data using the Microsoft Azure health data platform.
++ In doing this hack, learners will know how to **ingest**, **transform**, and **connect health data** using the Microsoft Azure health data platform.
 
 + The tasks in this hack require learners to locate information in technical documentation and **resolve issues independently**. This will help learners develop autonomy in resolving issues.
 
