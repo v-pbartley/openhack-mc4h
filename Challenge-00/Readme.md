@@ -24,7 +24,7 @@ In general, we want learners to walk away from this hack with a sense of confide
 
 + A solid foundation in **Azure fundamentals**. If you are new to Microsoft Azure, please visit [here](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-cloud-concepts/) to learn more about the platform.
 
-+ Familiarity with health data interoperability and the **FHIR R4 data standard**. Please visit [here](https://hl7.org/fhir/R4/) for more information about the FHIR R4 specification.
++ Familiarity with the **FHIR R4 data standard** and general health data interoperability. Please visit [here](https://hl7.org/fhir/R4/) for more information about the FHIR R4 specification.
 
 + Experience with making **REST API calls** using [Postman](https://www.postman.com/api-platform/api-testing/) or a similar API testing utility.
 
