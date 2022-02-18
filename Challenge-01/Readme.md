@@ -62,7 +62,24 @@ Follow the instructions in the repo and return here when finished.
 + Azure API for FHIR (PaaS) deployed and available
 + FHIR-Proxy (OSS) deployed and able to communicate with Azure API for FHIR
 + FHIR-Bulk Loader (OSS) deployed and available
-+ Postman set up and able to make REST API calls to Azure API for FHIR
++ Postman set up and able to connect with Azure API for FHIR
+    + You received a Capabilities Statement from the Azure API for FHIR server.
+    ```
+    {
+    "resourceType": "CapabilityStatement",
+    "url": "/metadata",
+    "version": "1.0.0.0",
+    "name": "Microsoft Azure API for FHIR 2.2.61 Capability Statement",
+    "status": "draft",
+    "experimental": true,
+    "date": "2022-02-18T00:06:47.9408665+00:00",
+    "publisher": "Microsoft",
+    ...
+    }
+    ```
+    + You used the `POST AuthorizeGetToken` call in Postman to obtain an AAD access token.
+    + You were able to make the `POST Save Patient` call in Postman to populate Azure API for FHIR with a Patient Resource.
+    + You were able to use the `GET List Patients` call in Postman to retrieve a bundle of all Patient Resources stored in Azure API for FHIR.
 
 ## Deployed Components 
 
