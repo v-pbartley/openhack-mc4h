@@ -12,11 +12,11 @@ This hack is intended for **healthcare system integrators**, **independent healt
 
 # What topics are covered?
 
-+ In the first portion of the hack (Challenges 00-04), you'll get direct experience deploying the Azure components used in real-world health data production environments.  
++ In the first portion of the hack (Challenges 00-04), you'll get direct experience deploying and configuring the Azure components used in real-world health data production environments.  
 
     + Challenge-00 - Check prerequisites and configure your environment
     + Challenge-01 - Deploy Azure API for FHIR (PaaS), FHIR-Proxy (OSS), and FHIR-Bulk Loader (OSS)
-    + Challenge-02 - Convert HL7 and C-CDA to FHIR
+    + Challenge-02 - Convert HL7v2 and C-CDA to FHIR
     + Challenge-03 - Ingest to FHIR
     + Challenge-04 - Query and Search FHIR
     
