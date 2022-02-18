@@ -95,4 +95,4 @@ FHIR-Bulk Loader
 
 ## Next Steps
 
-Click [here](../Challenge-02/Readme.md) to proceed to the next challenge.
+Click [here](../Challenge-02/Readme.md) to proceed to Challenge-02.
