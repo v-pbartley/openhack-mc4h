@@ -33,7 +33,7 @@ Please be sure to have the following ready in your environment before proceeding
 
 + Azure Subscription with [Contributor/Co-Owner rights](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
 + [Application Administrator](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#all-roles) role in your [Azure Active Directory (AAD) tenant](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis#:~:text=Azure%20tenant,tenant%20represents%20a%20single%20organization.)
-+ Postman installed - either desktop or web client app ([link](https://www.postman.com/))
++ [Postman](https://www.postman.com/) installed - either desktop or web client app ([link](https://www.getpostman.com/))
 + Optional - GitHub account ([link](https://github.com/))
 
 
