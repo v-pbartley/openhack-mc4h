@@ -1,58 +1,67 @@
-# Challenge-09 - Deploy and demonstrate the consent capabilities of Azure API for FHIR
-
+# Challenge 9 - Export and Anonymize Data
 ## Introduction
 
-Welcome to Challenge-09!
+Welcome to Challenge 9!
 
-In this challenge you will learn how to configure Consent Opt-Out filtering using the FHIR-Proxy (OSS) solution.
+In this challenge you will learn how to export anonymized data from Azure API for FHIR.
 
 ## Background
 
-In today's rapidly changing healthcare data landscape, the FHIR R4 format is has become the HLS industry standard for storage and exchange of health data. Healthcare consumers expect that their directives related to privacy, treatment, research, and advanced care are respected.
+Healthcare organizations and payors frequently partner with outside research groups, and the data used in these research projects generally comes from patients' medical records. If the purpose of the research is academic and not for treatment, payment, or healthcare operations, researchers are not allowed to access patients' Personal Health Information (PHI) *unless* the information has been de-identified. De-identification of PHI involves removing details from patients' medical data that could reveal the patients' identities. In the U.S., de-identification (or anonymization) of PHI is regulated under the Health Insurance Portability and Accountability Act (HIPAA).
 
 ## Learning Objectives
+By the end of this challenge you will be able to
+* Configure bulk export of FHIR data from Azure API for FHIR
+* Use the sample anonymization config file to de-identify FHIR data on export
+* Export anonymized data to an ADLS Gen2 account
+* Share anonymized data with a group not affiliated with your organization
 
-+ Configure Consent Opt-Out filtering in FHIR-Proxy
-+ Add a Consent Resource to the Healthcare APIs FHIR Service
-+ Verify that Consent Opt-Out filtering performs as expected
+## Prerequisites 
+* An Azure environment with a working instance of Azure API for FHIR. 
+* FHIR data loaded into Azure API for FHIR. If the data you have loaded does not include Immunization or Patient Resources, go ahead and [load this bundle](https://github.com/kamoclav/openhack-mc4h-2/blob/main/Challenge-9/synthea_sample_data_fhir_r4%20OpenHack.zip) for a small dataset or check out [Synthea](https://synthetichealth.github.io/synthea/) for a larger dataset.
+* Azure Data Lake Storage Gen2 deployed in your Azure environment.
 
-## Prerequisites
+## Step 1: Review sample anonymization configuration and customize if needed
+Microsoft provides a sample configuration file to anonymize data according to HIPAA Safe Harbor specifications. It's important to review the sample configuration and the HIPAA Safe Harbor rules to determine if the sample configuration will work for your organization. If the sample configuration doesn't meet your organization's requirements for PHI de-identification, you will need to implement your own anonymization rules in the configuration file.
 
-+ Azure Healthcare APIs FHIR service instance with patient data
-+ FHIR-Proxy successfully deployed
-+ Postman (https://www.postman.com/downloads/) or Visual Studio Code with the REST Client extension (https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
-+ Multiple Azure AD users to simulate user and or administrator access to the FHIR service. 
+More information on HIPAA de-identification rules can be found [here](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html).
 
-## Step - 1 Configure Postman
+**Task:**  
+Configure your Azure API for FHIR for export to a storage account following the instructions [here](https://docs.microsoft.com/en-us/azure/healthcare-apis/data-transformation/configure-export-data). <br>
 
-1. Configure postman using the guidance provided in [Challenge 1](../Challenge-01/Readme.md).
-2. Confirm that the FHIR service contains Patient resources.
-![Patient Resources](./images/patient-count-postman.png)
-3. Select a Patient resource and record the patient identifier. This will be used to create the Consent resource.
+Note: You are enabling a managed identity on the Azure API for FHIR resource. That managed identity is what needs to be added to the storage account with Storage Blob Data Contributor privledges. Be careful not to add the service client or a service principle by mistake. <br>
 
-Visual Studio Code with the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension may also be used to complete this challenge. See the walkthrough [here](https://docs.microsoft.com/en-us/azure/healthcare-apis/using-rest-client) for details on how to use REST Client to access Azure Healthcare APIs. Be sure to note that in all cases you will be using the FHIR-Proxy endpoint to complete this challenge.
+For more information on the sample anonymization file, check out [de-identified-export-operation-on-the-fhir-server](https://github.com/microsoft/Tools-for-Health-Data-Anonymization/blob/master/docs/FHIR-anonymization.md#how-to-perform-de-identified-export-operation-on-the-fhir-server).
 
-## Step - 2 Post Consent Record to FHIR Service
+For a general overview of the $export operation's query parameters for de-identification, check out [this documentation](https://docs.microsoft.com/en-us/azure/healthcare-apis/data-transformation/de-identified-export).
 
-1. Review and update (as needed) the sample Consent resource, which may be found [here](./sample-data/consent-resource.json). Be sure to use the Patient resource obtained in Step 1.
-2. Create a new request in Postman and post the consent resource.
 
-## Step - 3 Configure Secure FHIR Consent Opt-Out
+## Step 2: Export anonymized data to a storage account
 
-1. Refer to the FHIR-Proxy configuration [documentation](https://github.com/microsoft/fhir-proxy/blob/main/docs/configuration.md) for additional details.
+**Task:**  
+Perform a de-identified $export on Azure API for FHIR. If you get stuck, refer to the documentation in Step 1. <br>
 
-## Step - 3 Verify Consent Opt-Out filtering
+The general format of the query will be <br>
+`https://<<FHIR service base URL>>/$export?_container=<<container_name>>&_anonymizationConfig=<<config file name>>&_anonymizationConfigEtag=<<ETag on storage>>`
 
-1. Link a user to an appropriate FHIR resource. See the FHIR-Proxy configuration [documentation](https://github.com/microsoft/fhir-proxy/blob/main/docs/configuration.md) for additional details. Ensure that the linked user is not assigned to the FHIR-Proxy administrator role.
+The $export operation has required headers 
+* Accept: application/fhir+json
+* Authorization: Bearer{{bearerToken}}
+* Prefer: respond-async. <br>
 
-2. Sample query patient result.![Query patient](./images/ConsentOptOut-Withheld-2.png) 
+![export-header](./media/Export_Headers.png) <br>
 
+For more information on headers check out this [documentation] (https://hl7.org/Fhir/uv/bulkdata/export/index.html#headers)
+
+## Step 3: Securely transfer the file to the research team
+Researchers from outside organizations cannot have direct access to Healthcare or Payor organizations' Azure tennants. You will need to set up a way to securely transfer the anonymized datasets to these external groups.
+
+**Task:**  
+Set up a shared access signature (SAS) token to allow a research team to access the anonymized datasets that you exported.
+
+If you get stuck, check out [Create SAS Tokens](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/document-translation/create-sas-tokens?tabs=Containers).
 
 ## Challenge Success
 
-+ Successfully POST a consent record to the Azure Healthcare APIs FHIR service
-+ Verify that Consent Opt-Out properly filters resources
-
-## Next Steps
-
-Click [here](../Challenge-10/ReadMe.md) to proceed to the next challenge.
++ Successfully utilize an anonymization configuration file and the $export operator to export an anonymized dataset from Azure API for FHIR
++ Successfully set up a SAS token to allow access to the anonymized dataset

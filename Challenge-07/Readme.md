@@ -1,103 +1,180 @@
-# Challenge-07 - IoT Connector for FHIR
+#  Challenge 7 - Dataverse Writing Data (Instructor Lead Training)
 
 ## Introduction
 
-Welcome to Challenge-07!
+Welcome to Challenge 7!
 
-Challenge-07 and Challenge-08 are designed to introduce you to the upcoming PaaS release of the Azure API for FHIR IoT Connector and the Azure Healthcare APIs DICOM Service. These challenges can be performed in any subscription and are not dependent on the work from prior challenges.
+**Note: To actively follow the steps in this challenge requires a Dataverse Tenant, A Dataverse Environment, and a Dynamics Subscription.** Given that most participants do not have this access, this is an instructor-lead training module. 
 
-Challenge-07 introduces the IoT Connector for the Azure API for FHIR PaaS, with the OSS deployments offered as a bonus challenge. This will help you become familiar with the data flow for IoT to FHIR and will broaden your knowledge of Remote Patient Monitoring scenarios.
-
+In this challenge you will learn about writing data from Azure API for FHIR to Dataverse, and vice versa. 
 
 ## Background
-
-With the rise of wearable devices, Remote Patient Monitoring (RPM) has exploded in the healthcare marketplace. Many hardware vendors have tried a proprietary approach for providing the hardware and monitoring software. Microsoft has taken an agnostic approach to Remote Patient Monitoring and wearable data ingestion. Microsoft has created a tool kit for converting the output from any wearable into FHIR resources.
+The FHIR data store for Microsoft Cloud for Healthcare (MC4H) is **Azure API for FHIR**, while MC4H model-driven apps leverage the **Dynamics** health industry data model in **Dataverse**. Synchronizing data between FHIR and the Dataverse model requires several layers of mapping, most of which is set up and managed via the **SyncAdmin for FHIR** settings in Dynamics.
 
 ## Learning Objectives
++ Synchronizing data between Azure API for FHIR and Dynamics  
 
-- Deploy and configure the IoT Connector via Azure portal
-- Deploy and configure additional Azure services required for the IoT connector
-- Connect the IoT Connector to Azure API for FHIR
-- Create a map for incoming device data through to FHIR
-- Understand the data flow for medical IoT data
 
-## Challenges
+## Prerequisites
++ Successful completion of Challenge 1 
++ Successful completion of Challenge 5
++ Successful completion of Challenge 6
 
-### Challenge-07a
+---
 
-Let us begin with a basic walk through, performing the steps in this [IoT Quickstart](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/iot-fhir-portal-quickstart). Success for Challenge-07a means you can query the IoT FHIR Observation resource via Postman.
+## Step 1 - Configure Mapping on both Azure and Dynamics 
 
-Link - https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/iot-fhir-portal-quickstart
+To begin, all Entity Maps are Disabled by default. Customers must enable the ones equating to the FHIR Resources they wish to Sync with Dataverse. 
 
-__Note:__ Azure IoT Central is no longer needed. Please delete your Azure IoT Central instance prior to moving forward.
+![disable](./media/entity-map-disable.png)
 
-### Challenge-07b - Building Mappings from Sample Data
 
-Now let's go a step forward. This time let's create our own mappings using sample data.
+Entity Expansion Maps
 
-### Step 1 - Clone these repos
+Entity expansion maps have been added for Appointment, Patient, and CareTeam
 
-&nbsp;&nbsp;&nbsp;&nbsp; This hackathon repo (If not already complete)
+![expansion](./media/expansion-maps.png)
 
-```azurecli
-git clone https://github.com/microsoft/openhack-mc4h
+
+Enable Patient 
+
+Save & Close when finished.  
+
+__Note__  the expansion Attribute Maps are shown below 
+
+![enable-patient](./media/enable-patient.png)
+
+Enable Patient -> Identifier Map
+
+![enable-id](./media/enable-identifier.png)
+
+
+Enable Patient -> Link Map
+
+![enable-link](./media/enable-link.png)
+
+**Restart the SyncApp to pickup Dynamics Changes**
+
+## Step 2 Send a Patient to DV 
+The best method for testing FHIR to Dataverse is to start with Postman.  **Remember** data that is in FHIR will not automatically be sync'd to Dataverse once an Entity is enabled; rather, the data must be *updated* in the FHIR server to trigger a sync. This is due to the trigger function in the FHIR-Proxy:
+
++ FHIR data enters the FHIR-Proxy either via Bundle or HTTPS
++ The FHIR-Proxy performs any Pre-Process task (ie converting a Transaction Bundle into a Batch Bundle)
++ The FHIR-Proxy Post-Process _FHIRProxy.postprocessors.FHIRCDSSyncAgentPostProcess2_ sends the MSG and Patient ID to the FHIR-SyncAgent for processing
++ The FHIR-SyncAgent calls the Dataverse API with the FHIR resource for processing 
+
+You should have already loaded the MC4H Testing collection, here is the link again: [MC4H Testing.postman_collection.zip](./samples/MC4H_Testing.postman_collection.zip)  
+
+The Patient Data in the MC4H Testing collection is structured in a way to help you track the users you create by ID.  In this example we are creating a Patient with a known ID that we can track.
+
+```al
+PUT {{fhirurl}}/Patient/D000000001
+```
+The JSON for Patient D000000001 is in the body of the Postman message (shortened for readability)
+
+```al
+{
+    "resourceType": "Patient",
+    "id": "D000000001",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+        ]
+    }
+...
+}
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp; IoMT FHIR Connector for Azure
+First, obtain a new Token from AAD.
 
-```azurecli
-git clone https://github.com/microsoft/iomt-fhir
-```
+![postman-token](./media/postman-token.png)
 
-### Step 2 - Install Node.js (If not already complete)
+Select a Patient to test with - note the Patient ID - ensure you have a 200 OK return message from FHIR-Proxy.
 
-### Step 3 - Setup IoT Mapping Tool
+![postman-patient](./media/postman-patient.png)
 
-Follow the instructions for running the mapper [here](https://github.com/microsoft/iomt-fhir/tree/master/tools/data-mapper#getting-started)
+## Step 3 Check Dataverse
+Login to Dataverse Sync admin for FHIR (Challenge 6), but switch to Healthcare Data.
 
-Link - https://github.com/microsoft/iomt-fhir/tree/master/tools/data-mapper#getting-started
+![dataverse1](./media/dataverse1.png)
 
-Skip the optional steps on this page.
+Note in this most recent release of MC4H a FHIR view has been added for the Resources in the left menu - the default screen is the Patient screen with FHIR View selected.
 
-The mapper will be at this address when running: http://localhost:5000
+### Looking at Patient Details 
+Each Patient Resource is represented by the business logic in the model app driving the Dynamics UI - meaning Patinets with Links as part of thir record will appear differently than Patients without.
 
-### Step 4 - Continue through making sample maps
+The same happens with Identifiers (part of a Patient resource record). Here Donald has two Identifiers.
 
-Link - https://github.com/microsoft/iomt-fhir/tree/master/tools/data-mapper#how-to-make-mappings
+![donald](./media/donald.png)
 
-At the end of step 4 you will have a sample set of IoT Maps which can be used with the Azure API for FHIR and IoT Connector.
+_Note_ There is missing information in Donald's record either because it was not supplied (which is the case here), because it is not aligned with US Core standards, or because the Attribute Map JSON parsing is incorrect.  More on this in the next challenge.
 
-For more information on the IoT Mappings visit the docs page - https://github.com/microsoft/iomt-fhir/blob/master/docs/Configuration.md.
+### Postman Scenario
+For your convenience the Postman MC4H Collection is designed as a full scenario. Simply start at the top and work your way down through each entry to load both FHIR and Dataverse - __but wait__ - before you start loading data into FHIR, you must enable the following Dataverse Entities and Restart the SyncAgent to get that data into Dataverse.
 
-__Note:__ When creating a new mapping, you must click the 'Confirm' button. Pressing ENTER after typing will not work.
+**Enable** the following Entities in Dataverse (see above and below)
 
-### (Optional) Step 5
+US Core R4 Resources | FHIR    | Dataverse
+---------------------|---------|----------
+Patient              | Enabled | Enable 
+Encounter            | Enabled | Enable 
+Device               | Enabled | Enable 
+Observation          | Enabled | Enable 
+Appointment          | Enabled | Enable 
+MedicationRequest    | Enabled | Enable 
+AllergyIntolerance   | Enabled | Enable
+Procedure            | Enabled | Enable 
+Organization         | Enabled | Enable 
+Location             | Enabled | Enable 
+RelatedPerson        | Enabled | Enable
+Claim                | Enabled | Enable 
+DiagnosticReport     | Enabled | Enable 
+Condition            | Enabled | Enable 
+Medication           | Enabled | Enable 
+CarePlan             | Enabled | Enable 
+Slot                 | Enabled | Enable 
+Schedule             | Enabled | Enable 
+CareTeam             | Enabled | Enable 
+Practioner           | Enabled | Enable 
 
-Upload your newly created sample mappings to the IoT Connector via the portal.
+Once all Entities are enabled in Dataverse, your instance should look like this.  Note there are only a few Resources that should sync back to FHIR and a customer's EMR. 
 
-- Create a new IoT Connector.
-- Figure out the steps for uploading a device mapping.
-- Repeat for FHIR mapping.
 
-## Challenge-07c
+![dataverse-to-fhir](./media/dataverse-to-fhir.png)
 
-This is the most difficult challenge. However, this could be one of the most crucial to the success of an IoMT/ RPM project.
 
-Use the IoT Mapper from Challenge 11b to create maps for the sample messages in the SampleData folder. There are three sample messages in one file - vitals, BP, and weight. Vitals is an array of data while BP & weight are single entry messages. The SampleData folder has two files. Both files are the same data. Three-Sample-Message-Types-with-labels.json is the message data with data descriptions and/or units of measure.
 
-When you get to the FHIR mapping you can make up values for the 'Code'. For example - Code: A1235, System: https://loinc.org, Text: Heart Rate
+**Restart** the SyncAgent
 
-Answers are in the 'Answer' folder if you get stuck. Final mappings may vary from the answer mapping.
+![restart](./media/restart.png)
 
-Hint - You may need to create multiple maps and combine the output into a single JSON file.
 
-## [BONUS] Challenge-07d
 
-This challenge is a variation of Challenge-07a.  
-Deploy and configure the OSS IoMT FHIR Connector for Azure. Use Azure IoT Central as the source and the mappings from the Quickstart.
 
-Link to OSS - https://github.com/microsoft/iomt-fhir
+## Step 4 Writing data back to FHIR 
+Our Patients are in Dataverse, so we have been able to write them as planned, so why does it show "No" Azure FHIR Sync Enabled?
 
-## Next Steps
+![dataverse1](./media/dataverse2.png)
 
-Click [here](../Challenge-08/ReadMe.md) to proceed to the next challenge.
+
+__Recall that Entities allow data in__.  If you want to send data back to FHIR, you have to enable the Sync at the individual Patient level. 
+
+![dataverse-sync](./media/dataverse-patient-sync.png)
+
+Here we have enabled Daisy and Donald for write back to FHIR.  
+
+![daisy-enabled](./media/daisy-enabled.png)
+
+Lets change her mobile phone number to end in 0001 - then Save & Close.
+
+![daisy-modified](./media/daisy-modified.png)
+
+
+We can validate the change in FHIR by Listing All Patients and searching for Daisy, but that is rather inefficient.
+
+![patient-all](./media/all-patients.png)
+
+
+The better approach is to search by Daisy's ID (D000000004) like this.
+
+![daisy-updated](./media/daisy-updated.png)

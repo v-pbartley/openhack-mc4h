@@ -1,8 +1,8 @@
-#  Challenge-04 - Query and Search FHIR
+#  Challenge 4 - Query and Search FHIR
 
 ## Introduction
 
-Welcome to Challenge-04!
+Welcome to Challenge 4!
 
 In this challenge you will learn how to use the search operations in Azure API for FHIR.
 
@@ -18,7 +18,7 @@ The FHIR specification defines the fundamentals of search for FHIR resources. Th
 
 ## Prerequisites
 + Successful completion of Challenge 1
-+ Ensure you have loaded into Postman the `FHIR_Search.postman_collection.json` file from Challenge-01 [located here](./samples/FHIR_Search.postman_collection.zip).  
++ Ensure you have loaded the FHIR_Search.postman_collection from Challenge 01 [located here](./samples/FHIR_Search.postman_collection.zip).  
 
 ---
 
@@ -59,7 +59,7 @@ Azure API for FHIR supports _almost_ all resource-specific search parameters def
 
   
 ## Step 2 - Perform both Common and Composite Searches 
-Composite search allows you to search against value pairs. For example, if you were searching for a height observation where the person was 60 inches, you would want to make sure that a single component of the observation contained the code ```bodyheight``` and the value of 60. 
+Composite search allows you to search against value pairs. For example, if you were searching for a height observation where the person was 60 inches, you would want to make sure that a single component of the observation contained the code of ```bodyheight``` and the value of 60. 
 
 Azure API for FHIR supports the following search parameter type pairings:
 + Reference, Token
@@ -83,19 +83,9 @@ Using the Postman file provided, search for Patients using ```_has```.  For more
 
 
 ## Step 5 - Use the Include & Reverse Include Search Results Parameters  
-Using the Postman file provided, search for PractitionerRole including the Practitioner resource in the result to reduce calls to the server. Discover all PractitionerRoles for an Organization using reverse include. For more examples of include and reverse include search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
+Using the Postman file provided, search for PractitionerRole including the Practitioner resource in the result, to reduce calls to the server. Discover all PractitionerRoles for an Organization using reverse include. For more examples of include and reverse include search, refer to the **[FHIR search examples](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/search-samples)** page.
   
 
 ## Step 6 - Defining a Custom Search parameter 
 To create a new search parameter, you need to POST the SearchParameter resource to the database.  See the Postman file provided for an example.  Read through the full example at https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/how-to-do-custom-search.
 
-## What does success look like for Challenge-04?
-
-+ Developed a basic understanding of how to perform FHIR search operations in Azure API for FHIR
-+ Performed several FHIR search queries using paired/multiple parameters for Common and Composite Search
-+ Completed at least one Chained and Reverse Chained FHIR search query
-+ Completed at least one Include and Reverse Include FHIR search query
-
-## Next Steps
-
-Click [here](../Challenge-05/Readme.md) to proceed to the next challenge.

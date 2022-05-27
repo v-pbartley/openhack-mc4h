@@ -1,98 +1,201 @@
-# Challenge-01 - Deploy Azure API for FHIR (PaaS), FHIR-Proxy (OSS), and FHIR-Bulk Loader (OSS)
+# Challenge 1 - Deploy Azure API for FHIR and FHIR-Proxy (OSS)
 
 ## Introduction
 
-Welcome to Challenge-01!
+Welcome to Challenge 1!
 
-In this challenge, you will use an Azure Resource Manager (ARM) template to deploy **Azure API for FHIR** (PaaS), **FHIR-Proxy** (OSS), and **FHIR-Bulk Loader** (OSS). In addition, you will set up a **Postman** environment to make REST API calls to Azure API for FHIR.
+In this challenge, you will deploy both Azure API for FHIR (PaaS) and FHIR-Proxy (Open Source Software).
 
 ## Background
-FHIR (Fast Healthcare Interoperability Resources) is the standard format for data storage and exchange in Microsoft's health data platform. Microsoft's FHIR infrastructure rests on two Azure components: [Azure API for FHIR](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/overview) (GA) and [Azure Healthcare APIs](https://azure.microsoft.com/en-us/services/healthcare-apis/) (currently in Public Preview). For this training, we will be focusing on Azure API for FHIR.
-
-In Azure FHIR workflows, Azure API for FHIR receives REST API requests from remote client apps and manages all FHIR data persistance and retrieval tasks. Meanwhile, the open-source [FHIR-Proxy](https://github.com/microsoft/fhir-proxy) acts as a checkpoint surrounding Azure API for FHIR, filtering the incoming and outgoing FHIR data according to a set of admin-defined rules.
-
-For bulk ingestion of FHIR data into Azure API for FHIR, Microsoft offers the open-source [FHIR-Bulk Loader](https://github.com/microsoft/fhir-loader) utility. With FHIR-Bulk Loader, admins can import large amounts of FHIR data into Azure API for FHIR with point and click ease (FHIR-Bulk Loader automatically manages all API calls to Azure API for FHIR). The FHIR-Bulk Loader can import data from FHIR Bundles (compressed and non-compressed) as well as FHIR NDJSON files. 
+FHIR (Fast Healthcare Interoperability Resources) is at the center of our healthcare products at Microsoft. Support for FHIR in Microsoft Cloud for Healthcare (MC4H) rests on two fundamental components: Azure API for FHIR and FHIR-Proxy. In MC4H architectures, Azure API for FHIR is at the center of FHIR data activity, and FHIR-Proxy acts as a checkpoint, filtering data and enforcing Role-Based Access Control (RBAC) at the FHIR resource level.
 
 ## Learning Objectives 
-+ Understand the Azure API for FHIR - FHIR-Proxy relationship
-+ Use an ARM template to deploy Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader
-+ Configure AAD authentication for FHIR-Proxy
-+ Configure Postman for testing FHIR API calls
-+ Make FHIR API calls to Azure API for FHIR
++ Understand the prerequisites for deploying Azure API for FHIR and FHIR-Proxy
++ Become familiar with the Azure API for FHIR and FHIR-Proxy deployment process
++ Understand the Azure API for FHIR - FHIR-Proxy Relationship
 
 ### Azure API for FHIR and FHIR-Proxy Relationship
-In the Azure health data platform, FHIR-Proxy acts as a pre- and post- processor, selectively filtering FHIR data on its way into and out of Azure API for FHIR. Admins can set up FHIR-Proxy to listen to the stream of I/O data and trigger custom workflows based on specific FHIR events. FHIR-Proxy also brings enhanced Role-Based Access Control (RBAC) to Azure API for FHIR, allowing fine-grained Client Credential Authorization for REST API actions at the FHIR Resource level. This also provides a means of Role-Based Consent so that users (i.e., patients) can authorize or deny access to certain FHIR data.
+The FHIR-Proxy acts as a Pre- and Post- Processor for Azure API for FHIR.  FHIR-Proxy has its own Client Credential Auth Flow and adds a means of Role Based Consent to Azure API for FHIR.
 
-Component View of FHIR-Proxy and Azure API for FHIR with AAD [confidential clients](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/register-confidential-azure-ad-client-app) registered for Postman, FHIR-Proxy, and Azure API for FHIR.
+Component View of Azure API for FHIR and FHIR-Proxy.  _Larger image available [here](./media/component-view.png)_ 
 
 ![component-view](./media/component-view-small.png)
 
 
+
 ## Prerequisites 
+To help you set up your environment, we provide install scripts that gather (and export) information necessary for the proper deployment and configuration of Azure API for FHIR and supporting Open Source Software (OSS) components.
 
-Before deploying Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader, please make sure that you have the following permissions in your Azure environment:
+Before you run these install scripts, please make sure that you have the following permissions in your Azure environment:
 
-+ **Azure Subscription:** User must have rights to deploy resources at the Resource Group scope in their Azure Subscription (i.e. [Contributor](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) built-in role).
++ **Azure Subscription Prerequisite:** User must have rights to deploy resources at the Subscription scope (ie Contributor role or Owner role).
++ **Azure Active Directory (AAD) Prerequisite:** User must have Application Administrator (built-in RBAC role) rights for the AAD tenant they are deploying into.
 
-+ **Azure Active Directory (AAD):** User must have [Application Administrator](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator) rights for the AAD tenant attached to the Azure Subscription.
+The install will fail unless both of these prerequisites are met.
 
-For **Step 2** in this challenge, you will need to have [Postman](https://www.getpostman.com/) installed - either the desktop or web client.
+## Getting Started
+Deploying Azure API for FHIR. 
+For this challenge, we will walk through these steps: 
+- Login to Azure CLI (via the Portal or directly at shell.azure.com)
+- Clone the FHIR-Starter repo 
+- Execute the deployment scripts 
+- Set up Postman 
+- Test Authentication 
 
+To begin the deployment process, CTRL+click (Windows or Linux) or CMD+click (Mac) on the "Launch Azure Shell" button below.  
+The Azure Cloud Shell CLI will open in a new tab.
 
-## Step 1 - Deploy Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader
-In the first part of this challenge, you will
-- Visit another repo and read the deployment instructions
-- Go to the Azure Portal and begin the process for deploying Azure API for FHIR, FHIR-Proxy, and FHIR-Bulk Loader
+[![Launch Azure Shell](./media/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com/bash?target="_blank")
 
+Select Bash as the operating environment.
 
-To begin, **CTRL+click** (Windows or Linux) or **CMD+click** (Mac) on the link below to visit the fhir-starter quickstart repo (https://github.com/ToddM2/fhir-starter/tree/quickstarts/quickstarts) in a new browser tab.
+## Step 1 - FHIR Service deployment 
+  
+- Navigate to the FHIR-Starter repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-starter in your browser, review the main [Readme.md](https://github.com/microsoft/fhir-starter#fhir-starter) and the [Readme.md](https://github.com/microsoft/fhir-starter/blob/main/scripts/Readme.md) in the ./scripts folder.  
 
-Follow the instructions in the repo and return here when finished.
-
-
-## Step 2 - Set up Postman and test Azure API for FHIR
-In the next part of this challenge, you will
-- Visit another repo and read the instructions on setting up Postman
-- Make API calls to test Azure API for FHIR using Postman
-
-To begin, **CTRL+click** (Windows or Linux) or **CMD+click** (Mac) on the link below to visit the Postman tutorial repo (https://github.com/microsoft/health-architectures/tree/main/Postman) in a new browser tab.
-
-Follow the instructions in the repo and return here when finished.
-
-## What does success look like for Challenge-01?
-+ Azure API for FHIR (PaaS) deployed and available
-+ FHIR-Proxy (OSS) deployed and able to communicate with Azure API for FHIR
-+ FHIR-Bulk Loader (OSS) deployed and available
-+ Postman set up and able to connect with Azure API for FHIR
-    + Capabilities Statement from the Azure API for FHIR server - received
+- Clone the FHIR-Starter repo in your Azure Cloudshell environment.  
+    ```azurecli-interactive
+    git clone https://github.com/microsoft/fhir-starter.git
     ```
-    {
-    "resourceType": "CapabilityStatement",
-    "url": "/metadata",
-    "version": "1.0.0.0",
-    "name": "Microsoft Azure API for FHIR 2.2.61 Capability Statement",
-    "status": "draft",
-    "experimental": true,
-    "date": "2022-02-18T00:06:47.9408665+00:00",
-    "publisher": "Microsoft",
-    ...
-    }
+
+- Change the working directory to the ```./fhir-starter/scripts``` directory in the repo.  
+    ```azurecli-interactive
+    cd $HOME/fhir-starter/scripts
     ```
-    + `POST AuthorizeGetToken` call in Postman to obtain an AAD access token - succeeded
-    + `POST Save Patient` call in Postman to populate Azure API for FHIR with a Patient Resource - succeeded
-    + `GET List Patients` call in Postman to retrieve a bundle of all Patient Resources stored in Azure API for FHIR - succeeded
 
-## Deployed Components 
+- Make the Bash scripts for deployment and setup executable.  
+    ```azurecli-interactive
+    chmod +x *.bash
+    ```
 
-Azure API for FHIR and FHIR-Proxy
+- Execute the ```deployFhirStarter.bash``` script.  
+    ```azurecli-interactive
+    ./deployFhirStarter.bash
+    ```
 
-![proxy-deployment](./media/component-view-small.png)
+Be certain to click ```y``` (for "yes") when prompted to generate a Postman environment for FHIR Service access.
 
-FHIR-Bulk Loader
+Deployed Components 
 
-![fhir-bulk](./media/install-components-small.png)
+![fhir-starter](./media/fhir-starter.png)
 
 
-## Next Steps
+__Note__  During the live MC4H OpenHack session, Resource Group names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
 
-Click [here](../Challenge-02/Readme.md) to proceed to Challenge-02.
+## Step 2 - Set up Postman
+Using the Upload / Download button in the Azure Cloushell interface, download the _$fhirServiceName.postman_environment.json_ file to your computer. 
+
+Import the Postman Search Collection into Postman if you have not already done so.  
+Go to (CTRL+click or CMD+click) https://microsoft.github.io/openhack-mc4h/Challenge-1.html#materials for the collection download.
+
+Use the imported collection in Postman to test access to your FHIR Service.
+
+_[Need help with Postman - try this (CTRL+click or CMD+click for new tab)](https://github.com/daemel/fhir-postman)_ 
+
+
+## Step 3 - FHIR-Proxy (OSS) Setup  
+- Navigate to the FHIR-Proxy repo (CTRL+click or CMD+click for new tab) https://github.com/microsoft/fhir-proxy in your browser. 
+- Review the main [Readme.md](https://github.com/microsoft/fhir-proxy/tree/main/scripts#fhir-proxy-getting-startd-scripts-readme) and the [Readme.md](https://github.com/microsoft/fhir-proxy/blob/main/scripts/Readme.md) in the ./scripts folder.  
+    
+- Clone the Repo in your Azure Cloudshell environment.  
+    ```azurecli-interactive
+    git clone https://github.com/microsoft/fhir-proxy.git
+    ```
+
+- Change the working directory to the ```./fhir-proxy/scripts``` directory in the repo.  
+    ```azurecli-interactive
+    cd $HOME/fhir-proxy/scripts
+    ```
+
+- Make the Bash scripts for deployment and setup executable.  
+    ```azurecli-interactive
+    chmod +x *.bash
+    ```
+
+- Execute the ```deployfhirproxy.bash``` script.  
+    ```azurecli-interactive
+    ./deployfhirproxy.bash
+    ```
+
+Once the ```deployfhirproxy.bash``` script completes, run the ```createproxyserviceclient.bash``` script. 
+
+- Execute the ```createproxyserviceclient.bash``` script.  
+    ```azurecli-interactive
+    ./createproxyserviceclient.bash
+    ```
+
+Be certain to click ```y``` (for "yes") when prompted to generate a Postman environment for FHIR-Proxy access.
+
+Deployed Components 
+
+![proxy-deployment](./media/proxy-deployment.png)
+
+## Step 4 - Grant Admin Access (Portal)
+We purposely do not grant Admin Access in the ```createproxyserviceclient.bash``` script as not everyone has Application Administrator rights.  We will supply an "admin script" for this in the next release. In the meantime, here are the Azure Portal steps necessary to grant admin access. 
+
+Log into the Azure Portal, and go to Azure Active Directory
+
+![login](./media/login.png)
+
+Go to App Registrations and find the client created with the ```createproxyserviceclient.bash``` script
+
+![appreg](./media/appreg.png)
+
+Select API Permissions on the left blade, then slect Grant admin consent for "your tenant name"
+
+![api](./media/api-permissions.png)
+
+Grant Admin Consent 
+
+![apigrant](./media/api-grant.png)
+
+![apigrant](./media/api-grant2.png)
+
+Complete 
+
+![apigrant](./media/complete.png)
+
+---
+__Note__  During the live MC4H OpenHack session, Resource Groups names will be assigned. If you are performing the OpenHack on your own, you can use any Resource Group name. 
+
+## Step 5 - Set up Postman with Proxy 
+Using the Upload / Download button in the Azure Cloudshell interface, download the _$fhirServiceName.postman_environment.json_ file to your computer. 
+
+![download](./media/download.png)
+
+Import the _environment file_ into Postman
+
+![postman1](./media/postman1.png)
+
+Get a Token 
+
+![postman3](./media/postman3.png)
+
+List Patients as a test 
+
+![test](./media/list-patient.png)
+
+
+## Challenge Success
++ Azure API for FHIR (PaaS) installed and available 
++ FHIR-Proxy (OSS) installed and able to communicate with Azure API for FHIR
+
+## Troubleshooting 
+Most often the problem is order of execution in that someone will get a token before Granting Authorization.  
+
+Error 403 - Unauthorized 
+Cause:  Token does not have the Reader & Writer Roles authorized 
+
+Obtain a new Token 
+
+![token1](./media/postman-token1.png)
+
+Copy the Token from Postman 
+
+![token2](./media/postman-token2.png)
+
+Check the Token for Reader and Writer roles using https://jwt.ms 
+
+![token3](./media/postman-token3.png)
+
+If the roles are missing, the permissions grant was not saved, please re-do Step 4. 
